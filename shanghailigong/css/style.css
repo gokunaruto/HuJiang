@@ -1,0 +1,341 @@
+
+ul{margin:0;padding:0;}
+
+li {
+	list-style:none;
+}
+a img {border:0;}
+body {
+	margin:0;
+	background: url(../images/body_bg.jpg) repeat;
+	color:#3c3d43;
+	font-size:14px;
+}
+
+#banner {
+	width:100%;
+	height:500px;
+	background: url(../images/banner_bg.jpg) no-repeat top center;
+}
+
+#banner_cont {
+	position: relative;
+	margin:0 auto;
+	width:1000px;
+	height:500px;
+}
+.university_logo {
+	position: absolute;
+	top:50px;
+	left:0px;
+}
+.title_block {
+	position:absolute;
+	left:287px;
+	top:250px;
+	width:400px;
+	height:130px;
+	font-family: "Verdana";
+	text-align: center;
+}
+.title_block a {
+	color:#666;
+	text-decoration: none;
+}
+.title_block a:hover {
+	color:#f60;
+	text-decoration: underline;
+}
+.enter_class {
+	display: block;
+	margin:16px auto 0;
+	width:210px;
+	height:60px;
+	background: url(../images/btn_enterclass.png) no-repeat 0px 0px;
+}
+.enter_class:hover {background-position:0px -60px;}
+.title_block span {color:#999;}
+
+
+
+
+
+
+#pageCont {
+	margin:0 auto;
+	width:1000px;
+}
+
+.block {
+	width:1000px;
+	/*height:500px;*/
+	
+	/*padding-bottom:60px;*/
+	overflow: hidden;
+}
+.block_title {
+	position:relative;
+	width:1000px;
+	height:30px;
+	background: url(../images/block_title_bg.png) no-repeat 3px 8px;
+	text-indent: 30px;
+	line-height:30px;
+	font-size:24px;
+	font-family: "微软雅黑";
+}
+.more {
+	position: absolute;
+	top:0px;
+	right:50px;
+	height:30px;
+	width:200px;
+	text-align:right;
+	font-family:"宋体";
+	font-size:14px;
+	line-height:30px;
+}
+
+#wangxiao {
+	position:relative;
+	height:470px;
+	background: url(../images/block_bg.png) no-repeat bottom center;
+}
+.wangxiao_desc {
+	position:absolute;
+	top:80px;
+	left:63px;
+	width:312px;
+	height:272px;
+}
+.wangxiao_video {
+	position: absolute;
+	top:50px;
+	right:50px;
+	width:478px;
+	height:336px;
+	background: url(../images/video_bg.png) no-repeat;
+} 
+.wangxiao_video img {
+	position: absolute;
+	top:16px;
+	left:17px;
+	width:444px;
+	height:300px;
+	z-index:10;
+}
+.wangxiao_video a {
+	display: block;
+	position: absolute;
+	top:10px;
+	left:16px;
+	width:445px;
+	height:312px;
+	background: url(../images/video_btn1.png) no-repeat center;
+	z-index:20;
+}
+.wangxiao_video a:hover {
+	background: url(../images/video_btn2.png) no-repeat center;
+}
+
+
+
+#study_tool {
+	height:380px;
+	background: url(../images/block_bg.png) no-repeat bottom center;
+}
+.study_tools  {
+	padding:0px;
+	margin-top:20px;
+	width:1006px;
+	
+}
+.study_tools li {
+	float:left;
+	width:250px;
+	height:200px;
+	text-align: center;
+	border-right:1px #e8e8e8 solid;
+}
+.study_tools p {
+	margin:0 auto;
+	width:150px;
+	font-size:16px;
+	font-family: "微软雅黑";
+}
+.study_tools li img:hover {opacity:0.8;filter:alpha(opacity=80)}
+
+
+
+#app {
+	height:360px;
+	background: url(../images/block_bg.png) no-repeat bottom center;
+}
+.study_app li {
+	float:left;
+	width:250px;
+	height:200px;
+	background: url(../images/li_bg.png) no-repeat 50px 25px;
+	text-align: center;
+}
+.study_app li:hover {
+	background: url(../images/li_bg2.png) no-repeat 43px 18px;
+}
+.study_app li img {
+	margin:57px auto 50px;
+	width:84px;
+	height:82px;
+}
+.study_app p {
+	margin:0 auto;
+	width:150px;
+	font-size:16px;
+	font-family: "微软雅黑";
+}
+
+
+
+#nice_course {
+	position: relative;
+	height:360px;
+}
+.view_box {
+	position: absolute;
+	top:50px;
+	left:28px;
+	width:944px;
+	height:242px;
+	overflow: hidden;
+}
+ul.course {
+	position: absolute;
+	left:0px;
+	top:0px;
+	width:2000px;
+	height:242px;
+}
+.course .item{
+	float:left;
+	width:236px;
+	height:242px;
+}
+.course .item_cont {
+	margin: 0 auto;
+	/*float:left;
+	margin-left:7px;
+	margin-right:7px;*/
+	width:220px;
+	height:240px;
+	border:1px #e8e8e8 solid;
+	background: #fff;
+}
+.first {
+	_margin-left:3px;
+}
+.info_image {
+	width:220px;
+	height:159px;
+	border-bottom: 1px #e8e8e8 solid;
+	line-height: 158px;
+	text-align: center;
+}
+.info_image a {
+	display: inline-block;
+	width:205px;
+	height:135px;
+	margin-top:10px;
+}
+
+.info_image img {
+	width:205px;
+	height:135px;
+}
+.info_text {
+	position: relative;
+	width:220px;
+	height:80px;
+}
+.course_title {
+	display:inline-block;
+	margin-left:10px;
+	padding:8px 0;
+	color:#555;
+	line-height: 18px;
+	text-decoration:none;
+}
+/*.course_title:hover {
+	color:#f60;
+	text-decoration:underline;
+}*/
+.course_price {
+	display: block;
+	position: absolute;
+	left:10px;
+	top:50px;
+	width:80px;
+	padding-left:20px;
+	background: url(../images/icon_price.png) no-repeat 0px 4px;
+}
+.btn_baoban {
+	display: block;
+	position: absolute;
+	right:15px;
+	top:45px;
+	width:91px;
+	height:28px;
+	background: url(../images/btn_bg.png) no-repeat 0px 0px;
+}
+.btn_baoban:hover {
+	background-position: 0px -28px;
+}
+
+.btn_prev {
+	/*display: block;*/
+	position:absolute;
+	left:-1px;
+	top:150px;
+	width:29px;
+	height:48px;
+	/*background: url(../images/focus_bg.png) no-repeat 0px -96px;*/
+}
+/*.btn_prev:hover {background-position:0px -144px;}*/
+.bx-prev {
+	display: block;
+	width:29px;
+	height:48px;
+	background: url(../images/focus_bg.png) no-repeat 0px -96px;
+}
+.bx-prev:hover {background-position:0px -144px;}
+.btn_next {
+	/*display: block;*/
+	position:absolute;
+	right:-1px;
+	top:150px;
+	width:29px;
+	height:48px;
+	/*background: url(../images/focus_bg.png) no-repeat 0px 0px;*/
+}
+/*.btn_next:hover {background-position:0px -48px;}*/
+.bx-next {
+	display: block;
+	width:29px;
+	height:48px;
+	background: url(../images/focus_bg.png) no-repeat 0px 0px;
+}
+.bx-next:hover {background-position:0px -48px;}
+
+
+#flashlayer {position:absolute;left:50px;top:50px;width:800px;height:600px;border:5px #d4d4d4 solid;border-radius:4px;background:#fff;z-index:1000;}
+#layer_title {position:relative;width:100%;height:32px;background:#f0f4f7;border-bottom: 1px #e0e4e6 solid;line-height:32px;text-align: right;}
+#layer_cont {margin:10px auto;width:770px;height:548px;}
+#closeLayer {display:block;position:absolute;top:8px;right:10px;width:16px;height:16px;background: url(../images/close.gif) no-repeat 0px 0px;}
+#closeLayer:hover {background-position: -16px 0px;}
+
+
+
+
+
+
+
+
+
+

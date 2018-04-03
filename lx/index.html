@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>留学专题</title>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="http://common.hjfile.cn/analytics/site/class.js"></script>
+<script type="text/javascript" src="http://res.hjfile.cn/js/lib/jq/1.8.3/plugins/jbox-2.3.min.js"></script>
+<script type="text/javascript" src="http://www.hujiang.com/classzt/2014baofojiao/js/jquery.jBox-zh-CN.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.hujiang.com/classzt/2014baofojiao/css/jbox.css" />
+<link rel="stylesheet" type="text/css" href="css/bx_slider.css" />
+<style type="text/css">
+/*** reset ***/html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}ins{text-decoration:none}legend{color:#000}
+/*** font ***/body{font-size:12px;font-family:verdana, arial;} select,input,button,textarea{font:99% verdana,arial}table{font-size:inherit;font:100%}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%}
+/*** base ***/h1{font-size:138.5%}h2{font-size:123.1%}h3{font-size:108%}h1,h2,h3{margin:1em 0}h1,h2,h3,h4,h5,h6,strong{font-weight:bold}abbr,acronym{border-bottom:1px dotted #000;cursor:help}em{font-style:italic}blockquote{margin:1em}ul,ol,dl{margin:0}li,dd{list-style:none;margin:0}th,td{padding:.5em}.tabWithBorder th,.tabWithBorder td{border:1px solid #000}th{font-weight:bold;text-align:center}caption{margin-bottom:.5em;text-align:center}p,fieldset,table,pre{margin-bottom:1em}
+/*** hj ***/.clear{clear:both}.hide{display:none}.txt_r{text-align:right}.txt_l{text-align:left}.txt_c{text-align:center}.txt_hide{text-indent:-999em}.bold{font-weight:bold}.fl{float:left;display:inline}.fr{float:right;display:inline}.poa{position:absolute}.por{position:relative}.mouse_p{cursor:pointer}.mouse_d{cursor:default}.red{color:#cc0000;}a.red:link,a.red:visited,a.red:active{color:red;}.big{font-size:14px;}.small{font-size:12px;}.indent{text-indent:2em;}.green{color:#008000;}.gray{color:gray;}.orange{color:#ff6600;}a.green:link,a.green:visited,a.green:active{color:#008000;}a.gray:link,a.gray:visited,a.gray:active{color:gray;}
+
+.header{background:url(images/head.png) no-repeat center; height:476px; position:relative}
+#navbar {height:88px; background:#2482a9; width:100%}
+.navbar_float {height:88px; background:#2482a9; width:100%; position:fixed; top:0; z-index:1000}
+#navbar .nr{ width:1000px; height:88px; margin:0 auto; position:relative}
+#navbar .title {background:url(images/part1_title.png) no-repeat; width:667px; height:88px; position:absolute; left:0px}
+.xb{ font-size:12px; text-decoration:underline; color:#d5d5d5; position:absolute; margin-left:676px; margin-top:36px; }
+.qb_off { background:url(images/qb_off.png) no-repeat;right:126px; top:24px; position:absolute; width:113px; height:43px}
+.qb_off:hover {background:url(images/qb_on.png) no-repeat;right:126px; top:27px; position:absolute; width:113px; height:43px}
+.zx_off {background:url(images/zx_off.png) no-repeat; right:3px; top:24px; position:absolute; width:115px; height:43px}
+.zx_off:hover {background:url(images/zx_on.png) no-repeat; right:3px; top:27px; position:absolute; width:115px; height:43px}
+.xbsm{ width:188px;height:51px; position:absolute; left:616px; top:65px; background:url(images/sm.png) no-repeat; z-index:10000; display:none}
+
+#main{ width:100%; margin:0 auto;height:auto;}
+.part1 {height:367px;}
+.part1 .content{ height:367px; background:#179bf1}
+.part1 .content .rq {width:1000px; height:367px; margin:0 auto; position:relative}
+.part1 .content .title {background:url(images/part1_content_title.png) no-repeat; position:absolute; top:25px; left:268px; width:480px; height:30px}
+.content_right {width:498px; height:255px; background:url(images/detail.png) no-repeat; position:absolute; top:82px; right:47px}
+.content_left{ background:url(images/video.png) no-repeat; width:390px; height:275px; float:left; margin-top:76px; margin-left:45px; position:relative}
+.content_left_button { background:url(images/try.png) no-repeat; width:72px; height:72px; position:absolute; top:93px; left:157px;filter:alpha(opacity=90); opacity:0.9}
+.content_left_button:hover {filter:alpha(opacity=100); opacity:1}
+.part2{ height:543px; background:#ecf0f1}
+.part2 .vip {width:1000px; height:543px; margin:0 auto; position:relative}
+.part2 .vip .title {background:url(images/vip.png) no-repeat; position:absolute; top:127px; left:140px; width:711px; height:45px}
+.part2 .vip ul{width:944px; height:246px; position:absolute;top:215px; left:56px; overflow:hidden}
+.part2 .vip li {float:left; margin:0 31px 23px 0; position:relative; width:275px; height:110px}
+.float_t1{width:275px; height:110px; position:absolute; top:0px; left:0px; background:url(images/t1.png) no-repeat; filter:alpha(opacity=90); opacity:0.9; z-index:999; display:none}
+.float_t2{width:275px; height:110px; position:absolute; top:0px; left:0px; background:url(images/t2.png) no-repeat; filter:alpha(opacity=90); opacity:0.9; z-index:999; display:none}
+.float_t3{width:275px; height:110px; position:absolute; top:0px; left:0px; background:url(images/t3.png) no-repeat; filter:alpha(opacity=90); opacity:0.9; z-index:999; display:none}
+.float_t4{width:275px; height:110px; position:absolute; top:0px; left:0px; background:url(images/t4.png) no-repeat; filter:alpha(opacity=90); opacity:0.9; z-index:999; display:none}
+.float_t5{width:275px; height:110px; position:absolute; top:0px; left:0px; background:url(images/t5.png) no-repeat; filter:alpha(opacity=90); opacity:0.9; z-index:999; display:none}
+.float_t6{width:275px; height:110px; position:absolute; top:0px; left:0px; background:url(images/t6.png) no-repeat; filter:alpha(opacity=90); opacity:0.9; z-index:999; display:none}
+
+.part3 {height:1178px; background:#fef3d5}
+.part3 .scholarship {width:1000px; height:1178px; margin:0 auto; position:relative}
+.part3 .scholarship .title{ background:url(images/scholarship_title.png) no-repeat;top:135px; left:98px; position:absolute; width:812px; height:183px}
+.part3 .scholarship .jt	{ background:url(images/scholarship_jt.png) no-repeat; top:387px; left:8px; position:absolute; width:978px; height:260px}
+.part3 .scholarship .afq {background:url(images/afq.png) no-repeat; position:absolute; bottom:71px; width:1000px; height:430px}
+
+.part4 {height:695px; background:url(images/part4.png) no-repeat center;overflow:hidden}
+.part4 .content {width:1000px;margin:211px auto 0; }
+.part4 .item_all{width:912px; height:433px;overflow:hidden; padding-left:42px; padding-right:46px;}
+.slider li{float: left;list-style-type: none;width:309px;height:433px; position:relative}
+
+.wish{height:433px; width:300px;background:#FFFFFF;filter:alpha(opacity=70); opacity:0.7; float:left; margin-right:11px; position:relative}
+.wish_content{width:298px;height:433px; position:absolute; left:0px; top:0px; z-index:100}
+.wish_photo{width:74px; height:74px; position:absolute; top:25px; left:39px}
+.wish_sm{background:url(images/wish_content.png) no-repeat; position:absolute; left:15px; top:111px; width:273px; height:283px; padding: 20px 4px 5px}
+.wish_id{ font-size:18px; font-family:微软雅黑; float:left; margin-left:127px; margin-top:47px}
+.wish_content span {color:#FFFFFF; float:left; line-height:22px;}
+
+#popup{background:url(images/tc_bg.png) no-repeat; width:636px; height:314px}
+.dialog_close {background:url(images/tc_close.png) no-repeat; cursor:pointer; display:inline; float:right; height:28px; width:28px; margin:30px 28px 0 0;}
+.dialog_button{ background:url(images/dialog_button.png) no-repeat; width:130px; height:48px; cursor:pointer; float:right; display:inline-block; margin:-39px 185px 30px}
+.dialog_content{width:636px; font-family:微软雅黑; font-size:18px; padding:99px 0 0 245px;}
+.dialog_content_second{width:636px; font-family:微软雅黑; font-size:18px; padding:34px 0 0 129px;}
+.dialog_content_third{width:636px; font-family:微软雅黑; font-size:18px; padding:43px 0 0 206px; float:left}
+
+</style>
+</head>
+
+<body>
+<div class="header"></div>
+<div id="container" >
+	<div id="navbar" class="">
+		<div class="nr">
+			<div class="title"></div>
+			<div class="xb">(什么是学币)</div>
+			<a class="qb_off" href="#"></a>
+			<a class="zx_off" href="#"></a>
+			<div class="xbsm"></div>
+		</div>
+	</div>
+<div id="main">	
+<div class="part1">	
+	<div class="content">
+		<div class="rq">
+			<div class="title"></div>
+			<div class="content_left">
+				<a class="content_left_button" href=""></a>
+			</div>
+			<div class="content_right">	
+			</div>
+		</div>
+	</div>
+</div>
+<div class="part2">
+	<div class="vip">
+		<div class="title"></div>
+		<ul>
+			<li id="vip1"><a href=""><img src="images/vip1.png" /><div class="float_t1"></div></a></li>
+			<li id="vip2"><img src="images/vip2.png" /><div class="float_t2"></div></li>
+			<li id="vip3"><img src="images/vip3.png" /><div class="float_t3"></div></li>
+			<li id="vip4"><img src="images/vip4.png" /><div class="float_t4"></div></li>
+			<li id="vip5"><img src="images/vip5.png" /><div class="float_t5"></div></li>
+			<li id="vip6"><img src="images/vip6.png" /><div class="float_t6"></div></li>
+		</ul>
+	</div>
+</div>
+<div class="part3">
+	<div class="scholarship">
+		<div class="title"></div>
+		<div class="jt"></div>
+		<div class="afq"></div>
+	</div>
+</div>
+<div class="part4">
+	<div class="content">
+		<div class="item_all">
+			
+				<ul class="slider" style="overflow:hidden">
+					<li><div class="wish"></div>
+						<div class="wish_content">
+							<div class="wish_photo"><img src="images/wish1.png" /></div>
+							<div class="wish_sm"><span>首战雅思，拿到7啦！总分7、听力8、阅读8。从13年10月中旬开始断断续续的准备，工作之余听网校课程，做做真题，最后半个月每天听很多BBC news，终于在阅读和听力上面取得了成效！个人觉得除了卡好时间做剑桥真题以外，没有别的秘诀，网校课程里面很多技巧都很有用。最后，谢谢沪江网校的陪伴。老师们和助教们，辛苦鸟！</span></div>
+							<div class="wish_id">somnuslj</div>
+						</div>
+					</li>
+					<li><div class="wish"></div>
+						<div class="wish_content">
+							<div class="wish_photo"><img src="images/wish2.png" /></div>
+							<div class="wish_sm"><span>在以前不管是高中英语还是大学英语都没有系统学习过写作，所以决定要考雅思之后最担心的就是写作。<br>
+这是我第一次参加网校的课程学习，整个过程都很开心，老师们都很负责很认真，深受感动~~通过这次学习我对雅思大小作文写作都有了具体的概念，在几次练习中也基本形成了套路，只可惜工作之余时间也不多，上班时领导不让看书。
+不过课程还是让我有了信心，感谢yoyo老师、小艾老师以及所有帮助过我的老师们~<br>网校学习非常方便~将来有时间我会继续学习其他语言~</span></div>
+							<div class="wish_id">爱小豹的猫</div>
+						</div>
+					</li>
+					<li><div class="wish"></div>
+						<div class="wish_content">
+							<div class="wish_photo"><img src="images/wish3.png" /></div>
+							<div class="wish_sm"><span>报个喜，一次和雅思分手啦！7.5！总分7.5，听力8.5、阅读9、写作6.5、口语6.5。谢谢沪江的老师和助教们！<br>因为从复习到考试只有一个半月左右，中间还有语等级考和各种学校的考试，我只有前面听力阅读认真上了课，果然效果很好ww<br>后面来不及了，写作和口语都是直接拉到练习做完的。有点遗憾没能认真上完。散个喜气XD希望所有同学都能考出想要的成绩~</span></div>
+							<div class="wish_id">norther_tp</div>
+						</div>
+					</li>
+					<li><div class="wish"></div>
+						<div class="wish_content">
+							<div class="wish_photo"><img src="images/wish4.png" /></div>
+							<div class="wish_sm"><span>经过一个月的学习，我11月初考了一次，成绩进步啦！总分7，听力7、阅读8.5。自己鼓励自己一下啊。平均每样涨了一分。但也再次暴露了我最大的缺陷，写作，我的写作练的太少，尤其是大作文，同志还得努力！</span></div>
+							<div class="wish_id">miao19891227</div>
+						</div>
+					</li>
+					<li><div class="wish"></div>
+						<div class="wish_content">
+							<div class="wish_photo"><img src="images/wish5.png" /></div>
+							<div class="wish_sm"><span>真是不想说再见，还想继续听课写作业讨论提问啊TAT  谢谢老师们，谢谢助助们！谢谢课程！谢谢沪江！<br> 老师我的成绩出来了之前您电话回访说希望我告知一下总7 L8.5 R7.5 W6 S6.5 写作死菜菜了QAQ</span></div>
+							<div class="wish_id">ratcen</div>
+						</div>
+					</li>
+					<li><div class="wish"></div>
+						<div class="wish_content">
+							<div class="wish_photo"><img src="images/wish6.png" /></div>
+							<div class="wish_sm"><span>班课程已经结束，我基本没拉下一节课，喜欢luc 的幽默 ，佩服tino 的敢说 ，让我 admire。上班了，再学英语总觉的时间不够。沪江 我觉得是一个很好的平台，大家加油哟。期待你们分享烤鸭的经历，愿你们朝日梦想成真。最后有一句话和同学们共勉：The minute you think of giving up,think of the reason why you held on so long . 坚持！！</span>
+</div>
+							<div class="wish_id">lightlan</div>
+						</div>
+					</li>
+				</ul>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function doit(){ 
+    //todo
+	
+}
+$(document).ready(function(){
+	  $('.slider').bxSlider({
+	    	minSlides:3,
+	    	maxSlides:3,
+	    	slideWidth:309,
+	        auto: true,
+	        pager:false,
+	        pause:2000,
+	        moveSlides:1
+		})
+	});
+$(function(){	
+	$(".xb").hover(function(){
+		$(".xbsm").css("display","block")
+	},
+		function(){	$(".xbsm").css("display","none")
+	});
+	$("#vip1").hover(function(){
+		$(".float_t1").css("display","block")
+	},
+		function(){	$(".float_t1").css("display","none")
+	});
+	$("#vip2").hover(function(){
+		$(".float_t2").css("display","block")
+	},
+		function(){	$(".float_t2").css("display","none")
+	});
+	$("#vip3").hover(function(){
+		$(".float_t3").css("display","block")
+	},
+		function(){	$(".float_t3").css("display","none")
+	});
+	$("#vip4").hover(function(){
+		$(".float_t4").css("display","block")
+	},
+		function(){	$(".float_t4").css("display","none")
+	});
+	$("#vip5").hover(function(){
+		$(".float_t5").css("display","block")
+	},
+		function(){	$(".float_t5").css("display","none")
+	});
+	$("#vip6").hover(function(){
+		$(".float_t6").css("display","block")
+	},
+		function(){	$(".float_t6").css("display","none")
+	});
+	 $(window).scroll(
+			function () {
+			    if ($(window).scrollTop() > $(".part1").offset().top) {
+			        $("#navbar").addClass('navbar_float');
+			    }
+			    else {
+			        $("#navbar").removeClass('navbar_float');
+			    }
+			}
+		);
+ 	var dialog_show = false;
+            $(".qb_off").click(function () {
+               	var dialog_html = "<div id='popup'><div class='dialog_close'></div><div class='dialog_content'>~~~~(>_<)~~~~ </div>"
+				dialog_html +="<div class='dialog_content_second'>不好意思，您没有提前预约本课程，还不能报名哦~</div><div class='dialog_content_third'>如有疑问点击</div>"
+				dialog_html +="<a class='dialog_button' href='#'></a></div>"
+				$.jBox(dialog_html, { title: null, buttons: null, width: 636, height: 334, top: '30%' });
+                dialog_show = true;
+            })
+            $(".dialog_close").live('click', function () {
+                $.jBox.close(true);
+                dialog_show = false;
+            })
+
+            $(window).resize(function () {
+                if (dialog_show) {
+                    $.jBox.close(true);
+                    $(".qb_off").click();
+                }
+            });
+
+})
+
+</script>
+</body>
+</html>

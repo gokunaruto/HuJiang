@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>论坛主页</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+li {
+    list-style: none outside none;
+}
+a img {
+    border: 0 none;
+}
+a {
+    color: #075DB3;
+    text-decoration: none;
+}
+a:hover {
+    color: #FF6600;
+    text-decoration: underline;
+}
+input {
+    outline: medium none;
+}
+body {
+    background-color: #F6F6F6;
+}
+.clearfix:before, .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+}
+body #wrapper {
+    overflow: visible;
+}
+#wrapper { margin: 0 auto; width:1000px; position:relative}
+.a6_bbs_tops {
+    height: 255px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.a6_bbs_tops .a6_bbs_top_block {
+    background-color: #FFFFFF;
+    float: left;
+    height: 100%;
+    margin-left: 10px;
+}
+.a6_bbs_tops .a6_bbs_top_1 {
+    margin-left: 0;
+    width: 545px;
+}
+.a6_bbs_tops .a6_bbs_top_1 img {
+    height: 255px;
+    width: 545px;
+}
+.a6_bbs_tops .a6_bbs_top_1 img:hover {
+    transform: scale(1.03, 1.03);
+}
+.a6_bbs_tops .a6_bbs_top_2 {
+    background-color: #F6F6F6;
+    width: 240px;
+}
+.a6_bbs_tops .a6_bbs_top_2 .a6_bbs_top_2_top {
+    height: 123px;
+}
+.a6_bbs_tops .a6_bbs_top_2 .a6_bbs_top_2_bottom {
+    height: 123px;
+    margin-top: 9px;
+}
+.a6_bbs_tops .a6_bbs_top_2 img {
+    height: 123px;
+    width: 240px;
+}
+.a6_bbs_tops .a6_bbs_top_2 img:hover {
+    transform: scale(1.03, 1.03);
+}
+.a6_bbs_tops .a6_bbs_top_3 {
+    width: 195px;
+}
+.a6_bbs_tops .a6_bbs_top_3 img {
+    height: 255px;
+    width: 195px;
+}
+.a6_bbs_tops .a6_bbs_top_3 img:hover {
+    transform: scale(1.03, 1.03);
+}
+.article_list {
+    background-color:#FFFFFF;
+    border: 1px solid #EEEEEE;
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 19px;
+    width: 700px;
+}
+
+
+.right_slide {
+    display: inline;
+    float: left;
+    width: 278px;
+}
+.right_slide .right_slide_block {
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    margin-bottom: 20px;
+    padding: 15px 15px 20px;
+    width: 248px;
+}
+.right_slide h3 {
+    background-color: #F8F8F8;
+    border-bottom: 1px solid #EEEEEE;
+    color: #666666;
+    font-family: 'microsoft yahei';
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: -15px;
+    padding-left: 20px;
+}
+
+.right_slide .xxcp li { display:inline; float:left; overflow:hidden; width:71px; height:95px; margin-left:33px; margin-top:25px;}
+
+
+
+
+.right_slide .user_info .head_img {
+    float: left;
+    height: 48px;
+    width: 48px;
+}
+.right_slide .user_info .show_user_info {
+    float: left;
+    height: 48px;
+    margin-left: 20px;
+    width: 180px;
+}
+.right_slide .user_info .show_user_info .welcome {
+    line-height: 30px;
+}
+.right_slide .user_info .show_user_info p {
+    color: #999999;
+    font-family: 'microsoft yahei';
+    font-size: 12px;
+}
+.right_slide .user_info .user_name {
+    color: #666666;
+    font-family: 'microsoft yahei';
+    font-size: 14px;
+    text-decoration: none;
+}
+.right_slide .user_info .user_name:hover {
+    text-decoration: underline;
+}
+.right_slide .button_wrap {
+    float: left;
+    height: 38px;
+    line-height: 38px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+.right_slide .button_wrap .post_button {
+    background-color: #FA8910;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-family: 'microsoft yahei';
+    font-size: 16px;
+    height: 38px;
+    position: relative;
+    text-decoration: none;
+    width: 118px;
+}
+.right_slide .button_wrap .post_button:hover {
+    background-color: #F07F06;
+}
+.right_slide .button_wrap .ml10 {
+    margin-left: 10px;
+}
+.right_slide .post_num_wrap {
+    background-color: #FBFCF9;
+    border-top: 1px solid #EEEEEE;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    margin: 12px -15px -20px;
+    padding: 15px;
+    width: 100%;
+}
+.right_slide .post_num_wrap li {
+    border-right: 1px solid #EEEEEE;
+    color: #666666;
+    display: inline;
+    float: left;
+    height: 58px;
+    line-height: 35px;
+    text-align: center;
+    width: 81px;
+}
+.right_slide .post_num_wrap li a {
+    display: block;
+    text-decoration: none;
+}
+.right_slide .post_num_wrap span {
+    color: #666666;
+    display: block;
+    font-size: 16px;
+}
+.right_slide .post_num_wrap .nb {
+    border-right: medium none;
+}
+.right_slide .post_num_wrap .num_type {
+    font-family: 'microsoft yahei';
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+}
+.right_slide .post_num_wrap .post_num {
+    cursor: pointer;
+    font-size: 22px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.right_slide .hot_post li {
+    height: 20px;
+    line-height: 20px;
+    margin-top: 15px;
+    width: 248px;
+}
+.right_slide .hot_post a {
+    color: #666666;
+    display: block;
+    font-family: 'Verdana','Arial','Helvetica';
+    font-size: 14px;
+    height: 20px;
+    overflow: hidden;
+    text-decoration: none;
+}
+.right_slide .hot_post a:hover {
+    color: #FF6600;
+    text-decoration: underline;
+}
+.right_slide .hot_post .hot_post_num {
+    background-color: #B3B3B3;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 5px;
+    position: relative;
+    text-align: center;
+    width: 20px;
+}
+.right_slide .hot_post .hot_post_num1 {
+    background-color: #F56F02;
+}
+.right_slide .hot_post .hot_post_num2 {
+    background-color: #FA8609;
+}
+.right_slide .hot_post .hot_post_num3 {
+    background-color: #FCA446;
+}
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+ <div id="wrapper">
+      <div class="clearfix">
+	  
+	       <div class="a6_bbs_tops clearfix">
+		        <div class="a6_bbs_top_block a6_bbs_top_1">
+                   <a target="_blank" href="http://s.hujiang.com/topic/126284/">
+                        <img width="543" alt="" src="img/bbs_top1.png">
+                   </a>
+                </div>
+		        <div class="a6_bbs_top_block a6_bbs_top_2">
+                     <div class="a6_bbs_top_2_top">
+                        <a target="_blank" href="http://s.hujiang.com/topic/125909/">
+                            <img width="240" alt="" src="img/bbs_top2.png">
+                        </a>
+                     </div>
+                     <div class="a6_bbs_top_2_bottom">
+                        <a target="_blank" href="http://s.hujiang.com/topic/125799/">
+                            <img width="240" alt="" src="img/bbs_top3.png">
+                        </a>
+                      </div>
+                 </div>
+		         <div class="a6_bbs_top_block a6_bbs_top_3">
+				        <a target="_blank" href="http://s.hujiang.com/topic/125799/">
+                            <img width="240" alt="" src="img/bbs_top4.png">
+                        </a>
+				 </div>
+			</div>
+		   <!--头部图片-->
+		   
+		   
+           <div class="article_list">
+		   </div>
+		   
+		   
+           <div class="right_slide">
+		   
+		        <div class="right_slide_block user_info clearfix">
+                    <a href="/myboard/">
+                         <img class="head_img" alt="" src="img/head_img.png" />
+                    </a>
+                    <div class="show_user_info">
+                          <p>
+                            <a class="user_name" href="/myboard/">ID:梦里的雾</a>
+                          </p>
+                          <p class="welcome">你好，欢迎来到沪江论坛~</p>
+                    </div>
+                    <div class="button_wrap clearfix">
+                          <a id="fast_post" class="post_button" onclick="ShowNav();" href="javascript:void(0);">快速发帖</a>
+                          <a id="my_bbs" class="post_button ml10" href="/myboard/">我的论坛</a>
+                    </div>
+                    <div class="post_num_wrap">
+                          <ul>
+                              <li>
+                                  <span class="num_type">发帖</span>
+                                  <a target="_blank" href="/mytopic/">
+                                      <span class="post_num">100</span>
+                                  </a>
+                             </li>
+                             <li>
+                                  <span class="num_type">回帖</span>
+                                  <a target="_blank" href="/myreply/">
+                                        <span class="post_num">98</span>
+                                  </a>
+                             </li>
+                             <li class="nb">
+                                  <span class="num_type">收藏</span>
+                                  <a target="_blank" href="/myfavourite/">
+                                        <span class="post_num">5</span>
+                                  </a>
+                              </li>
+                           </ul>
+                    </div>
+              </div>
+		      <!--右侧用户-->
+			  <div class="right_slide_block hot_plate clearfix">
+                   <h3>名师公开课 </h3>
+			  </div>
+			  <!--名师公开课-->
+			 
+			  <div class="right_slide_block xxcp clearfix">
+                   <h3>学习产品 </h3>
+				   <ul class="clearfix">
+				      <li>
+					  <img src="img/xxcp1.png" title="开心辞场" alt="" width="71px" height="71px"/>
+					  <p style="bottom:0; color:#666666; font-size:14px; text-align:center">开心辞场</p>
+					  </li>
+					  <li>
+					  <img src="img/xxcp2.png" title="在线听写" alt="" width="71px" height="71px"/>
+					  <p style="bottom:0; color:#666666;font-size:14px; text-align:center">在线听写</p>
+					  </li>
+					  <li>
+					  <img src="img/xxcp3.png" title="沪江小D" alt="" width="71px" height="71px"/>
+					  <p style="bottom:0; color:#666666; font-size:14px; text-align:center">沪江小D</p>
+					  </li>
+					  <li>
+					  <img src="img/xxcp4.png" title="天天向上" alt="" width="71px" height="71px"/>
+					  <p style="bottom:0; color:#666666; font-size:14px; text-align:center">天天向上</p>
+					  </li>
+					  </ul>
+			  
+			  </div>
+			 <!-- 学习产品-->
+			  
+			   <div class="right_slide_block hot_post clearfix">
+		           <h3>热帖排行</h3>
+				   <ul class="clearfix">
+				        <li>
+						    <a title="我想给亲爱的阿娜达盖个5200楼" href="/topic/126284/">
+                                 <span class="hot_post_num hot_post_num1">1</span>
+                                我想给亲爱的阿娜达盖个5200楼
+                            </a>
+						</li>	
+		                <li>
+						    <a title="我想给亲爱的阿娜达盖个5200楼" href="/topic/126284/">
+                                 <span class="hot_post_num hot_post_num2">2</span>
+                                 我想给亲爱的阿娜达盖个5200楼
+                            </a>
+						</li>	
+		                <li>
+						    <a title="我想给亲爱的阿娜达盖个5200楼" href="/topic/126284/">
+                                 <span class="hot_post_num hot_post_num3">3</span>
+                                 我想给亲爱的阿娜达盖个5200楼
+                            </a>
+						</li>
+						<li>
+						    <a title="我想给亲爱的阿娜达盖个5200楼" href="/topic/126284/">
+                                 <span class="hot_post_num ">4</span>
+                                 我想给亲爱的阿娜达盖个5200楼
+                            </a>
+						</li>	
+						<li>
+						    <a title="我想给亲爱的阿娜达盖个5200楼" href="/topic/126284/">
+                                 <span class="hot_post_num ">5</span>
+                                 我想给亲爱的阿娜达盖个5200楼
+                            </a>
+						</li>	
+						<li>
+						    <a title="我想给亲爱的阿娜达盖个5200楼" href="/topic/126284/">
+                                 <span class="hot_post_num ">6</span>
+                                 我想给亲爱的阿娜达盖个5200楼
+                            </a>
+						</li>	
+						<li>
+						    <a title="我想给亲爱的阿娜达盖个5200楼" href="/topic/126284/">
+                                 <span class="hot_post_num ">7</span>
+                                 我想给亲爱的阿娜达盖个5200楼
+                            </a>
+						</li>
+						<li>
+						    <a title="我想给亲爱的阿娜达盖个5200楼" href="/topic/126284/">
+                                 <span class="hot_post_num ">8</span>
+                                 我想给亲爱的阿娜达盖个5200楼
+                            </a>
+						</li>	
+						<li>
+						    <a title="我想给亲爱的阿娜达盖个5200楼" href="/topic/126284/">
+                                 <span class="hot_post_num ">9</span>
+                                 我想给亲爱的阿娜达盖个5200楼
+                            </a>
+						</li>	
+						<li>
+						    <a title="我想给亲爱的阿娜达盖个5200楼" href="/topic/126284/">
+                                 <span class="hot_post_num ">10</span>
+                                 我想给亲爱的阿娜达盖个5200楼
+                            </a>
+						</li>	  	  
+		           </ul>
+				</div>
+				<!--热帖排行-->
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   </div>
+		   <!--right side-->
+	  </div>
+ </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+@charset "UTF-8";
+
+.bdsharebuttonbox{float:left;margin-left: 21px}
+.head_bg1{background: url("../img/head_bg1.png") no-repeat center 0;height:270px;}
+.head_bg2{background: url("../img/head_bg2.png") no-repeat center 0;height:296px;}
+.top_content{width:1020px;margin: 0 auto;overflow: hidden}
+.icon_location{float: left;margin: 127px 0 0 750px;clear: both;display: inline;}
+.top_icon1_span a{width:39px;height:40px;float: left;display: block;margin-left: 21px;cursor: pointer;background: url("../img/sui_normal.png") no-repeat}
+.top_tip{clear: both;margin-left: 450px}
+.top_tip_title{font:bold 14px 'SimSun';color: #FFF;margin-bottom: 7px}
+.top_tip_content li{display: block;width: 350px;font:normal 14px/28px 'SimSun';color: #FFF;border-bottom: 1px dashed #FFF}
+.top_nav{background: #f8d033;height:70px;}
+.top_nav ul{width: 1020px;margin: 0 auto}
+.top_nav li {
+	display: inline-block;
+	float:left;
+}
+.top_nav .normal_nav{_padding-top:14px;} 
+.top_nav span{
+	font:bold 18px/20px "Microsoft YaHei";
+	margin:15px 45px 0 0;
+	padding-left: 23px;
+	background: url("../img/nav_icon_normal.jpg") no-repeat 0 8px;
+	display: block;
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+	_width: 55px;
+	_margin:10px 30px 0 0;
+}
+.top_nav .first span{
+	font:bold 24px "Microsoft YaHei";
+	margin: 19px 45px 0 53px;
+	background: url("../img/nav_icon_normal.jpg") no-repeat 0 4px;
+	_width:50px 
+}
+.top_nav span.bec_nav{margin-right:50px;_width:40px;}
+.top_nav span.third{
+	_width: 72px
+}
+.top_nav .normal_nav .topnav_hover{
+	background: url("../img/nav_icon_hover.jpg") no-repeat 0 8px;
+	color:#FFF;
+}
+.top_nav .first .topnav_first_hover{
+	background: url("../img/nav_icon_hover.jpg") no-repeat 0 4px;
+	color:#FFF;
+}
+.main1{background:#04b0ec;height: 690px}
+.main_content{
+	width: 1020px;margin:0px auto;
+}
+.time{
+	width: 163px;
+	float: left;
+}
+.target_time1{
+	background: url("../img/target_time1_pic.jpg") no-repeat;width:163px;height:268px;
+}
+.time_line1{
+	background: url("../img/time_line1_bac.png") no-repeat 5px 0px;height:296px;margin:5px 0 0 6px
+}
+.time_line1 li{
+	font:normal 14px "SimSun";
+	color:#044b64;
+	padding-left: 17px;
+	width:85px;
+	display: block;
+	text-align: center;
+	margin-bottom: 24px;
+	cursor: pointer;
+	height:16px;
+	background: url("../img/time_line1_normal.jpg") no-repeat -1px 0px;
+}
+.time_line1 .active{
+	color:#FFF;
+	background: url("../img/time_line1_hover.jpg") no-repeat -1px -1px;
+	height:19px;
+}
+.to_top1{position: relative;}
+.to_top_bac{
+	background: url("../img/to_top_bac.png") no-repeat 12px 0px;width:27px;height:125px;position: absolute;left:50px;top:7px;
+}
+.to_top_icon{
+	background: url("../img/to_top1.png") no-repeat;width:27px;height:27px;position: relative;left:-1px;top:15px;
+}
+.to_top_icon_hover{
+	background: url("../img/to_top1_hover.png") no-repeat;width:27px;height:27px;position: relative;left:-1px;top:15px;cursor: pointer;
+}
+.main_content_first{
+	float:left;
+	margin-top: 13px;
+}
+.main1_content,.main2_content,.main3_content{
+	float:left;
+	margin-top: 5px;
+}
+.target_font1{
+	background:url("../img/target_font1.jpg") no-repeat;width:244px;height:65px;
+	margin-top:30px;
+	float: left;
+}
+.big_calendar{background: url("../img/big_calendar.png") no-repeat;width:200px;height:112px;float:left;margin-right: 2px}
+.big_calendar span{font:normal 88px "Arial";padding: 19px 0 0 8px;display: block;height: 87px;letter-spacing:19px;}
+.main1_title_right,.main2_title_right,.main3_title_right{float: left;}
+.small_calendar{display: block;overflow: hidden;}
+.small_calendar span{float: left;background: url("../img/small_calendar.png") no-repeat;width:58px;height:41px;font:normal 36px "Arial";padding:13px 0 0 5px;margin-top: 5px;letter-spacing: 13px;display:block;}
+.small_calendar strong{font:bold 20px "Microsoft YaHei";margin: 30px 2px 0;float: left;}
+.main1_title,.main2_title,.main3_title{overflow: hidden;margin-bottom: 10px}
+.main1_title_font{clear: both;margin-left: 24px}
+.main1_title_font p{color:#FFF;font:normal 14px/25px "SimSun";border-bottom: 1px dashed #FFF;margin-bottom: 0px;width:350px;}
+.main1_lesson{
+	background: url("../img/main1_lesson_bigbac.png") no-repeat;
+	clear: both;
+	width: 801px;
+	height:510px;
+	margin-top: 7px;
+	overflow: hidden;
+	padding: 15px;
+}
+.big_lesson{overflow: hidden;display: inline;}
+.big_lesson dl{margin: 17px 6px 10px 17px;background: #FFF;width:240px;height:240px;float: left;display: inline;}
+.big_lesson dt{margin:11px 0 0 11px;}
+.big_lesson .big_lesson_title{font:normal 18px/38px "Microsoft YaHei";text-align: center;}
+.big_lesson .big_lesson_title a{color:#000;text-decoration: none}
+.big_lesson .big_lesson_title a:hover{text-decoration: underline;}
+.big_lesson_money{float: left;font: normal 14px/14px "Microsoft YaHei";margin-left: 10px}
+.big_lesson_money div{margin-bottom: 4px}
+.big_lesson_money .money{color:#e00f0f}
+.big_lesson button{margin-left: 9px;width:102px;height:36px;border: none}
+.big_lesson_buy_button{background: url("../img/big_lesson_buy_normal.jpg") no-repeat;}
+.big_lesson_buy_button_hover{background: url("../img/big_lesson_buy_hover.jpg") no-repeat;cursor: pointer;}
+.small_lesson{
+	margin-left: 17px;
+	
+}
+.small_lesson dl{width:98px;float: left;margin-right: 34px}
+.small_lesson dt{margin: 6px}
+.small_lesson .small_lesson_title{color:#6e2e17;font:normal 14px/17px "SimSun";margin-bottom: 3px}
+.small_lesson .small_lesson_title a{color:#6e2e17;text-decoration: none}
+.small_lesson .small_lesson_title a:hover{text-decoration: underline;}
+.small_lesson_money{font:normal 12px "SimSun";color:#333;text-align: center;margin-bottom: 3px}
+.small_lesson_money .money{color:#ff6e0b;}
+.small_lesson_buy button{margin:3px 0 0 3px;width:91px;height:25px;border: none;margin-top: 8px\0}
+.small_lesson_buy_button{background: url("../img/small_lesson_buy_normal.png") no-repeat;}
+.small_lesson_buy_button_hover{background: url("../img/small_lesson_buy_hover.png") no-repeat;cursor: pointer}
+.small_lesson .last_small_lesson{margin: 0px;width:113px;}
+.last_small_lesson .small_lesson_title{line-height: 34px;height: 34px}
+.gzkc .gzkc_button{background:url("../img/gzkc_normal.png") no-repeat;border: none;width:92px;height:26px; }
+.gzkc .gzkc_button_hover{background:url("../img/gzkc_hover.png") no-repeat;border: none;width:92px;height:26px;cursor: pointer;}
+.zxx .zxx_button{background:url("../img/zxx_normal.png") no-repeat;border: none;width:92px;height:26px; }
+.zxx .zxx_button_hover{background:url("../img/zxx_hover.png") no-repeat;border: none;width:92px;height:26px;cursor: pointer;}
+.btg{
+	background: url("../img/btg.jpg") repeat-x;height:11px;clear:both;overflow: hidden;
+}
+.main2{background: url("../img/main2_bg.jpg") repeat;height: 680px}
+.target_time2{
+	background: url("../img/target_time2_pic.jpg") no-repeat;width:163px;height:259px;
+}
+.time_line2{
+	background: url("../img/time_line2_bac.png") no-repeat 5px 0px;height:296px;margin:5px 0 0 6px
+}
+.time_line2 li{
+	font:normal 14px "SimSun";
+	color:#000;
+	padding-left: 17px;
+	width:85px;
+	display: block;
+	text-align: center;
+	margin-bottom: 24px;
+	cursor: pointer;
+	height:16px;
+	background: url("../img/time_line2_normal.jpg") no-repeat -1px 0px;
+}
+.time_line2 .active{
+	color:#ff6f08;
+	background: url("../img/time_line2_hover.jpg") no-repeat -1px -1px;
+	height:19px;
+}
+.target_font2{
+	background:url("../img/target_font2.jpg") no-repeat;width:244px;height:83px;
+	margin-top:30px;
+	float: left;
+}
+.main2_title_font{margin-left: 24px}
+.main2_title_font p{
+	color:#000;font:normal 14px/25px "SimSun";border-bottom: 1px dashed #000;margin-bottom: 0px;width:295px;
+}
+.main2_lesson{
+	background: url("../img/main2_lesson_bigbac.png") no-repeat;
+	clear: both;
+	width: 801px;
+	height:510px;
+	margin-top: 7px;
+	overflow: hidden;
+	padding: 15px;
+}
+.lv4_6 .lv4_6_button{background:url("../img/lv4_6_normal.png") no-repeat;border: none;width:92px;height:26px; }
+.lv4_6 .lv4_6_button_hover{background:url("../img/lv4_6_hover.png") no-repeat;border: none;width:92px;height:26px;cursor: pointer;}
+.lv0_4_6 .lv0_4_6_button{background:url("../img/lv0_4_6_normal.png") no-repeat;border: none;width:92px;height:26px; }
+.lv0_4_6 .lv0_4_6_button_hover{background:url("../img/lv0_4_6_hover.png") no-repeat;border: none;width:92px;height:26px;cursor: pointer;}
+.to_top2{position: relative;}
+.to_top2 .to_top_bac{
+	background: url("../img/to_top_bac.png") no-repeat 12px 0px;width:27px;height:125px;position: absolute;left:50px;top:7px;
+}
+.gty{
+	background: url("../img/gty.jpg") repeat-x;height:10px;clear:both;overflow: hidden;
+}
+.main3{background:#f8d033;height: 680px}
+.target_time3{
+	background: url("../img/target_time3_pic.jpg") no-repeat;width:163px;height:259px;
+}
+.time_line3{
+	background: url("../img/time_line3_bac.png") no-repeat 5px 0px;height:296px;margin:5px 0 0 6px
+}
+.time_line3 li{
+	font:normal 14px "SimSun";
+	color:#b87200;
+	padding-left: 17px;
+	width:85px;
+	display: block;
+	text-align: center;
+	margin-bottom: 24px;
+	cursor: pointer;
+	height:16px;
+	background: url("../img/time_line3_normal.jpg") no-repeat -1px 0px;
+}
+.time_line3 .active{
+	color:#000;
+	background: url("../img/time_line3_hover.jpg") no-repeat -1px -1px;
+	height:19px;
+}
+.to_top3{position: relative;}
+.to_top3 .to_top_bac2{
+	background: url("../img/to_top_bac.png") no-repeat 12px 0px;width:27px;height:125px;position: absolute;left:50px;top:7px;
+}
+.to_top_icon2{
+	background: url("../img/to_top2.png") no-repeat;width:27px;height:27px;position: relative;left:-1px;top:15px;
+}
+.target_font3{
+	background:url("../img/target_font3.jpg") no-repeat;width:244px;height:69px;
+	margin-top:34px;
+	float: left;
+}
+.main3_title_font{margin-left: 24px}
+.main3_title_font p{
+	color:#000;font:normal 14px/25px "SimSun";border-bottom: 1px dashed #000;margin-bottom: 0px;width:310px;
+}
+.main3_lesson{
+	background: url("../img/main3_lesson_bigbac.png") no-repeat;
+	clear: both;
+	width: 801px;
+	height:510px;
+	margin-top: 7px;
+	overflow: hidden;
+	padding: 15px;
+}
+.fykc .fykc_button{background:url("../img/fykc_normal.png") no-repeat;border: none;width:92px;height:26px; }
+.fykc .fykc_button_hover{background:url("../img/fykc_hover.png") no-repeat;border: none;width:92px;height:26px;cursor: pointer;}
+.more_lesson2{margin-top: 10px}
+.xyzkc .xyzkc_button{background:url("../img/xyzkc_normal.png") no-repeat;border: none;width:92px;height:26px; }
+.xyzkc .xyzkc_button_hover{background:url("../img/xyzkc_hover.png") no-repeat;border: none;width:92px;height:26px;cursor: pointer;}
+.ytg{
+	background: url("../img/ytg.jpg") repeat-x;height:10px;clear:both;overflow: hidden;
+}
+.target_time4{
+	background: url("../img/target_time4_pic.jpg") no-repeat;width:163px;height:259px;
+}
+.target_font4{
+	background:url("../img/target_font4.jpg") no-repeat;width:244px;height:82px;
+	margin-top:20px;
+	float: left;
+}
+.main4_title_font p{
+	width: 270px
+}
+.nlkkc .nlkkc_button{background:url("../img/nlkkc_normal.png") no-repeat;border: none;width:92px;height:26px; }
+.nlkkc .nlkkc_button_hover{background:url("../img/nlkkc_hover.png") no-repeat;border: none;width:92px;height:26px;cursor: pointer;}
+.rykc .rykc_button{background:url("../img/rykc_normal.png") no-repeat;border: none;width:92px;height:26px; }
+.rykc .rykc_button_hover{background:url("../img/rykc_hover.png") no-repeat;border: none;width:92px;height:26px;cursor: pointer;}
+.gtb{
+	background: url("../img/gtb.jpg") repeat-x;height:10px;clear:both;overflow: hidden;
+}
+.target_time5{
+	background: url("../img/target_time5_pic.jpg") no-repeat;width:163px;height:258px;
+}
+.target_font5{
+	background:url("../img/target_font5.jpg") no-repeat;width:244px;height:86px;
+	margin-top:17px;
+	float: left;
+}
+.main5_title_font p{
+	width:285px;
+}
+.hykc .hykc_button{background:url("../img/hykc_normal.png") no-repeat;border: none;width:92px;height:26px; }
+.hykc .hykc_button_hover{background:url("../img/hykc_hover.png") no-repeat;border: none;width:92px;height:26px;cursor: pointer;}
+.main5{background:#04b0ec;height: 680px}
+.target_time6{
+	background: url("../img/target_time6_pic.jpg") no-repeat;width:163px;height:259px;
+}
+.target_font6{
+	background:url("../img/target_font6.jpg") no-repeat;width:244px;height:86px;
+	margin-top:17px;
+	float: left;
+}
+.main6_title_font p{
+	width:280px;
+}
+.swyy .swyy_button{background:url("../img/swyy_normal.png") no-repeat;border: none;width:92px;height:26px; }
+.swyy .swyy_button_hover{background:url("../img/swyy_hover.png") no-repeat;border: none;width:92px;height:26px;cursor: pointer;}
+.qtyy .qtyy_button{background:url("../img/qtyy_normal.png") no-repeat;border: none;width:92px;height:26px; }
+.qtyy .qtyy_button_hover{background:url("../img/qtyy_hover.png") no-repeat;border: none;width:92px;height:26px;cursor: pointer;}
+.target_time7{
+	background: url("../img/target_time7_pic.jpg") no-repeat;width:163px;height:257px;
+}
+.target_font7{
+	background:url("../img/target_font7.jpg") no-repeat;width:275px;height:42px;
+	margin-top:39px;
+	float: left;
+}
+.main7_title_right{float:left;margin: 31px 0 0 15px}
+.main7_title_right p {
+    border-bottom: 1px dashed #000000;
+    color: #000000;
+    font: 14px/25px "SimSun";
+    margin-bottom: 0;
+    width: 230px;
+}
+.yskc .yskc_button{background:url("../img/yskc_normal.png") no-repeat;border: none;width:92px;height:26px; }
+.yskc .yskc_button_hover{background:url("../img/yskc_hover.png") no-repeat;border: none;width:92px;height:26px;cursor: pointer;}
+.tfkc .tfkc_button{background:url("../img/tfkc_normal.png") no-repeat;border: none;width:92px;height:26px; }
+.tfkc .tfkc_button_hover{background:url("../img/tfkc_hover.png") no-repeat;border: none;width:92px;height:26px;cursor: pointer;}
+.target_time8{
+	background: url("../img/target_time8_pic.jpg") no-repeat;width:163px;height:255px;
+}
+.target_font8{
+	background:url("../img/target_font8.jpg") no-repeat;width:211px;height:38px;
+	margin-top:24px;
+	float: left;
+}
+.main8{height:670px;overflow: hidden}
+.main8_title_right{float:left;margin:15px 0 0 18px;}
+.main8_title_right p {
+    border-bottom: 1px dashed #000000;
+    color: #000000;
+    font: 14px/25px "SimSun";
+    margin-bottom: 0;
+    width: 240px;
+}
+.last_main_big_lesson{
+	float: left;
+	margin-top: 23px
+}
+.last_main_big_lesson dl{
+	margin-left: 28px;
+	margin-bottom: 9px;
+}
+.last_main_big_lesson dd a{
+	color:#6e2e17;
+	font:normal 14px/23px "SimSun";
+	text-decoration:none;
+	padding-left: 12px;
+}
+.last_main_big_lesson dd a:hover{
+	text-decoration: underline;
+}
+.last_main_small_lesson{float:left;width:632px;margin: 8px 0 0 0}
+.last_main_small_lesson dl{margin:9px 0 0 55px;display: inline;}
+.to_top2 .to_top_bac_last{
+	height:107px;
+}

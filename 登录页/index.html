@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录页</title>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="http://res.hjfile.cn/js/lib/jq/1.8.3/plugins/jbox-2.3.min.js"></script>
+<script type="text/javascript" src="http://www.hujiang.com/classzt/2014baofojiao/js/jquery.jBox-zh-CN.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.hujiang.com/classzt/2014baofojiao/css/jbox.css" />
+<style>
+/*** reset ***/html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}ins{text-decoration:none}legend{color:#000}
+/*** font ***/body{font-size:12px;font-family:verdana, arial;} select,input,button,textarea{font:99% verdana,arial}table{font-size:inherit;font:100%}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%}
+/*** base ***/h1{font-size:138.5%}h2{font-size:123.1%}h3{font-size:108%}h1,h2,h3{margin:1em 0}h1,h2,h3,h4,h5,h6,strong{font-weight:bold}abbr,acronym{border-bottom:1px dotted #000;cursor:help}em{font-style:italic}blockquote{margin:1em}ul,ol,dl{margin:0}li,dd{list-style:none;margin:0}th,td{padding:.5em}.tabWithBorder th,.tabWithBorder td{border:1px solid #000}th{font-weight:bold;text-align:center}caption{margin-bottom:.5em;text-align:center}p,fieldset,table,pre{margin-bottom:1em}
+/*** hj ***/.clear{clear:both}.hide{display:none}.txt_r{text-align:right}.txt_l{text-align:left}.txt_c{text-align:center}.txt_hide{text-indent:-999em}.bold{font-weight:bold}.fl{float:left;display:inline}.fr{float:right;display:inline}.poa{position:absolute}.por{position:relative}.mouse_p{cursor:pointer}.mouse_d{cursor:default}.red{color:#cc0000;}a.red:link,a.red:visited,a.red:active{color:red;}.big{font-size:14px;}.small{font-size:12px;}.indent{text-indent:2em;}.green{color:#008000;}.gray{color:gray;}.orange{color:#ff6600;}a.green:link,a.green:visited,a.green:active{color:#008000;}a.gray:link,a.gray:visited,a.gray:active{color:gray;}
+a{blr:expression_r(this.onFocus=this.blur());outline:none;}
+html{ background:#fff8e6; margin:0 auto}
+.main{margin:0 auto; width:1046px; position:relative}
+.ad_wrap{background:url(images/ad_wrap.png) no-repeat; width:635px; height:497px; margin-top:149px; margin-left:10px; float:left}
+#form1{ background:url(images/form_bg.png) no-repeat; width:400px; height:700px; position:absolute; top:6px; right:-21px}
+#reg_info{ float:left; margin-top:200px; margin-left:75px; display:inline; *margin-top: 227px;}
+#reg_info tr .error_td {
+    height: 60px;
+}
+.pnl_pwdStrong {
+    background:url(images/bg_pwdStrong.gif) no-repeat;
+    width: 108px;
+    height: 6px;
+    overflow: hidden;
+    float: left;
+    margin-left: 5px;
+    margin-top: 6px;
+    *margin-top: -8px;
+}
+.pnl_pwdStrong_1 {
+    background:url(images/bg_pwdStrong.gif) 0px -6px no-repeat;
+}
+.pnl_pwdStrong_2 {
+    background:url(images/bg_pwdStrong.gif) 0px -12px no-repeat;
+}
+.pnl_pwdStrong_3 {
+    background:url(images/bg_pwdStrong.gif) 0px -18px no-repeat;
+}
+#reg_info td {
+    height: 60px;
+    *height: 64px;
+    width: 400px;
+    z-index: 1;
+    position: relative;
+    overflow: visible;
+}
+th, label_field {
+    color: #666;
+}
+th {
+    width: 70px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: right;
+}
+th.compaction {
+        height: 40px;
+    }
+
+td {
+    vertical-align: middle;
+    position: relative;
+}
+.text_field {
+    width: 250px;
+    height: 30px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #333;
+    font-size: 16px;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    outline: none;
+}
+#reg_info .text_field {
+    border: 0px !important;
+    height: 18px;
+    margin-left: 4px;
+    margin-top: 2px;
+    width: 238px;
+    line-height: 18px;
+    padding: 7px 5px;
+}
+.checkbox_field {
+    width: 13px;
+    height: 13px;
+    top: 9px;
+    position: relative;
+}
+.label_field {
+    padding-left: 6px;
+    padding-right: 4px;
+    z-index: 101;
+}
+#vali_code {
+    width: 90px !important;
+    padding-right: 0px;
+    z-index: 1;
+}
+#random_image {
+    border: none;
+    cursor: pointer;
+    vertical-align: top;
+}
+.submit {
+    width: 264px;
+    height: 89px;
+    display: block;
+    background:url(images/button.png) no-repeat;
+    z-index: 1;
+}
+.submit:hover { background:url(images/button_hover.png) no-repeat; width:264px; height:89px;}
+span.error {
+    background:url(images/pic_all.gif) 7px 4px no-repeat #FFEAEA;
+    border: 1px solid #E5C3C4;
+    border-radius: 3px 3px 3px 3px;
+    color: #CC0000;
+    height: 24px;
+    line-height: 24px;
+    *line-height: 25px;
+    padding: 0 4px;
+    padding-right: 8px;
+    font-size: 12px;
+    z-index: 3;
+    white-space: nowrap;
+    padding-left: 29px;
+    position: absolute;
+    top: -28px;
+    left: 0;
+    display: none;
+}
+
+#valicode {
+    display: inline-block;
+    *margin-top: -10px;
+}
+
+.gray {
+    color: #999;
+}
+
+.text_strong {
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    margin: 2px 0 0 13px;
+    *width: 70px;
+    height: 19px;
+    *margin: 0;
+    overflow: hidden;
+    *margin-top: -10px;
+}
+.hide {
+    display: none;
+}
+.mail_out_box {
+    line-height: 18px;
+    border: 1px solid #ccc;
+    color: #999;
+    background: #fff;
+    font-size: 12px;
+    z-index: 999;
+}
+.mail_list_box {
+    line-height: 18px;
+    border-bottom: 1px solid #fff;
+    padding: 1px 5px 2px 5px;
+    _padding-top: 2px;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 999;
+}
+.mail_focus_box {
+    line-height: 18px;
+    background: #f0f3f9;
+    padding: 1px 5px 2px 5px;
+    font-size: 12px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+}
+.focus_box {
+    line-height: 18px;
+    background: #f0f3f9;
+    padding: 1px 5px 2px 5px;
+    font-size: 12px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+}
+
+.mail_mark_box {
+    line-height: 18px;
+    color: #c00;
+}
+
+.mail_head {
+    padding-left: 5px;
+}
+#reg_info label {
+    color: #ccc;
+    position: absolute;
+    z-index: 1;
+    font-size: 14px;
+    padding-left: 13px;
+    line-height: 35px;
+    left: 0;
+    cursor: text;
+}
+.input_wrap {
+    border: 1px #D9D9D9 solid;
+    background: #FFF;
+    width: 255px;
+    height: 35px;
+    float: left;
+    z-index: 2;
+    position: relative;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.input_hover, .input_wrap {
+    position: relative;
+}
+.input_hover label, .input_wrap label {
+        position: absolute;
+        top: 1px;
+        left: 275px;
+    }
+
+.vali_code .input_hover {
+    width: 80px !important;
+    height: 37px;
+}
+
+.vali_code span {
+    left: 246px !important;
+}
+
+.change_code {
+    margin-left: 11px;
+    background:url(images/icon_change.png) no-repeat;
+    width: 18px;
+    height: 17px;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 9px;
+}
+
+ .change_code:hover {
+        background-position: 0 -18px;
+    }
+
+.vc_input_wrap {
+    background: #FFF;
+    border: 1px #D9D9D9 solid;
+    width: 105px !important;
+    height: 35px;
+    float: left;
+    margin-right: 5px;
+}
+
+span.valid {
+    background:url(images/icon_right.gif) no-repeat !important;
+    width: 16px;
+    height: 16px;
+    display: none;
+    margin-top: 9px;
+    border: 0px !important;
+    padding-left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 1px;
+    left: auto;
+}
+#reg_info td {
+    padding: 0.3em;
+}
+#popup{background:url(images/tc.png) no-repeat; width:443px; height:302px; margin-left:85px; margin-top:29px;}
+.dialog_close {background:url(images/close_btn.png) no-repeat; cursor:pointer; display:inline; float:right; height:28px; width:25px; margin:20px 28px 0 0;}
+.dialog_button{ background:url(images/dialog_button.png) no-repeat; width:99px; height:54px; cursor:pointer; float:left; display:block; margin-top:220px; margin-left:184px}
+</style>
+</head>
+
+<body>
+<div class="main">
+	<div class="ad_wrap"></div>
+	<form id="form1" method="post" name="form1">
+
+		<table id="reg_info">
+			 <tbody>
+                  <tr>
+				   	  <td>
+						  <div class="input_wrap">
+                                    <span class="error" for="name" generated="true">请至少使用2个字符。</span>
+                                    <label for="name">用户名</label>
+                                    <input name="name" type="text" id="name" tabindex="1" class="text_field" maxlength="12" autocomplete="off" />
+                           </div>
+                      </td>
+                  </tr> 
+				   <tr>
+                      <td style="height: 73px; *height: 83px;">
+						    <div class="input_wrap">
+                                 <span class="error" for="password" generated="true"></span>
+                                 <label for="password">密码</label>
+                                 <input name="password" type="password" id="password" tabindex="2" class="text_field" maxlength="20" autocomplete="off" />
+                            </div>
+                            <div class="clear"></div>
+                            <div class="gray text_strong" style="*margin-left: 12px;">密码强度   ：</div>
+                            <div class="pnl_pwdStrong "></div>
+                            <input type="hidden" name="hide_pwdStrong" value="" id="hide_pwdStrong" />
+                            <div class="clear"></div>
+                      </td>
+                    </tr>
+					<tr>
+                       <td>
+							<div class="input_wrap">
+                            	<span class="error" for="re_password" generated="true"></span>
+                            	<label for="re_password">确认密码</label>
+                            	<input name="re_password" type="password" id="re_password" autocomplete="off" maxlength="20" class="text_field" onpaste="return false;" tabindex="3" style="ime-mode: disabled" oncopy="return false;" oncut="return false;" />
+                            </div>
+                       </td>
+                    </tr>
+                    <tr>
+                       <td style="z-index: 2">
+						    <div class="input_wrap">
+                                  <span class="error" for="mail" generated="true"></span>
+                                  <label for="mail">电子邮箱</label>
+                                  <input name="mail" type="text" id="mail" tabindex="4" class="text_field" maxlength="50" style="ime-mode: disabled" autocomplete="off" />
+                            </div>
+                       </td>
+                    </tr>
+				    <tr>
+                        <td style="*height: 50px;">
+                            <div class="vc_input_wrap input_wrap">
+                                  <label for="vali_code">验证码</label>
+                                  <input id="vali_code" name="vali_code" tabindex="5" type="text" class="text_field" maxlength="10" autocomplete="off" onpaste="return false;" style="ime-mode: disabled" />
+                                </div>
+                                <span id="valicode">
+                                    <img id="random_image" style="width: 120px; height: 36px" alt="" src="http://class.hujiang.com/images/grey.gif" title="点击更换验证码" class="fl" />
+                                    <a id="change_code" href="javascript:" class="gray change_code noline fl" title="换一张"></a>
+                                </span>
+                                <input id="hidden_token" name="token" type="hidden" />
+                        </td>
+                    </tr>
+				    <tr>
+                        <td style="height: 99px; line-height: 99px;">
+                                <a href="#" class="submit"></a>  
+                        </td>
+                    </tr>
+			 </tbody>
+		</table>
+	</form>
+</div>
+<script>
+$(function(){
+	var dialog_show = false;
+            $(".submit").click(function () {
+               	var dialog_html = "<div id='popup'>"
+				dialog_html +="<div class='dialog_close'></div>"
+				dialog_html +="<a class='dialog_button' href='javascript:' target='_blank'></a></div>"
+				$.jBox(dialog_html, { title: null, buttons: null, width: 636, height: 334, top: '20%' });
+                dialog_show = true;
+            })
+            $(".dialog_close").live('click', function () {
+                $.jBox.close(true);
+                dialog_show = false;
+            })
+
+            $(window).resize(function () {
+                if (dialog_show) {
+                    $.jBox.close(true);
+                    $(".dialog_button").click();
+                }
+            });
+
+})
+</script>
+</body>
+</html>

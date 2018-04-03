@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>BEC</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+<link rel="stylesheet" type="text/css" href="css/examples.css" />
+<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+<script type="text/javascript" src="js/examples.js"></script>
+<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+<style>
+/*** reset ***/html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}ins{text-decoration:none}legend{color:#000}
+/*** font ***/body{font-size:12px;font-family:verdana, arial;} select,input,button,textarea{font:99% verdana,arial}table{font-size:inherit;font:100%}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%}
+/*** base ***/h1{font-size:138.5%}h2{font-size:123.1%}h3{font-size:108%}h1,h2,h3{margin:1em 0}h1,h2,h3,h4,h5,h6,strong{font-weight:bold}abbr,acronym{border-bottom:1px dotted #000;cursor:help}em{font-style:italic}blockquote{margin:1em}ul,ol,dl{margin:0}li,dd{list-style:none;margin:0}th,td{padding:.5em}.tabWithBorder th,.tabWithBorder td{border:1px solid #000}th{font-weight:bold;text-align:center}caption{margin-bottom:.5em;text-align:center}p,fieldset,table,pre{margin-bottom:1em}
+/*** hj ***/.clear{clear:both}.hide{display:none}.txt_r{text-align:right}.txt_l{text-align:left}.txt_c{text-align:center}.txt_hide{text-indent:-999em}.bold{font-weight:bold}.fl{float:left;display:inline}.fr{float:right;display:inline}.poa{position:absolute}.por{position:relative}.mouse_p{cursor:pointer}.mouse_d{cursor:default}.red{color:#cc0000;}a.red:link,a.red:visited,a.red:active{color:red;}.big{font-size:14px;}.small{font-size:12px;}.indent{text-indent:2em;}.green{color:#008000;}.gray{color:gray;}.orange{color:#ff6600;}a.green:link,a.green:visited,a.green:active{color:#008000;}a.gray:link,a.gray:visited,a.gray:active{color:gray;}
+a{blr:expression_r(this.onFocus=this.blur());outline:none;}	
+	/* Style for our header texts 
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;	
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+	
+	/* Centered texts in each section 
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+	
+	
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	#section0,
+	#section1,
+	#section2,
+	#section3,
+	#section4{	/*background-size: cover;*/min-width:1000px;
+	}
+	
+	/* Defining each sectino background and styles 
+	* --------------------------------------- */
+	#section0{
+		/*background:url(images/page.jpg) no-repeat center top;*/
+	background-image:url(images/page.jpg); background-repeat:no-repeat; background-position: center center;
+	}
+	#section1{
+	background-image:url(images/page2.jpg); background-repeat:no-repeat; background-position: center center;
+	/*	background:url(images/page2.jpg) no-repeat center top;*/
+	}
+	#section2{
+	background-image:url(images/page3.jpg); background-repeat:no-repeat; background-position: center top;
+	/*	background-image: url(images/page3.jpg) ;*/
+	}
+	#section3{
+	/*background-image: url(images/page4.jpg) ;*/
+		padding: 4% 0 0 0;
+		background-image:url(images/page4.jpg); background-repeat:no-repeat; background-position: center center;
+	}
+	#section4{
+		background-image: url(images/page5.jpg); background-repeat:no-repeat; background-position: center top;
+		/*background-image: url(images/page5.jpg) ;*/
+ }
+.navbar{background:url(images/banner_bg.png); background-repeat:no-repeat; background-position: center top; 
+  	height: 126px;
+    position: fixed;
+    top: -7px;
+   z-index: 100; width:100%}
+.navbar .logo {background:url(images/logo.png) no-repeat;    float: left;
+    height: 31px;
+    margin-left: 2px;
+    margin-top: 55px;
+    width: 160px; cursor:pointer}
+.navbar .logo_t {background:url(images/logo_t.png) no-repeat;  height: 36px;
+    left:0px;
+    position: absolute;
+    top: -15px;
+    width: 166px;}
+.navbar .banner { height:126px; float:left; margin-left:64px} 	
+.navbar .title {float:left; margin-left:74px; margin-top:53px; font-size:20px; font-family:微软雅黑; text-decoration:none; color:#000000 }
+.navbar .title:hover { color:#0fad9c; cursor:pointer}
+.navbar .login { height:126px; float:right; margin-right:0px; }
+.navbar .title2 { float:left; margin-left:23px; margin-top:54px; font-size:18px; font-family:微软雅黑; text-decoration:none; color:#4a4a4a}
+.navbar .title2 a {display:block;}
+.tree {background:url(images/tiao.png); width:1px; height:46px; float:left; margin-left:-23px; margin-top:45px }
+.xuanke{width:46px; height:30px; background:url(images/xuanke.png) no-repeat; cursor:pointer; float:left; margin-left:19px; margin-top:51px;}
+.page_auto{width:1000px; margin:0 auto; position:relative;  height:100px;}
+.page2_ins1{background:url(images/page2_ins1.png) no-repeat; width:262px; height:262px; float:left; margin-left:39px; margin-top:192px; cursor:pointer;border-radius:262px }
+.page2_ins2{background:url(images/page2_ins2.png) no-repeat; width:263px; height:262px; float:left; margin-left:-12px; margin-top:396px; cursor:pointer;border-radius:262px}
+.page2_ins3{background:url(images/page2_ins3.png) no-repeat; width:263px; height:262px; float:left; margin-top:107px; margin-left:-83px}
+.page2_ins4{background:url(images/page2_ins4.png) no-repeat; width:263px; height:262px; float:left; margin-left:171px; margin-top:5px;}
+
+.page3_btn1{background:url(images/page3_btn1.png) no-repeat; top:145px; left:20px; position:absolute; width:170px; height:170px; border-radius:170px; cursor:pointer}
+.page3_btn2{background:url(images/page3_btn2.png) no-repeat; position:absolute; top:6px; left:268px; width:170px; height:170px; border-radius:170px; cursor:pointer}
+.page3_btn3{background:url(images/page3_btn3.png) no-repeat; position:absolute; top:148px; left:514px; width:170px; height:170px; border-radius:170px; cursor:pointer}
+.page3_btn4{background:url(images/page3_btn4.png) no-repeat; position:absolute; top:7px; left:762px; width:170px; height:170px; border-radius:170px; cursor:pointer}
+.page3_bt1{background:url(images/page3_bt1.png) no-repeat; width:379px; height:93px; position:absolute;top:287px; left:0px;display:none}
+.page3_bt2{background:url(images/page3_bt2.png) no-repeat; width:379px; height:93px; position:absolute;top:-59px; left:235px;display:none}
+.page3_bt3{background:url(images/page3_bt3.png) no-repeat; width:379px; height:93px; position:absolute;top:287px; left:343px;display:none}
+.page3_bt4{background:url(images/page3_bt4.png) no-repeat; width:379px; height:93px; position:absolute;top:-88px; left:550px; display:none}
+
+.btn1{background:url(images/btn1.png) no-repeat; width:203px; height:43px; float:left; margin-top:588px; margin-left:22px;}
+.btn2{background:url(images/btn2.png) no-repeat; width:203px; height:43px; float:left; margin-top:588px; margin-left:49px;}
+.btn3{background:url(images/btn3.png) no-repeat; width:203px; height:43px; float:left; margin-top:588px; margin-left:49px;}
+.btn4{background:url(images/btn4.png) no-repeat; width:203px; height:43px; float:left; margin-top:588px; margin-left:49px;}
+
+.footer {background:#525969; width:100%; position:absolute; bottom:0;left:0; overflow:hidden}
+.tree1{background:url(images/tree2.png) no-repeat; width:2px; height:84px; position:absolute; left:365px; top:33px}
+.footer_content {width:387px; height:100px; margin-left:0px;float:left}
+.footer_zl {background:url(images/foot_1.png) no-repeat; width:131px; height:28px; position:absolute;top:70px;left:12px;}
+.footer_course {background:url(images/foot_2.png) no-repeat; width:152px; height:28px; position:absolute;top:71px;left:147px;}
+.footer_weibo {background:url(images/foot_3.png) no-repeat; width:142px; height:28px; position:absolute; top:71px; left:397px; }
+.footer_weixin{background:url(images/foot_4.png) no-repeat; width:148px; height:28px; position:absolute; top:71px; left:546px}
+.footer_tel {width:173px; height:84px; background:url(images/foot_tel.png) no-repeat; position:absolute; right:26px;top:32px;}
+.footer .tj{background:url(images/tj.png) no-repeat; width:95px; height:24px; position:absolute; top:33px; left:13px;}
+.footer .gz{ background:url(images/gz.png) no-repeat; width:95px; height:24px; position:absolute; top:33px; left:419px}
+.footer .bottom {height:50px; margin:42px auto;}
+.footer .bottom a{font-size:14px; color:#dcdee1; font-family:微软雅黑;}
+.weixin {background:url(images/weixin.png) no-repeat; width:180px; height:180px; position:absolute; right:124px; top:0px; z-index:1000; display:none}
+
+#other{position:absolute;width:1000px;height:500px;top:450px;}
+#other2{position:absolute;width:1000px;height:500px;top:50px;}
+#fullPage-nav ul li .fullPage-tooltip{ background:url(images/sy.gif) left top no-repeat;width:54px;height:35px;padding-right:9px; text-align:center;line-height:35px;font-family:'Microsoft Yahei';color:#fff;font-size:18px;margin-top:-10px;}
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
+			'verticalCentered': false,
+			navigation: true,
+			anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', 'lastPage'],
+			menu: '#banner',
+			//navigationTooltips: ['a', 'Second', 'Third', 'a' , 'b'],
+			navigationTooltips: ["首页", "专业", "懂你", "领先" , "选课"],
+			navigationPosition: 'right'	
+		});
+		});
+</script>
+</head>
+
+<body>
+<div class="navbar">
+	<div class="page_auto" >
+		<div class="logo_t"></div>
+		<a class="logo" href="http://www.hjenglish.com/bec/" target="_blank"></a>
+		<div id="banner">
+			<a data-menuanchor="firstPage" href="#firstPage" class="title">首页</a>
+			<a data-menuanchor="secondPage" href="#secondPage"  class="title">专业</a>
+			<a data-menuanchor="3rdPage" href="#3rdPage" class="title">懂你</a>
+			<a data-menuanchor="4thPage" href="#4thPage" class="title">领先</a>
+		</div>
+		<div class="login">
+			<div class="tree"></div>
+			<a class="title2" href="http://bulo.hujiang.com/home/" target="_blank">登录</a>
+			<a class="title2" href="http://pass.hujiang.com/signup/" target="_blank">注册</a>
+			<a class="xuanke" href="http://class.hujiang.com/course?cate=11532" target="_blank"></a>
+		</div>
+	</div>
+</div>
+
+<div id="fullpage">
+	<div class="section" id="section0"></div>
+	<div class="section" id="section1">
+		<div class="page_auto">
+        		<div id="other2">
+					<a class="page2_ins1" href="http://www.hjenglish.com/bec/" target="_blank"></a>
+					<a class="page2_ins2" href="http://class.hujiang.com/course?cate=11532" target="_blank"></a>
+					<a class="page2_ins3"></a>
+					<a class="page2_ins4"></a>
+                 </div>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="page_auto">
+        		<div id="other">
+					<div class="page3_btn1"></div>
+					<div class="page3_bt1"></div>
+					<div class="page3_btn2"></div>
+					<div class="page3_bt2"></div>
+					<div class="page3_btn3"></div>
+					<div class="page3_bt3"></div>
+					<div class="page3_btn4"></div>
+					<div class="page3_bt4"></div>
+                 </div>
+		</div>
+	</div>
+	<div class="section" id="section3"></div>
+	<div class="section" id="section4">
+		<div class="page_auto">
+			<a class="btn1" href="http://class.hujiang.com/course/search?k=bec%E5%88%9D" target="_blank"></a>
+			<a class="btn2" href="http://class.hujiang.com/course/search?k=bec%E4%B8%AD" target="_blank"></a>
+			<a class="btn3" href="http://class.hujiang.com/course/search?k=bec%E9%AB%98" target="_blank"></a>
+			<a class="btn4" href="http://class.hujiang.com/course_v2?cate=121334" target="_blank"></a>
+		</div>
+        <!--foot-->
+	<div class="footer" id="foot">
+			<div class="page_auto">
+				<div class="footer_content">
+					<div class="tj"></div>
+					<a class="footer_zl" href="http://www.hjenglish.com/bec/" target="_blank"></a>
+					<a class="footer_course" href="http://class.hujiang.com/course?cate=11532" target="_blank"></a>
+					<div class="tree1"></div>
+				</div>
+				<div class="footer_content">
+					<div class="gz"></div>
+					<a class="footer_weibo" href="http://weibo.com/hjbusiness/home" target="_blank"></a>
+					<div class="footer_weixin"></div>
+					<div class="weixin"></div>
+					<div class="tree1" style="left:755px;"></div>
+				</div>
+				<div class="footer_tel"></div>
+			</div>
+			<div class="bottom">
+				<div style="margin-bottom:-13px;">
+					<a href="http://www.hujiang.com/about/" target="_blank">关于我们&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="http://www.hujiang.com/about/report/" target="_blank">媒体报道&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="http://www.hujiang.com/zt/about/contact/" target="_blank">联系我们&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="http://www.hujiang.com/zt/about/biz/" target="_blank">商务合作&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="http://jobs.hujiang.com/" target="_blank">沪江招聘&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="http://kefu.hujiang.com/" target="_blank">帮助中心&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="http://kefu.hujiang.com/feedback/" target="_blank">意见反馈&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="http://www.hujiang.com/sitemap/" target="_blank">全站地图&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="http://bulo.hujiang.com/u/1998577/diary/" target="_blank">沪江动态&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="http://a5.yeshj.com/page/help" target="_blank">自助广告&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="http://class.hujiang.com/qipei/" target="_blank">企培&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="http://www.hujiang.com/zt/about/copyright/" target="_blank">版权声明&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="javascript:;" target="_blank">免费英语学习网站&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="http://www.hujiang.com/about/about_zizhi/" target="_blank">教育部职成司函&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                    <a href="http://www.hujiang.com/about/zizhi/" target="_blank">更多》&nbsp;&nbsp;</a>
+				</div><br>
+				<a href="http://www.miibeian.gov.cn/state/outPortal/loginPortal.action;jsessionid=017ZThrfrsvRn8TVlkWKn9MvpmZVG2C9qc5TvRTX2LYFg2t8dvb9!896926564" target="_blank">沪B2-20110096 CopyRight 沪江网 2014</a>
+			</div>
+		</div>
+       <!--foot-->
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+$(function(){
+	$(".page3_btn1").hover(function(){
+		$(".page3_bt1").css("display","block")
+	},	
+	function(){	$(".page3_bt1").css("display","none")
+	});
+	$(".page3_btn2").hover(function(){
+		$(".page3_bt2").css("display","block")
+	},	
+	function(){	$(".page3_bt2").css("display","none")
+	});
+	$(".page3_btn3").hover(function(){
+		$(".page3_bt3").css("display","block")
+	},	
+	function(){	$(".page3_bt3").css("display","none")
+	});
+	$(".page3_btn4").hover(function(){
+		$(".page3_bt4").css("display","block")
+	},	
+	function(){	$(".page3_bt4").css("display","none")
+	});
+	
+	$(".footer_weixin").hover(function(){
+		$(".weixin").css("display","block")
+	},	
+	function(){	$(".weixin").css("display","none")
+	});
+})
+function showfoot(){
+		if($(document).width()<1000){
+			$("body").css("overflow-x","auto");
+			}
+		if($(document).height()<800){
+			$("#section2").css("background-position","center -100px");
+			$("#other").css("top","350px");
+			}
+		if($(document).height()<870){
+			$("#foot>div").hide();
+			$("#foot").height(50);
+			$("#section4").css('background-position',"center -30px");
+			$("#section4 .page_auto>a").css("margin-top","558px");
+			$("#foot").hover(function(){$(this).height('auto').css("background","#525969");$("#foot").children().show();},function(){$("#foot").children().hide();$("#foot").height(50);})
+		}
+		else{
+			$("#foot>div").show();
+			$("#foot").height('auto');
+			$("#section4").css('background-position',"center top");
+			$("#section4 .page_auto>a").css("margin-top","588px");
+			}
+		if($(document).height()<700){
+			$("#other2").css("top","-50px");
+			$("#section4").css('background-position',"center -70px");
+			$("#section4 .page_auto>a").css("margin-top","518px");
+			}
+		}
+	window.onresize=function(){showfoot();}
+	window.onload=function(){showfoot();}
+</script>
+</body>
+</html>

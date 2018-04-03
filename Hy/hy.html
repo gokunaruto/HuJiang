@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>韩语专题</title>
+<script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
+<script src="http://res.hjfile.cn/js/lib/jq/1.8.3/plugins/jquery.bxslider.min.js" type="text/javascript"></script>
+<script src="scripts/turn.min.js"></script>
+<style>
+/*** reset ***/html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}ins{text-decoration:none}legend{color:#000}
+/*** font ***/body{font-size:12px;font-family:verdana, arial;} select,input,button,textarea{font:99% verdana,arial}table{font-size:inherit;font:100%}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%}
+/*** base ***/h1{font-size:138.5%}h2{font-size:123.1%}h3{font-size:108%}h1,h2,h3{margin:1em 0}h1,h2,h3,h4,h5,h6,strong{font-weight:bold}abbr,acronym{border-bottom:1px dotted #000;cursor:help}em{font-style:italic}blockquote{margin:1em}ul,ol,dl{margin:0}li,dd{list-style:none;margin:0}th,td{padding:.5em}.tabWithBorder th,.tabWithBorder td{border:1px solid #000}th{font-weight:bold;text-align:center}caption{margin-bottom:.5em;text-align:center}p,fieldset,table,pre{margin-bottom:1em}
+/*** hj ***/.clear{clear:both}.hide{display:none}.txt_r{text-align:right}.txt_l{text-align:left}.txt_c{text-align:center}.txt_hide{text-indent:-999em}.bold{font-weight:bold}.fl{float:left;display:inline}.fr{float:right;display:inline}.poa{position:absolute}.por{position:relative}.mouse_p{cursor:pointer}.mouse_d{cursor:default}.red{color:#cc0000;}a.red:link,a.red:visited,a.red:active{color:red;}.big{font-size:14px;}.small{font-size:12px;}.indent{text-indent:2em;}.green{color:#008000;}.gray{color:gray;}.orange{color:#ff6600;}a.green:link,a.green:visited,a.green:active{color:#008000;}a.gray:link,a.gray:visited,a.gray:active{color:gray;}
+
+#header{ background:url(img/head.png) no-repeat center; height:748px; position:relative; }
+#log{ width:1000px; margin:0 auto; position:relative}
+#logo{ background: url(img/logo.png) no-repeat; width:170px; height:46px; margin-left:14px; margin-top:20px; position:absolute;}
+#book_set {width:1000px; position:relative; margin:0 auto; top:83px;}
+#book_tag { position:absolute; height:553px; width:57px; top:31px; right:6px; }
+#book_tag a { display:block; text-indent:-999em; margin-top:0px; width:50px}
+#book_tag a:hover {width:57px; }
+#chapter_1 {
+    background:url(img/book_tag1.png) no-repeat scroll right top;
+    height: 122px;
+}
+#chapter_2 {
+    background:url(img/book_tag2.png) no-repeat scroll right top;
+    height: 122px;
+}
+#chapter_3 {
+    background:url(img/book_tag3.png) no-repeat scroll right top ;
+    height: 122px;
+}
+#chapter_4 {
+    background:url(img/book_tag4.png) no-repeat scroll right top;
+    height: 122px;
+}
+#book {width:937px; height:583px; _height:583px; background:url(img/book.png) no-repeat ; left:0px; top:0px; position:absolute; }
+	
+#flipbook {width:878px; height:572px; position:relative; right:11px; top:0px}
+.paper-wrapper
+   { height: 572px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 878px;
+	z-index:2;
+   }
+
+#contain{background:#eceaea; height:2234px;}
+
+#part1{height:546px; width:1000px; margin:0 auto; position:relative}
+#part1_title { background:url(img/part1_title.png) no-repeat ; width:320px; height:81px; left:339px; top:22px; position:absolute; z-index:1}
+#part1_t1{ background:url(img/part1_t1.png) no-repeat; width:413px; height:73px; left:293px; top:60px; position:absolute }
+#part1_content{background:url(img/part1_t2.png) no-repeat; width:1000px; height:432px; top:115px; position:absolute}
+#part1_content_sm{background:url(img/part1_t.png); width:963px; height:91px; margin-top:20px; margin-left:20px; position:absolute}
+.part_content_shop { width:918px; height:303px; margin-left:41px; bottom:19px; position:absolute; overflow:hidden;}
+.shop_item{ float:left; margin-top:20px; width:313px; height:263px}
+.shop_wrap{ border:1px solid #DFDFDF; overflow:hidden; position:relative; width:290px; height:193px;}
+.shop_wrap a {display:block;position:relative}
+.shop_img {margin:2px; width:286px; height:189px}
+.shop_wrap p { margin-bottom:0;display:none; background-color:#4c4c4c;bottom:0px; color:#FFFFFF; height:40px;  font:normal 12px/40px "SimSun"; position:absolute; width:100%;left:0;  filter:alpha(opacity=90); -moz-opacity:0.9; -khtml-opacity: 0.9; opacity: 0.9;} 
+.shop_price_wrap { background-color: #F3F3F3;height: 60px;margin-top: 10px;padding-left: 0;padding-right: 10px; width:284px}
+.price_num { color: #FF4926;font-family: 'microsoft yahei'; font-size: 30px; float:left; margin-top:10px }
+.old_price { color: #BCBCBC;font-size: 14px;text-decoration: line-through; float:left; margin-top:26px; margin-left:4px}
+.buy_button{background-color: #e5425f;border-radius: 3px 3px 3px 3px;color: #FFFFFF;display: block;float: right;font-family: 'microsoft yahei';font-size: 24px;height: 40px;line-height: 37px;margin-top: 10px;position: relative;text-align: center;width: 128px; text-decoration:none}
+.buy_button:hover {background-color:#eb745d}
+.txt1 {float:left; margin-left:15px}
+.txt2 {float:right; margin-right:15px}
+
+#img-list {
+    overflow: hidden;
+    position: absolute;
+    width: 1900px;
+}
+#img-list1{
+    overflow: hidden;
+    position: absolute;
+    width: 1900px;
+}
+#img-list2{
+    overflow: hidden;
+    position: absolute;
+    width: 1900px;
+}
+#img-list3{
+    overflow: hidden;
+    position: absolute;
+    width: 1900px;
+}
+#prev{background:url(img/prev.png) no-repeat; top:172px; left:0px; width:41px; height:90px; position:absolute; cursor:pointer}
+#next{background:url(img/next.png) no-repeat; top:172px; right:0px; width:41px; height:90px; position:absolute; cursor:pointer}
+#prev1{background:url(img/prev.png) no-repeat; top:172px; left:0px; width:41px; height:90px; position:absolute; cursor:pointer}
+#next1{background:url(img/next.png) no-repeat; top:172px; right:0px; width:41px; height:90px; position:absolute; cursor:pointer}
+#prev2{background:url(img/prev.png) no-repeat; top:172px; left:0px; width:41px; height:90px; position:absolute; cursor:pointer}
+#next2{background:url(img/next.png) no-repeat; top:172px; right:0px; width:41px; height:90px; position:absolute; cursor:pointer}
+#prev3{background:url(img/prev.png) no-repeat; top:172px; left:0px; width:41px; height:90px; position:absolute; cursor:pointer}
+#next3{background:url(img/next.png) no-repeat; top:172px; right:0px; width:41px; height:90px; position:absolute; cursor:pointer}
+
+#part2{height:546px; width:1000px; margin:0 auto; position:relative}
+#part2_title { background:url(img/part2_title.png) no-repeat ; width:320px; height:81px; left:339px; top:22px; position:absolute; z-index:1}
+#part2_t1{ background:url(img/part1_t1.png) no-repeat; width:413px; height:73px; left:293px; top:60px; position:absolute }
+#part2_content{background:url(img/part1_t2.png) no-repeat; width:1000px; height:432px; top:115px; position:absolute}
+#part2_content_sm{background:url(img/part2_t.png); width:963px; height:91px; margin-top:20px; margin-left:20px; position:absolute}
+
+#part3{height:546px; width:1000px; margin:0 auto; position:relative}
+#part3_title { background:url(img/part3_title.png) no-repeat ; width:320px; height:81px; left:339px; top:22px; position:absolute; z-index:1}
+#part3_t1{ background:url(img/part1_t1.png) no-repeat; width:413px; height:73px; left:293px; top:60px; position:absolute }
+#part3_content{background:url(img/part1_t2.png) no-repeat; width:1000px; height:432px; top:115px; position:absolute}
+#part3_content_sm{background:url(img/part3_t.png); width:963px; height:91px; margin-top:20px; margin-left:20px; position:absolute}
+
+#part4{height:576px; width:1000px; margin:0 auto; position:relative}
+#part4_title { background:url(img/part4_title.png) no-repeat ; width:320px; height:81px; left:339px; top:22px; position:absolute; z-index:1}
+#part4_t1{ background:url(img/part1_t1.png) no-repeat; width:413px; height:73px; left:293px; top:60px; position:absolute }
+#part4_content{background:url(img/part4_bg.png) no-repeat; width:1000px; height:462px; top:115px; position:absolute}
+#part4_content_sm{background:url(img/part4_t.png); width:963px; height:118px; margin-top:20px; margin-left:20px; position:absolute}
+</style>
+
+</head>
+
+<body>
+<div id="header">
+  <div id="log">
+  <div id="logo"></div>
+  </div>
+  <div id="book_set">
+      <div id="book_tag">
+	     <a id="chapter_1" href="javascript:;">发音测试</a>
+	     <a id="chapter_2" style="margin-top:15px" href="javascript:;">初级测试</a>
+	     <a id="chapter_3" style="margin-top:18px" href="javascript:;">中级测试</a>
+	     <a id="chapter_4" style="margin-top:21px" href="javascript:;">网校课程</a>
+	  </div>
+      <div id="book">
+	  	<div id="flipbook">
+			<div class="paper_wrapper" paper="1"></div>
+		</div>
+	  </div>
+  </div>
+</div>
+
+<div id="contain">
+   <div id="part1">
+        <div id="part1_title"></div>
+	    <div id="part1_t1"></div>
+	    <div id="part1_content">
+	         <div id="part1_content_sm"></div>
+			 <div id="prev"></div>
+		     <div id="next"></div>
+		     <div class="part_content_shop">
+			    <div id="img-list" >
+			       <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop1.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+		          <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				  <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				   <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				  <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				</div>	  
+			</div>	  
+		      </div>
+	      </div>
+
+ 
+   <div id="part2">
+        <div id="part2_title"></div>
+	    <div id="part2_t1"></div>
+	    <div id="part2_content">
+	         <div id="part2_content_sm"></div>
+			 <div id="prev1"></div>
+		     <div id="next1"></div>
+		     <div class="part_content_shop">
+			 
+			 <div id="img-list1" >
+			 
+		          <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop1.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+		          <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				  <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				   <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				   <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				</div>
+		      </div>
+	      </div>
+	 </div>
+	 
+	 <div id="part3">
+        <div id="part3_title"></div>
+	    <div id="part3_t1"></div>
+	    <div id="part3_content">
+	         <div id="part3_content_sm"></div>
+			 <div id="prev2"></div>
+		     <div id="next2"></div>
+		     <div class="part_content_shop">
+			 
+			 <div id="img-list2">
+		          <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop1.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+		          <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				  <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				   <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				   <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				  </div>
+		      </div>
+	      </div>
+	 </div>
+	 
+	 <div id="part4">
+        <div id="part4_title"></div>
+	    <div id="part4_t1"></div>
+	    <div id="part4_content">
+	         <div id="part4_content_sm"></div>
+			 <div id="prev3" style="margin-top:25px"></div>
+		     <div id="next3" style="margin-top:25px"></div>
+		     <div class="part_content_shop">
+			 
+			 <div id="img-list3">
+			
+		          <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop1.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+		          <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				  <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				   <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				   <div class="shop_item">
+			           <div class="shop_wrap">
+				          <a target="_blank" href="#"><img class="shop_img" src="img/shop2.png" data-pinit="registered" alt=""><p><span class="txt1"> 新标韩中级上下册</span><span class="txt2">102课时 | 210天</span></p></a>
+                       </div>
+			           <div class="shop_price_wrap">
+                          <span class="price_num">￥48</span>
+                          <span class="old_price">￥69.8</span>
+                          <a class="buy_button" target="_blank" href="#">开通课程</a>
+                       </div>
+			      </div>
+				</div>
+		      </div>
+	      </div>
+	 </div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+  $(".shop_wrap").hover(function(){
+      $(this).find('p').toggle()
+	})
+ })
+
+$(function(){
+         var $imgList = $('#img-list'); 
+         var $shopitem = $('.shop_item');
+		 var shop_Width = $shopitem.width();
+		 var n=1;
+		 $('#prev').click(function(){
+		   if (n==1)
+		        {
+		  		$(this).siblings('.part_content_shop').find('#img-list').animate({left: '-=' + (shop_Width*2)},800);
+				n=3;
+				}
+           else
+		        {
+                $(this).siblings('.part_content_shop').find('#img-list').animate({left: '+=' + shop_Width}, 800);
+                n--;
+				}
+				
+            });
+		
+         $('#next').click(function(){
+	
+		   if (n==3)
+		       {
+	    		$(this).siblings('.part_content_shop').find('#img-list').animate({left: '0px'}, 800); 
+                n = 1;
+				}
+			else{
+			    $(this).siblings('.part_content_shop').find('#img-list').animate({left: '-=' + shop_Width},800);
+				n++;
+			   }
+		   });
+     })
+	  $(function(){
+         var $imgList = $('#img-list1'); 
+         var $shopitem = $('.shop_item');
+		 var shop_Width = $shopitem.width();
+		 var n=1;
+		 $('#prev1').click(function(){
+		   if (n==1)
+		        {
+		  		$(this).siblings('.part_content_shop').find('#img-list1').animate({left: '-=' + (shop_Width*2)},800);
+				n=3;
+				}
+           else
+		        {
+                $(this).siblings('.part_content_shop').find('#img-list1').animate({left: '+=' + shop_Width}, 800);
+                n--;
+				}
+				
+            });
+         $('#next1').click(function(){
+	
+		   if (n==3)
+		       {
+	    		$(this).siblings('.part_content_shop').find('#img-list1').animate({left: '0px'}, 800); 
+                n = 1;
+				}
+			else{
+			    $(this).siblings('.part_content_shop').find('#img-list1').animate({left: '-=' + shop_Width},800);
+				n++;
+			   }
+		   });
+		   })
+           $(function(){
+         var $imgList = $('#img-list2'); 
+         var $shopitem = $('.shop_item');
+		 var shop_Width = $shopitem.width();
+		 var n=1;
+		 $('#prev2').click(function(){
+		   if (n==1)
+		        {
+		  		$(this).siblings('.part_content_shop').find('#img-list2').animate({left: '-=' + (shop_Width*2)},800);
+				n=3;
+				}
+           else
+		        {
+                $(this).siblings('.part_content_shop').find('#img-list2').animate({left: '+=' + shop_Width}, 800);
+                n--;
+				}
+				
+            });
+         $('#next2').click(function(){
+	
+		   if (n==3)
+		       {
+	    		$(this).siblings('.part_content_shop').find('#img-list2').animate({left: '0px'}, 800); 
+                n = 1;
+				}
+			else{
+			    $(this).siblings('.part_content_shop').find('#img-list2').animate({left: '-=' + shop_Width},800);
+				n++;
+			   }
+		   });
+		   })
+		 $(function(){
+         var $imgList = $('#img-list2'); 
+         var $shopitem = $('.shop_item');
+		 var shop_Width = $shopitem.width();
+		 var n=1;
+		 $('#prev3').click(function(){
+		   if (n==1)
+		        {
+		  		$(this).siblings('.part_content_shop').find('#img-list3').animate({left: '-=' + (shop_Width*2)},800);
+				n=3;
+				}
+           else
+		        {
+                $(this).siblings('.part_content_shop').find('#img-list3').animate({left: '+=' + shop_Width}, 800);
+                n--;
+				}
+				
+            });
+         $('#next3').click(function(){
+	
+		   if (n==3)
+		       {
+	    		$(this).siblings('.part_content_shop').find('#img-list3').animate({left: '0px'}, 800); 
+                n = 1;
+				}
+			else{
+			    $(this).siblings('.part_content_shop').find('#img-list3').animate({left: '-=' + shop_Width},800);
+				n++;
+			   }
+		   });
+        
+       })
+ </script>
+</body>
+</html>

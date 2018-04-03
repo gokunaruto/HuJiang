@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+                padding:0;
+                margin:0;
+                list-style:none;
+        }
+        .wrap{
+                width:790px;
+                height:340px;
+                margin:55px auto;
+                overflow:hidden;
+                position:relative;
+        }
+        .wrap .tab_t li{
+                position:absolute;
+                top:0;
+                left:0;
+                display:none;
+        }
+        .wrap li.active{
+                display:block;
+        }
+
+        /*下方小圆点的样式*/
+        .circle{
+                width:226px;
+                height:20px;
+                background:rgba(255,255,255,0.5);
+                position:absolute;
+                bottom:20px;
+                left:50%;
+                margin-left:-113px;
+        }
+        .circle li{
+                width:16px;
+                height:16px;
+                background:#fff;
+                border-radius:50%;
+                margin:2px 6px;
+                float:left;
+        }
+        .circle li.acitve_c{
+                background:red;
+        }
+        /*左右箭头*/
+        span{
+                width:28px;
+                height:60px;
+                font-size:30px;
+                line-height:60px;
+                text-align:center;
+                color:#fff;
+                background:rgba(0,0,0,0.3);
+                position:absolute;
+                top:50%;
+                margin:-30px;
+                cursor:pointer;
+        }
+        span:hover{
+                background:rgba(0,0,0,0.6);
+        }
+        .left{
+                left:30px;
+        }
+        span.right{
+                right:30px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+        <ul class="tab_t">
+            <li class="active"><a href="#"><img src="imgs/1.jpg"></a></li>
+            <li><a href="#"><img src="imgs/2.jpg"></a></li>
+            <li><a href="#"><img src="imgs/3.jpg"></a></li>
+            <li><a href="#"><img src="imgs/4.jpg"></a></li>
+            <li><a href="#"><img src="imgs/5.jpg"></a></li>
+            <li><a href="#"><img src="imgs/6.jpg"></a></li>
+            <li><a href="#"><img src="imgs/7.jpg"></a></li>
+            <li><a href="#"><img src="imgs/8.jpg"></a></li>
+        </ul>
+        <div class="circle">
+            <ul>
+                <li class="acitve_c"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <span class="left"> < </span>
+        <span class="right"> > </span>
+</div>
+
+</body>
+</html>

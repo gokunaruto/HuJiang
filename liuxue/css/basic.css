@@ -1,0 +1,21 @@
+*{margin:0px;padding:0px;}
+.hide{display:none;}
+/* Overlay */
+#simplemodal-overlay {background-color:#000;}
+/* Container */
+#simplemodal-container { border:none;overflow:visible}
+#simplemodal-container .simplemodal-data {}
+#simplemodal-container code {background:#141414; border-left:3px solid #65B43D; color:#bbb; display:block; font-size:12px; margin-bottom:12px; padding:4px 6px 6px;}
+#simplemodal-container a.modalCloseImg {background:url(../images/x.png) no-repeat; width:10px; height:10px; display:inline; z-index:3200; position:absolute;top: 17px;right: 16px; cursor:pointer;}
+#simplemodal-container h3 {color:#84b8d9;}
+.clearfix{
+	*zoom:1;
+}
+.clearfix:before, 
+.clearfix:after {
+	display: table;
+	content: " ";
+}
+.clearfix:after {
+	clear: both;
+}

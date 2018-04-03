@@ -1,0 +1,104 @@
+﻿body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:Verdana, Helvetica, SimSun, Arial, "Arial Unicode MS", MingLiu, PMingLiu, "MS Gothic", sans-serief;
+	background:url("../images/bg01.jpg") no-repeat center 0;height:666px;
+}
+li{list-style-type:none}
+#top_content{width:1000px;margin:0px auto;position:relative}
+#logo{
+    background:url("../images/hjplogo@194x48.png") no-repeat;width:194px;height:48px;margin:22px 0 0 16px;
+}
+#top_pic{
+	position:absolute;top:42px;left:23px;background:url(../images/pic-big.png) no-repeat;width:964px;height:698px;z-index:10
+}
+#icon_location{margin:148px 0 0 690px;overflow:hidden}
+.top_icon{
+    margin-left:13px;float:left;cursor:pointer
+}
+
+
+#top_nav{
+	background:#ff5b67;height:116px;margin-top:578px;position:relative
+}
+#nav_content{
+	width:1000px;margin:0px auto;position:relative;z-index:100
+}
+#nav_content label{
+	padding-top:11px;height:105px;font: normal 24px/105px "Microsoft YaHei";color:#FFF;margin-left:11px;float:left
+}
+.qq_contact{
+	background:url("../images/qq_icon.jpg") no-repeat;margin-left:12px;padding-left:20px;float:left;margin-top:54px
+}
+.qq_contact a{
+	color:#FFF;font: normal 12px/18px "SimSun";cursor:pointer;display:block
+}
+.qq_contact2{
+	margin-left:20px
+}
+#nav_button{
+	border:none;background:url(../images/nav_button.jpg) no-repeat;width:246px;height:56px;float:right;margin:30px 76px 0 0;cursor:pointer
+}
+
+
+
+
+#main_content{
+	padding-top:47px;width:1000px;margin:0 auto
+}
+#tip_title{
+	background:url(../images/tip_title.jpg) no-repeat;width:166px;height:230px;float:left
+}
+#tip_content{
+	width:618px;height:218px;background:#ebf9ff;float:left;margin-top:12px;padding-top:7px
+}
+.tip_lv2_title{
+	font:normal 14px "Microsoft YaHei";color:#ff5b67;margin:13px 0 5px 35px;
+}
+.tip_lv2_content{
+	font:normal 14px/26px "Microsoft YaHei";color:#6d92a2;width:560px;margin-left:35px
+}
+#quick_response{
+	margin:18px 0 0 15px;float:left
+}
+#quick_response p{
+color:#ff5b67;font:bold 14px/25px "SimSun";width:187px;text-align:center
+}
+#animate_pic{height:887px;width:1000px;margin:0 auto}
+
+
+
+#main_content2{height:464px;background:#ff5b67}
+#main_content2_div{width:1000px;margin:0px auto;overflow:hidden}
+#main_content2 p{margin-left:41px;margin-top:47px;font:normal 16px/31px "Microsoft YaHei";color:#FFF}
+#money{font-size:32px}
+.underline{text-decoration:underline}
+.study_abroad{margin-top:8px}
+.study_abroad a{width:451px;height:267px;float:left;display:block}
+.study_abroad1{background:url(../images/study_abroad1.jpg) no-repeat;margin-left:45px}
+.study_abroad2{background:url(../images/study_abroad2.jpg) no-repeat;margin-left:10px}
+#school_show{background:#7cd6fc;height:835px;}
+#school_show1{width:1000px;margin:0 auto;padding-top:32px;overflow:hidden}
+#school_show1_title{background:url(../images/school_show_title1.jpg) no-repeat;width:140px;height:377px;float:left}
+#school_show1_content{width:860px;background:#FFF;height:362px;float:left;margin-top:15px}
+#school_show1_content ul{margin:17px 0 0 23px;width:810px;overflow:hidden}
+#school_show1_content li{float:left;border:1px solid #e1e1e1;margin:5px 0 0 5px;position:relative}
+#school_show1_content li p{position:absolute;bottom:0px;height:22px;background:#ff5b67;width:100%;font:normal 12px/22px "SimSun";color:#FFF;text-align:center;display:none}
+#school_show1_content ul a{display:block}
+#school_show2{width:1000px;margin:0 auto;padding-top:28px;overflow:hidden}
+#school_show2_title{background:url(../images/school_show_title2.jpg) no-repeat;width:140px;height:295px;float:left}
+#school_show2_content{width:860px;background:#FFF;height:283px;float:left;margin-top:12px}
+#school_show2_content ul{margin:24px 0 0 23px;width:820px;overflow:hidden}
+#school_show2_content li{float:left;border:1px solid #e1e1e1;margin:5px 0 0 5px;position:relative}
+#school_show2_content li p{position:absolute;bottom:0px;height:22px;background:#ff5b67;width:100%;font:normal 12px/22px "SimSun";color:#FFF;text-align:center;display:none}
+#school_show2_content ul a{display:block}
+
+#other_zt{width:1000px;margin:0 auto;display:block;overflow:hidden;position:relative}
+#other_zt h2{margin:0 8px}
+#other_zt hr{margin:61px 0 54px 0px;color:#ff5b67;height:1px;line-height:1px;border:none;border-top:1px solid #ff5b67}
+#other_zt_title{position:absolute;left:400px;top:40px;width:200px;text-align:center;background:#FFF}
+#other_zt_content li{float:left}
+#other_zt_content{overflow:hidden;display:block;margin-bottom:10px}
+.zt2_mar{margin:0 12px}

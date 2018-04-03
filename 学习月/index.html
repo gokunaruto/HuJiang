@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+<title>study month</title>
+<meta name="author" content="Alvaro Trigo Lopez" />
+<meta name="description" content="fullPage full-screen sliders navigation widh dots." />
+<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,sliders navigation, horizontal navigation,horizontal,navigation,dots" />
+<meta name="Resource-type" content="Document" />
+
+<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+
+<style>
+/*** reset ***/html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}ins{text-decoration:none}legend{color:#000}
+/*** font ***/body{font-size:12px;font-family:verdana, arial;} select,input,button,textarea{font:99% verdana,arial}table{font-size:inherit;font:100%}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%}
+/*** base ***/h1{font-size:138.5%}h2{font-size:123.1%}h3{font-size:108%}h1,h2,h3{margin:1em 0}h1,h2,h3,h4,h5,h6,strong{font-weight:bold}abbr,acronym{border-bottom:1px dotted #000;cursor:help}em{font-style:italic}blockquote{margin:1em}ul,ol,dl{margin:0}li,dd{list-style:none;margin:0}th,td{padding:.5em}.tabWithBorder th,.tabWithBorder td{border:1px solid #000}th{font-weight:bold;text-align:center}caption{margin-bottom:.5em;text-align:center}p,fieldset,table,pre{margin-bottom:1em}
+/*** hj ***/.clear{clear:both}.hide{display:none}.txt_r{text-align:right}.txt_l{text-align:left}.txt_c{text-align:center}.txt_hide{text-indent:-999em}.bold{font-weight:bold}.fl{float:left;display:inline}.fr{float:right;display:inline}.poa{position:absolute}.por{position:relative}.mouse_p{cursor:pointer}.mouse_d{cursor:default}.red{color:#cc0000;}a.red:link,a.red:visited,a.red:active{color:red;}.big{font-size:14px;}.small{font-size:12px;}.indent{text-indent:2em;}.green{color:#008000;}.gray{color:gray;}.orange{color:#ff6600;}a.green:link,a.green:visited,a.green:active{color:#008000;}a.gray:link,a.gray:visited,a.gray:active{color:gray;}
+a{blr:expression_r(this.onFocus=this.blur());outline:none; text-decoration:none; color:#666666; font-size:12px;}	
+a:hover{color:#1DAADF}
+.page2_content {width:615px; height:459px; position:absolute; top:226px; left:19px; background:#FFFFFF; overflow:scroll}
+.fr{ float:right}
+.mt10{ margin-bottom:10px;}
+.mr5{ margin-right:5px;}
+.list_item_subject {
+	float: left;
+	margin:17px 0px -13px 21px;
+	border-radius:5px;
+	width:270px;
+	height:250px;
+	overflow:hidden;
+	position:relative
+}
+.list_item_subject .subject_cover {
+	width:240px;
+	height:140px;
+}
+.subject_cover:hover{
+    opacity: 0.8;
+    filter:alpha(opacity=80);
+}
+.list_item_subject a.subject_title:hover {
+	color:#f60;
+}
+.subject_title {
+    position:absolute;
+    width:240px;
+    height:30px;
+    left:15px;
+    bottom:2px;
+    z-index:9;
+    background:rgba(0,0,0,0.6);
+    color:#FFF;
+    line-height:30px;
+    text-align:center;
+    overflow:hidden;
+}
+.list_subject_event li {
+	height: 28px;
+    line-height: 28px;
+    width: 240px;
+    overflow: hidden;
+    border-bottom: 1px dotted #DDD;
+	margin-left:15px;
+}
+.list_subject_event li a {margin-left:0px; color:#666666;font-size:12px; font-family:Geneva, Arial, Helvetica, sans-serif, "微软雅黑"; text-decoration:none; float:left; text-align:left}
+.list_subject_event li a:hover{color:#1daadf} 
+a.subject_img {
+    display:block;
+}
+	/* Style for our header texts 
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;	
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+	}
+	.intro p{
+		color: #fff;
+	}
+	
+	/* Centered texts in each section 
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+	
+	
+	/* Overwriting styles for the navigation dots (to place it where we want)
+	* --------------------------------------- */
+	.fullPage-slidesNav.bottom{
+		bottom: 98px;
+	}
+	
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	
+	#section2 h1{
+		color: #333;
+	}
+#slide1 {background:url(images/01.png) no-repeat center top;}
+#slide2 {background:url(images/02.png) no-repeat center top;}
+#slide3 {background:url(images/03.png) no-repeat center top;}
+#slide4 {background:url(images/04.png) no-repeat center top;}
+.page_auto {width:1000px; height:100%;margin:0 auto; position:relative}	
+.navbar{  width:1000px; height:30px; position:absolute; bottom:89px; left:50%; margin-left:-500px;*margin-left:-527px; z-index:99}
+
+#logo{
+background:url(images/logo.png); width:596px; height:220px;
+-webkit-animation:bounceInDown 1s .2s ease both;
+-moz-animation:bounceInDown 1s .2s ease both;}
+@-webkit-keyframes bounceInDown{
+0%{opacity:0;
+-webkit-transform:translateY(-1000px)}
+60%{opacity:1;
+-webkit-transform:translateY(30px)}
+80%{-webkit-transform:translateY(-10px)}
+100%{-webkit-transform:translateY(0)}
+}
+@-moz-keyframes bounceInDown{
+0%{opacity:0;
+-moz-transform:translateY(-1000px)}
+60%{opacity:1;
+-moz-transform:translateY(30px)}
+80%{-moz-transform:translateY(-10px)}
+100%{-moz-transform:translateY(0)}
+}
+
+.navbar_1f{ background:url(images/1st.png); width:168px; height:49px; position:absolute; bottom:38px; left:123px; display:none}
+.navbar_2f{ background:url(images/2rd.png); width:168px; height:49px; position:absolute; bottom:38px; left:318px; display:none}
+.navbar_3f{ background:url(images/3rd.png); width:168px; height:49px; position:absolute; bottom:38px; left:510px; display:none}
+.navbar_4f{ background:url(images/4th.png); width:168px; height:49px; position:absolute; bottom:38px; left:707px; display:none}
+
+.page3_bg{ margin-left:74px; margin-top:24px; background:url(images/03_bg.png) no-repeat; width:832px; height:226px; float:left; overflow:hidden; padding:10px}
+.page3_bg2{margin-top:154px; margin-left:167px;background:url(images/03_bg.png) no-repeat; width:832px; height:226px; float:left; overflow:hidden; padding:10px}
+.page3_eng{background:url(images/03_england.png) no-repeat; width:52px; height:31px; position:absolute; right:256px; top:216px;}
+.page3_usa{background:url(images/03_usa.png) no-repeat; width:52px; height:31px; position:absolute; right:162px; top:614px;}
+.page3_more{background:url(images/03_more.png) no-repeat; width:129px; height:20px;top:221px; right:107px;display:block; position:absolute}
+.page3_more2{background:url(images/03_more.png) no-repeat; width:129px; height:20px;top:621px; right:15px;display:block; position:absolute}
+.page3_content{ width:250px; height:164px; background:#c9c9c9; border:4px solid #FFFFFF; float:left; margin-right:19px; position:relative}
+.page3_content img{width:250px; height:164px; display:block; display:inline}
+.page3_content img:hover{ box-shadow: 0 0 4px #999999;filter:alpha(opacity=90); opacity:0.9;}
+.hover_span {
+	background-color:#000000;
+   	filter:alpha(opacity=70); opacity:0.7;
+    bottom: 0;
+    color: #FFFFFF;
+    height: 28px;
+    left: 0;
+    line-height: 28px;
+    position: absolute;
+    text-indent: 10px;
+    width: 250px;
+	font-size:12px
+}
+
+.page4_bg{background:url(images/04_more_bg.png) no-repeat; width:175px; height:60px;  top:665px; right:17px; position:absolute}
+.page4_more{ background:url(images/04_more.png) no-repeat; width:79px; height:40px; float:left; margin-top:12px; margin-left:50px; display:block}
+.page4_content1{width:1050px; height:314px; margin:0 auto; float:left; margin-top:18px; overflow:hidden; padding:0px}
+.page4_content2{ width:1000px; height:314px; margin:0 auto; float:left; padding:9px 0 0 345px;}
+.page4_part{ background:url(images/04_content.png) no-repeat; width:311px; height:313px; float:left; margin-right:32px; position:relative}
+.page4_part img {width:289px; height:219px; display:block; overflow:hidden}
+.prod_buy{background: none repeat scroll 0 0 #000000;
+    color: #FFF45C;
+    font: 16px "Microsoft YaHei";
+   filter:alpha(opacity=90); opacity:0.9;
+   position: absolute;
+    width: 312px;
+	bottom:-56px; height:57px}
+.img_content{width:289px; height:219px;float:left; margin-left:12px; margin-top:36px; overflow:hidden; position:relative}	
+.hover_layer {
+    bottom: -40px;
+    font-size: 24px;
+    height: 40px;
+    line-height: 40px;
+    width: 312px;
+	float:left
+}
+.btn_buy {
+    border-radius: 2px;
+    font-size: 28px;
+    height: 42px;
+    line-height: 42px;
+    margin-top:7px;
+    width: 127px;
+	background: none repeat scroll 0 0 #EDE102;
+    border: 1px solid #EDD102;
+    color: #533C3C;
+    display: inline-block;
+ 	 text-align: center;
+    text-decoration: none; margin-left:-12px;
+}
+.n_price{ color: #EDE102;
+    font-size: 22px;
+    height: 42px;
+    line-height: 52px;
+	margin-bottom:0px;}
+.price_set{width:133px; float:left}
+.more2{ float:right; margin-top:15px; margin-right:10px; font-size:14px; color:#005A94; font-family:微软雅黑;}
+.more2:hover{color:#1daadf}
+</style>
+
+
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+</head>
+
+
+
+<body>
+
+<!--<div id="logo"></div>-->
+<div id="fullpage">
+	
+	<div class="section" id="section0">
+		<div class="navbar">
+			<div class="navbar_1f"></div>
+			<div class="navbar_2f"></div>
+			<div class="navbar_3f"></div>
+			<div class="navbar_4f"></div>
+		</div>
+	    <div class="slide" id="slide1" data-anchor="slide1">
+	
+			
+		</div>
+		<div class="slide" id="slide2" data-anchor="slide2">
+			<div class="page_auto">
+				<div class="page2_content">
+					
+                    <ul id="list_subject">
+					   
+					</ul>	
+					<a class="more2" href="http://www.cctalk.com/gongkaike/subject/" target="_blank">查看更多》</a>
+				</div>
+			</div>
+		</div>
+		<div class="slide" id="slide3" data-anchor="slide3">
+			<div class="page_auto">
+				<div class="page3_bg">
+					
+				</div>
+				<div class="page3_eng"></div>
+				<a class="page3_more" href="http://www.cctalk.com/gongkaike/search/?cate=all&q=5aSW5pWZ6IGU5ZCI5Zu9 " target="_blank"></a>
+				<div class="page3_bg2">
+					
+				</div>
+				<div class="page3_usa"></div>
+				<a class="page3_more2" href="http://www.cctalk.com/gongkaike/search/?cate=all&q=5aSW5pWZ6IGU5ZCI5Zu9 " target="_blank"></a>
+			</div>
+		</div>
+		<div class="slide" id="slide4" data-anchor="slide4">
+			<div class="page_auto">
+				<div class="page4_content1">
+					
+				</div>
+				
+				<div class="page4_content2">
+					
+				</div>
+				<div class="page4_bg"><a class="page4_more" href="http://tuan.hujiang.com/tuangou/reviews/fenlei?kw=cctalk
+" target="_blank"></a></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				slidesNavigation: true,
+				slidesNavPosition: 'bottom',
+				afterRender: function(){
+					var tooltips = ['firstPage','secondPage','3rdPage','4thPage'];
+					$(".fullPage-slidesNav li").each(function(i){
+						$(this).addClass(tooltips[i]);
+					});
+				}				
+			});
+		})
+</script>
+<script type="text/javascript">
+$(function(){
+	
+	$(".firstPage").hover(function(){
+		$(".navbar_1f").css("display","block")
+	},	
+	function(){	$(".navbar_1f").css("display","none")
+	});		
+	$(".secondPage").hover(function(){
+		$(".navbar_2f").css("display","block")
+	},	
+	function(){	$(".navbar_2f").css("display","none")
+	});				
+	$(".3rdPage").hover(function(){
+		$(".navbar_3f").css("display","block")
+	},	
+	function(){	$(".navbar_3f").css("display","none")
+	});				
+	$(".4thPage").hover(function(){
+		$(".navbar_4f").css("display","block")
+	},	
+	function(){	$(".navbar_4f").css("display","none")
+	});				
+})
+</script>
+<script type="text/javascript">
+ $(function(){
+ /*var data = 
+    [
+		{
+		EventID :"http://www.cctalk.com/gongkaike/12417",
+		EventName : "\u548C\u65E5\u672C\u5C0F\u5B66\u751F\u4E00\u6837\u5B66\u4E60\u65E5\u8BED\uFF083\uFF09" , 
+		ImageUrl : "http://f1.c.hjfile.cn/public/upload/201404/201404120939118574_m.jpg"
+		},{
+		EventID :"http://www.cctalk.com/gongkaike/12905",
+		EventName : "\u6CAA\u6C5F\u5F02\u56FD\u7EC3\uFF1A\u5916\u6559Aaron\u4E4BIT\u72C2\u4EBA",
+		ImageUrl : "http://f1.c.hjfile.cn/public/upload/201404/201404240306571531_m.jpg"
+		},{
+		EventID: "http://www.cctalk.com/gongkaike/13117",
+		EventName : "\u6CAA\u6C5F\u5F02\u56FD\u7EC3\uFF1A\u5916\u6559Rock\u4E4BI need a Coffee",
+		ImageUrl : "http://f1.c.hjfile.cn/public/upload/201404/201404251021336307_m.jpg"
+		},{
+		EventID : "http://www.cctalk.com/gongkaike/13165",
+		EventName : "\u6CAA\u6C5F\u5F02\u56FD\u7EC3\uFF1A\u5916\u6559Aaron Lee\u4E4BSHOWS ",
+		ImageUrl: "http://f1.c.hjfile.cn/public/upload/201404/201404261234401465_m.jpg"
+		},{
+		EventID : "http://www.cctalk.com/gongkaike/13169",
+		EventName: "\u6CAA\u6C5F\u5F02\u56FD\u7EC3\uFF1A\u5916\u6559Aaron Lee\u4E4BWorld " ,
+		ImageUrl : "http://f1.c.hjfile.cn/public/upload/201404/201404261248458782_m.jpg"
+		},{
+		EventID : "http://www.cctalk.com/gongkaike/13120",
+		EventName : "\u6CAA\u6C5F\u5F02\u56FD\u7EC3\uFF1A\u5916\u6559Rock\u4E4BDid you get my ",
+		ImageUrl: "http://f1.c.hjfile.cn/public/upload/201404/201404251040394147_m.jpg"
+		}
+	];*/
+	var data=
+	[ { "Link1" : "\u5927\u8BED\u6587\u8BB2\u575B\uFF1A\u8BA9\u4F5C\u6587\u63D2\u4E0A\u6210\u8BED\u7684\u7FC5\u8180\uFF08\u521B\u610F\u4F5C\u6587\u4E13\u573A\uFF09" , "Link2" : "\u5927\u8BED\u6587\u8BB2\u575B\uFF1A\u8BA9\u4F5C\u6587\u597D\u73A9\u4E00\u70B9\uFF08\u521B\u610F\u4F5C\u6587\u4E13\u573A\uFF09" , "Link3" : "\u5927\u8BED\u6587\u8BB2\u575B\uFF1A\u5982\u4F55\u5411\u540D\u5BB6\u5B66\u5199\u4F5C\uFF1F\uFF08\u521B\u610F\u4F5C\u6587\u4E13\u573A\uFF09" , "RowNumber" : 1 , "LinkName2" : "http://www.cctalk.com/gongkaike/12117/" , "LinkName3" : "http://www.cctalk.com/gongkaike/12119/" , "SubjectUrl" : "http://www.cctalk.com/gongkaike/subject/134/" , "SubjectID" : 134 , "CoverUrl" : "http://f1.c.hjfile.cn//upload/201405/201405040959479331.jpg" , "LinkName1" : "http://www.cctalk.com/gongkaike/12033/" , "TagName" : "\u5927\u8BED\u6587" , "LecturerUserName" : "" , "SubjectName" : "\u5927\u8BED\u6587\u5B66\u4E60\u56E2" },{ "Link1" : "\u3010\u4E3B\u6301\u4EBA\u57F9\u8BAD\u8425\u3011\u7B2C\u4E00\u5F39 \u6CE1\u9762\u7537\u795E\u6559\u4F60\u6210\u4E3A\u7F8E\u5DE5\u5927\u795E" , "Link2" : "\u3010\u4E3B\u6301\u4EBA\u57F9\u8BAD\u8425\u3011\u7B2C\u4E8C\u5F39 \u7389\u5154\u8001\u5E08\u6559\u4F60\u8282\u76EE\u57FA\u672C\u64CD\u4F5C" , "Link3" : "\u3010\u4E3B\u6301\u4EBA\u57F9\u8BAD\u8425\u3011\u7B2C\u4E09\u5F39 \u5C0F\u8272\u6559\u4F60\u8282\u76EE\u5185\u5BB9\u8D28\u91CF\u63D0\u5347\u6280\u5DE7" , "RowNumber" : 2 , "LinkName2" : "http://www.cctalk.com/gongkaike/13323/" , "LinkName3" : "http://www.cctalk.com/gongkaike/13325/" , "SubjectUrl" : "http://www.cctalk.com/gongkaike/subject/133/" , "SubjectID" : 133 , "CoverUrl" : "http://f1.c.hjfile.cn//upload/201405/201405021027596124.jpg" , "LinkName1" : "http://www.cctalk.com/gongkaike/13297/" , "TagName" : "\u4E3B\u6301\u4EBA\u57F9\u8BAD\u8425" , "LecturerUserName" : "" , "SubjectName" : "\u6CAA\u6C5F\u4E3B\u6301\u4EBA\u57F9\u8BAD\u8425" },{ "Link1" : "\u4E00\u8D77\u505A\u52A8\u753B\u4E4B\u9006\u88AD\u6D77\u8D3C\u738B\uFF08\u4E00\uFF09\u4E09\u7EF4\u52A8\u753B\u5165\u95E8" , "Link2" : "\u4E00\u8D77\u505A\u52A8\u753B\u4E4B\u9006\u88AD\u6D77\u8D3C\u738B\uFF08\u4E8C\uFF09\u6D77\u8D3C\u4EBA\u7269\u59FF\u6001\u5236\u4F5C" , "Link3" : "\u4E00\u8D77\u505A\u52A8\u753B\u4E4B\u9006\u88AD\u6D77\u8D3C\u738B\uFF08\u4E09\uFF09\u6D77\u8D3C\u8DD1\u6B65\u52A8\u753B\u5236\u4F5C" , "RowNumber" : 3 , "LinkName2" : "http://www.cctalk.com/gongkaike/12996/" , "LinkName3" : "http://www.cctalk.com/gongkaike/12997/" , "SubjectUrl" : "http://www.cctalk.com/gongkaike/subject/132/" , "SubjectID" : 132 , "CoverUrl" : "http://f1.c.hjfile.cn//upload/201404/201404300723224845.jpg" , "LinkName1" : "http://www.cctalk.com/gongkaike/12995/" , "TagName" : "" , "LecturerUserName" : "lqb1000" , "SubjectName" : "\u9006\u88AD\u6D77\u8D3C\u738B" },{ "Link1" : "\u804C\u573A\u5FC5\u5907\u7EDD\u6280\uFF1A\u9AD8\u6548\u8DE8\u90E8\u95E8\u6C9F\u901A\u4E0E\u534F\u4F5C\uFF08\u516B\uFF09" , "Link2" : "\u804C\u573A\u5FC5\u5907\u7EDD\u6280\uFF1A\u9AD8\u6548\u8DE8\u90E8\u95E8\u6C9F\u901A\u4E0E\u534F\u4F5C\uFF08\u4E03\uFF09" , "Link3" : "\u804C\u573A\u5FC5\u5907\u7EDD\u6280\uFF1A\u9AD8\u6548\u8DE8\u90E8\u95E8\u6C9F\u901A\u4E0E\u534F\u4F5C\uFF08\u516D\uFF09" , "RowNumber" : 4 , "LinkName2" : "http://www.cctalk.com/gongkaike/13132/" , "LinkName3" : "http://www.cctalk.com/gongkaike/13133/" , "SubjectUrl" : "http://www.cctalk.com/gongkaike/subject/131/" , "SubjectID" : 131 , "CoverUrl" : "http://f1.c.hjfile.cn//upload/201404/201404300721015194.jpg" , "LinkName1" : "http://www.cctalk.com/gongkaike/13131/" , "TagName" : "" , "LecturerUserName" : "Trainer_Lily" , "SubjectName" : "\u804C\u573A\u5FC5\u5907\u7EDD\u6280" },{ "Link1" : "\u8DDF\u5916\u6559\u5B66\u97E9\u56FD\u4EBA\u6700\u5E38\u8BF4\u7684\u53E5\u5B50\uFF1A\u4E07\u80FD\u65E5\u5E38\u7BC7" , "Link2" : "\u8DDF\u5916\u6559\u5B66\u97E9\u56FD\u4EBA\u6700\u5E38\u8BF4\u7684\u53E5\u5B50\uFF1A\u827A\u4EBA\u7BC7" , "Link3" : "\u8DDF\u5916\u6559\u5B66\u97E9\u56FD\u4EBA\u6700\u5E38\u8BF4\u7684\u53E5\u5B50\uFF1A\u6559\u5E08\u7BC7" , "RowNumber" : 5 , "LinkName2" : "http://www.cctalk.com/gongkaike/13198/" , "LinkName3" : "http://www.cctalk.com/gongkaike/13199/" , "SubjectUrl" : "http://www.cctalk.com/gongkaike/subject/130/" , "SubjectID" : 130 , "CoverUrl" : "http://f1.c.hjfile.cn//upload/201404/201404301122388815.jpg" , "LinkName1" : "http://www.cctalk.com/gongkaike/13193/" , "TagName" : "\u97E9\u8BED\u5916\u6559" , "LecturerUserName" : "" , "SubjectName" : "\u8DDF\u5916\u6559\u5B66\u97E9\u56FD\u4EBA\u6700\u5E38\u8BF4\u7684\u53E5\u5B50" },{ "Link1" : "\u63ED\u5BC60-6\u5C81\u80CE\u6559\u65E9\u6559\uFF1A\u5982\u4F55\u8FDB\u884C\u201C\u60A6\u8BFB\u201D\u6559\u80B2" , "Link2" : "\u80B2\u513F\u667A\u6167\u5206\u4EAB\uFF1A\u966A\u5B69\u5B50\u8BF5\u8BFB\u7ECF\u5178" , "Link3" : "\u9001\u7ED9\u5B69\u5B50\u6700\u597D\u7684\u793C\u7269\u2014\u2014\u6559\u5B69\u5B50\u7231\u4E0A\u9605\u8BFB" , "RowNumber" : 6 , "LinkName2" : "http://www.cctalk.com/gongkaike/13277/" , "LinkName3" : "http://www.cctalk.com/gongkaike/13278/" , "SubjectUrl" : "http://www.cctalk.com/gongkaike/subject/129/" , "SubjectID" : 129 , "CoverUrl" : "http://f1.c.hjfile.cn//upload/201404/201404290327063242.jpg" , "LinkName1" : "http://www.cctalk.com/gongkaike/13122/" , "TagName" : "" , "LecturerUserName" : "\u80B2\u5FC3\u5C0F\u96C5" , "SubjectName" : "\u8BF5\u8BFB\u7ECF\u5178\u2014\u2014\u8BA9\u5B69\u5B50\u7231\u4E0A\u9605\u8BFB" },{ "Link1" : "\u7F8E\u5267\u8BFE\u5802\u2014\u2014\u751F\u6D3B\u5927\u7206\u70B8S1E6" , "Link2" : "\u820C\u5C16\u4E0A\u7684\u534E\u4E3D\u82F1\u97F3\u2014\u2014Stop Stumbling on Your Pronunciation" , "Link3" : "\u201C\u6A2A\u7EB5\u5411\u542C\u529B\u6CD5\u201D\u653B\u7834\u6258\u798F\u542C\u529B\u987D\u75BE" , "RowNumber" : 7 , "LinkName2" : "http://www.cctalk.com/gongkaike/12748/" , "LinkName3" : "http://www.cctalk.com/gongkaike/12775/" , "SubjectUrl" : "http://www.cctalk.com/gongkaike/subject/128/" , "SubjectID" : 128 , "CoverUrl" : "http://f1.c.hjfile.cn//upload/201404/201404290226312162.jpg" , "LinkName1" : "http://www.cctalk.com/gongkaike/12708/" , "TagName" : "\u82F1\u8BED\u540D\u5E08" , "LecturerUserName" : "" , "SubjectName" : "\u7FA4\u201C\u82F1\u201D\u835F\u8403\uFF1A\u6CAA\u6C5F\u516C\u5F00\u8BFE\u82F1\u8BED\u540D\u5E08\u6708" },{ "Link1" : "\u89C6\u89C9\u827A\u672F\u8FD0\u7528\u529B\u2014\u2014\u5B69\u5B50\u672A\u6765\u7684\u6838\u5FC3\u7ADE\u4E89\u529B" , "Link2" : "\u827A\u672F\u2014\u2014\u6539\u53D8\u513F\u7AE5\u57FA\u56E0" , "Link3" : "\u827A\u672F\u2014\u2014\u6559\u7ED9\u5B69\u5B50\u5B66\u6821\u4E0D\u6559\u7684\u601D\u8003\u529B" , "RowNumber" : 8 , "LinkName2" : "http://www.cctalk.com/gongkaike/13257/" , "LinkName3" : "http://www.cctalk.com/gongkaike/13260/" , "SubjectUrl" : "http://www.cctalk.com/gongkaike/subject/127/" , "SubjectID" : 127 , "CoverUrl" : "http://f1.c.hjfile.cn//upload/201404/201404290135022370.jpg" , "LinkName1" : "http://www.cctalk.com/gongkaike/13202/" , "TagName" : "" , "LecturerUserName" : "luozhen1" , "SubjectName" : "\u827A\u672F\u6559\u80B2\u2014\u2014\u57F9\u517B\u5B69\u5B50\u6838\u5FC3\u7ADE\u4E89\u529B" } ];
+	
+	
+
+	$.ajax({
+	type:"POST",
+	url:"http://yz.buy.hujiang.com/new/AjaxPage/OnSales/Lecture.ashx",
+	dataType: 'json',
+	success:function(data){
+	var html = new Array();
+		for(var i=0; i<8;i++){
+            html[i] = '';
+            if(data[i]){
+                var y = data[i];
+				 html[i] +='<li class="list_item_subject">'
+				 html[i] +='<a class="subject_img por" target="_blank" href="'+y.SubjectUrl+'"><img class="subject_cover" src="'+y.CoverUrl+'"><span class="subject_title">'+y.SubjectName+'</span></a>'
+				 html[i] +='<ul class="list_subject_event"><li><a target="_blank" href="'+y.LinkName1+'">'+y.Link1+'</a></li><li><a target="_blank" href="'+y.LinkName2+'">'+y.Link2+'</a></li><li><a target="_blank" href="'+y.LinkName3+'">'+y.Link3+'</a></li></ul><a class="more" target="_blank" href="'+y.SubjectUrl+'">查看更多》</a></li>'
+			}
+		 $('#list_subject').append(html[i]);
+		};
+	
+}
+})	
+	
+	$.ajax({
+	type:"POST",
+	url:"http://buy.hujiang.com/new/AjaxPage/OnSales/teacherun.ashx",
+	dataType: 'json',
+	success:function(data){
+		var html = new Array();
+		for(var i=0; i<3;i++){
+            html[i] = '';
+            if(data[i]){
+                var d = data[i];
+				  html[i] +='<div class="page3_content">'
+				  html[i] +='<a href="'+d.EventID+'" target="_blank"><img src="'+d.ImageUrl+'"></a>'
+				  html[i] +='<span class="hover_span">'+d.EventName+'</span></div>'
+				}
+			 $('.page3_bg').append(html[i]);	
+		};
+		for(var i=3; i<6;i++){
+            html[i] = '';
+            if(data[i]){
+                var d = data[i];
+				  html[i] +='<div class="page3_content">'
+				  html[i] +='<a href="'+d.EventID+'" target="_blank"><img src="'+d.ImageUrl+'"></a>'
+				  html[i] +='<span class="hover_span">'+d.EventName+'</span></div>'
+				}
+			 $('.page3_bg2').append(html[i]);	
+		};
+	}
+	});
+
+	
+
+	
+	 var data2 = 
+    [
+		{ID : "http://tuan.hujiang.com/tuangou/p1931/", 
+		GroupBuyPriceString : "499" ,
+		SmallImgAddress : "http://i1.b.hjfile.cn/shop/tuan/201404/midd/201404022263849310.jpg" 
+		},{
+		ID : "http://tuan.hujiang.com/tuangou/p1968/" ,
+		GroupBuyPriceString : "128" ,
+		SmallImgAddress : "http://i1.b.hjfile.cn/shop/tuan/201404/midd/201404105094758944.jpg" 
+		},{
+		ID : "http://tuan.hujiang.com/tuangou/p1901/" , 
+		GroupBuyPriceString : "160" ,
+		SmallImgAddress : "http://i1.b.hjfile.cn/shop/tuan/201403/midd/201403246013477634.jpg"
+		},{
+		ID : "http://tuan.hujiang.com/tuangou/p2013/" ,
+		GroupBuyPriceString : "360" ,
+		SmallImgAddress : "http://i1.b.hjfile.cn/shop/tuan/201404/midd/201404182175624378.jpg" 
+		},{
+		ID : "http://tuan.hujiang.com/tuangou/p1998/" , 
+		GroupBuyPriceString : "299" ,
+		SmallImgAddress : "http://i1.b.hjfile.cn/shop/tuan/201404/midd/201404189593663345.jpg"
+		}
+	];
+	
+
+	var html = new Array();
+		for(var i=0; i<3;i++){
+            html[i] = '';
+            if(data2[i]){
+                var x = data2[i];
+				 html[i] +='<div class="page4_part"><div class="img_content">'
+				 html[i] +=	'<a href="'+x.ID+'" target="_blank"><img src="'+x.SmallImgAddress+'"></a><div class="prod_buy"><div class="price_set">'
+				 html[i] +=	'<p class="n_price">团购价:￥'+x.GroupBuyPriceString+'</p></div><a class="btn_buy" target="_blank" href="'+x.ID+'">点击抢购</a></div></div></div>'
+			}
+			 $('.page4_content1').append(html[i]);
+		};
+		for(var i=3; i<5;i++){
+            html[i] = '';
+            if(data2[i]){
+                var x = data2[i];
+				 html[i] +='<div class="page4_part"><div class="img_content">'
+				 html[i] +=	'<a href="'+x.ID+'" target="_blank"><img src="'+x.SmallImgAddress+'"></a><div class="prod_buy"><div class="price_set">'
+				 html[i] +=	'<p class="n_price">团购价:￥'+x.GroupBuyPriceString+'</p></div><a class="btn_buy" target="_blank" href="'+x.ID+'">点击抢购</a></div></div></div>'
+			}
+			 $('.page4_content2').append(html[i]);
+		};
+		
+		
+		$(".page4_part").hover(function(){
+			$(this).find(".prod_buy").stop().animate({"bottom":0},{duration:200});
+				},function(){
+			$(this).find(".prod_buy").stop().animate({"bottom":-56},{duration:200});
+			});
+			
+			
+});
+</script>
+</body>
+</html>

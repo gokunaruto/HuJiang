@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script language="JavaScript">  
+function ShowTimes(){  
+var AfterTime= new Date("April 4 18:00:00  2014");  
+LeaveTime = AfterTime -new Date();  
+LeaveDays=Math.floor(LeaveTime/(1000*60*60*24));//天  
+LeaveHours=Math.floor(LeaveTime/(1000*60*60)%24);//时  
+LeaveMinutes=Math.floor(LeaveTime/(1000*60)%60);//分  
+LeaveSeconds=Math.floor(LeaveTime/1000%60);//秒
+var nSS = Math.floor(LeaveTime /10)%60;
+     
+if (nSS<10){ nSS="0"+nSS;}
+
+hxtime1.innerHTML="距离下班还有<font color=red>"+LeaveDays+"</font>天<font color=red>"+LeaveHours+"</font>时<font color=red>"+LeaveMinutes+"</font>分<font color=red>"+LeaveSeconds+"</font>秒<font color=red>"+nSS+"</font>毫秒";   
+}  
+setInterval(ShowTimes,20);  
+
+
+
+</script>
+
+</head>
+
+<body >
+<div id="hxtime1" style="padding:5px 0 0 0;"></div> 
+<div id="hxtime2" style="padding:5px 0 0 0;"></div> 
+ 
+</body>
+</html>

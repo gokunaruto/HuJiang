@@ -1,0 +1,755 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>cctalk专题</title>
+<script src="js/jquery-1.4.2.min.js"></script>
+<script src="http://res.hjfile.cn/js/lib/jq/1.8.3/plugins/jquery.bxslider.min.js" type="text/javascript"></script>
+<style type="text/css">
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+a {
+    color: #606A7A;
+    text-decoration: none;
+}
+li {list-style-type:none}
+img{ border:none}
+body {
+    background:url(img/bg.png) repeat scroll 0 0 #E2E6EC;
+    color: #606A7A;
+    font: 12px verdana,arial;}
+.big{font-size:14px}
+.bold{font-weight:700} 
+.fl {display:inline; float:left}
+.fr {display:inline;float:right}
+.mb20{margin-bottom:20px}
+.mb10{margin-bottom:10px}
+.mb15{margin-bottom:15px}
+.pt10{padding-top:10px}
+.mt10{margin-top:10px}
+.mb5{margin-bottom:5px}
+.mt5{margin-top:5px}
+.por{position:relative}
+.gray {
+    color: #9CA6B4;
+}
+.cf:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.cf {
+}
+#wrapper { margin:0 auto; overflow:hidden; width:1000px; padding-top:28px;}
+#wrapper.course {height:270px}
+.main {width:760px}
+.course_recommend {
+    height: 270px;
+    overflow: hidden;
+    width: 710px;
+}
+.course_recommend a {
+    display: block;
+    height: 130px;
+    width: 195px;
+}
+.course_recommend p a {
+    height: 30px;
+}
+.course_recommend img {
+    background-color: #EEEEEE;
+    display: block;
+    height: 130px;
+    width: 195px;
+}
+.course_recommend img:hover, .gkk_panel img:hover {
+    box-shadow: 0 0 4px #999999;
+    opacity: 0.9;
+}
+.course_recommend ul {
+    margin-right: -5px;
+    padding-left: 25px;
+}
+.course_recommend li {
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 35px;
+    width: 195px;
+}
+.course_recommend li p {
+    border-bottom: 1px dotted #EEEEEE;
+    height: 28px;
+    line-height: 28px;
+}
+.panel {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 3px;
+    box-shadow: 0 2px 2px #D2D5D7;
+    padding: 15px;
+    position: relative;
+}
+
+.tag_gkk {
+    background:url(img/tag_gkk2.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    bottom: 0;
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+    z-index: 2;
+}
+.course_title:hover{color:#1DAADF}
+
+
+
+.aside {width:240px;}
+
+.myinfo_con {
+    line-height: 28px;
+    width: 110px;
+}
+.mytab{
+    border-top: 1px dotted #EEEEEE;
+}
+.mytab li a {
+    display: block;
+    height: 24px;
+    padding-top: 40px;
+    width: 66px;
+}
+.dlcc{
+	font-family: 'Microsoft Yahei';
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+	background-color: #00ADEF;
+    color: #FFFFFF;
+	border-radius:3px;
+	display:block;
+	padding:0 30px;
+	text-align:center
+	}
+.dlcc:hover {background-color:#1EBDFA}	
+	
+.cblock {background-color:#FFFFFF; border-radius:3px; box-shadow: 0 2px 2px #D2D5D7; margin-bottom:20px; overflow:hidden; padding:10px; position:relative; width:220px; z-index:10}
+
+
+.panel_title {
+    font-family: STHeiti,"microsoft yahei";
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+
+.side_title {color:#333333; font-size:18px; height:24px; line-height:24px; font-family: STHeiti,"Microsoft Yahei";}
+.btn_dzb {background:url(img/dzb.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);display: block; height: 80px; width: 220px;}/*邮箱*/
+.btn_gkkorder {
+    background:url(img/gkk.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 80px;
+    text-indent: -999em;
+    width: 220px;
+}
+.btn_yjfk{
+    background:url(img/yjfk.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 80px;
+    width: 220px;
+}
+.btn_hy{
+    background:url(img/hy.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 80px;
+    width: 220px;
+}
+.random_feed_list .feed_content {
+    display: none;
+}
+.random_feed_list li {
+    float: left;
+    height: 70px;
+    width: 70px;
+}
+.random_feed_item a {
+    display: block;
+}
+.random_feed_item img {
+    display: block;
+    height: 70px;
+    width: 70px;
+}
+#random_feed_pop_layer {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    color: #A1A3B0;
+    display: none;
+    left: 10px;
+    padding: 6px 10px;
+    position: absolute;
+    text-indent: 0;
+    width: 190px;
+    z-index: 10;
+}
+#random_feed_pop_layer .arrow01, #random_feed_pop_layer .arrow02, #random_feed_pop_layer .arrow03 {
+    background: url("/images/pop_layer_arrow.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#random_feed_pop_layer .arrow01 {
+    left: 23px;
+    top: -13px;
+}
+#random_feed_pop_layer .arrow02 {
+    left: 93px;
+    top: -13px;
+}
+#random_feed_pop_layer .arrow03 {
+    left: 163px;
+    top: -13px;
+}
+#random_feed_pop_layer .arrow04, #random_feed_pop_layer .arrow05, #random_feed_pop_layer .arrow06 {
+    background: url("/images/pop_layer_arrow.gif") no-repeat scroll 0 -11px rgba(0, 0, 0, 0);
+}
+#random_feed_pop_layer .arrow04 {
+    bottom: -14px;
+    left: 23px;
+}
+#random_feed_pop_layer .arrow05 {
+    bottom: -14px;
+    left: 93px;
+}
+#random_feed_pop_layer .arrow06 {
+    bottom: -14px;
+    left: 163px;
+}
+#pop_layer_arrow {
+    display: block;
+    height: 12px;
+    position: absolute;
+    width: 24px;
+}
+#pop_layer_user_name {
+    color: #646E6F;
+    font-size: 14px;
+    font-weight: bold;
+}
+#pop_layer_btn_invite {
+    background: none repeat scroll 0 0 #FF6600;
+    border-radius: 3px;
+    color: #FFFFFF;
+    display: inline-block;
+    line-height: 14px;
+    padding: 2px 5px 4px;
+}
+#random_feed_pop_layer .inviteed {
+    background: none repeat scroll 0 0 #DDDDDD;
+    cursor: default;
+}
+.pop_layer_declaration {
+    display: block;
+    line-height: 18px;
+    max-height: 54px;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+
+.course_top{ width:710px}
+#zs{background:url(img/zs.png) no-repeat; width:17px; height:15px; top:22px; right:273px; position:absolute;}
+#zs2{float: right; position: absolute; color: rgb(102, 102, 102); right: 39px; font-size: 16px; top: 18px; font-family: 'Microsoft Yahei'; opacity:0.9}
+#gkkscroller{ height:145px; overflow:hidden}
+#btn_eventMenu_prev{background:url(img/prev.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);height:20px; width:18px; display:inline-block}
+#btn_eventMenu_next{background:url(img/next.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);height:20px; width:18px; display:inline-block}
+#eventMenuScroller{
+    height: 113px;
+    overflow: hidden;
+    position: relative;
+    width: 225px;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	<div class="main fl">
+		<div class="course_recommend panel"  style="margin-bottom:19px">
+			<div class="course_top">
+				<p class="panel_title">高中课程</p>
+				<div id="zs"></div>
+				<p id="zs2">为什么要成为会员 | 当月课程表</p>
+				
+			</div>
+			<ul>
+				<li>
+					<a class="por mb5" target="_blank" href="/gongkaike/151201681/">
+					<div class="tag_gkk"></div>
+					<img class="lazy" width="195" height="130" data-original="http://f1.c.hjfile.cn/public/upload/201403/201403050547137835_m.jpg" src="img/course1.png" style="display: block;" />
+					</a>
+					<p>
+						<a class="course_title" title="看电影学英语 你真的会吗？" target="_blank" href="/gongkaike/151201681/">看电影学英语 你真的会吗？ </a>
+					</p>
+					<p>
+						<span class="gray">开课时间：</span>
+						4月14日 19:30
+					</p>
+					<p>
+						<span class="gray">预约人数：</span>
+						2129 人
+					</p>
+				</li>
+				<li>
+					<a class="por mb5" target="_blank" href="/gongkaike/151201681/">
+					<div class="tag_gkk"></div>
+					<img class="lazy" width="195" height="130" data-original="http://f1.c.hjfile.cn/public/upload/201403/201403050547137835_m.jpg" src="img/course1.png" style="display: block;" />
+					</a>
+					<p>
+						<a class="course_title" title="看电影学英语 你真的会吗？" target="_blank" href="/gongkaike/151201681/">看电影学英语 你真的会吗？ </a>
+					</p>
+					<p>
+						<span class="gray">开课时间：</span>
+						4月14日 19:30
+					</p>
+					<p>
+						<span class="gray">预约人数：</span>
+						2129 人
+					</p>
+				</li>
+				<li>
+					<a class="por mb5" target="_blank" href="/gongkaike/151201681/">
+					<div class="tag_gkk"></div>
+					<img class="lazy" width="195" height="130" data-original="http://f1.c.hjfile.cn/public/upload/201403/201403050547137835_m.jpg" src="img/course1.png" style="display: block;" />
+					</a>
+					<p>
+						<a class="course_title" title="看电影学英语 你真的会吗？" target="_blank" href="/gongkaike/151201681/">看电影学英语 你真的会吗？ </a>
+					</p>
+					<p>
+						<span class="gray">开课时间：</span>
+						4月14日 19:30
+					</p>
+					<p>
+						<span class="gray">预约人数：</span>
+						2129 人
+					</p>
+				</li>
+			</ul>
+		</div>
+		
+		
+		<div class="course_recommend panel"  style="margin-bottom:19px">
+			<div class="course_top">
+				<p class="panel_title">高中课程</p>
+				<div id="zs"></div>
+				<p id="zs2">为什么要成为会员 | 当月课程表</p>
+				
+			</div>
+			<ul>
+				<li>
+					<a class="por mb5" target="_blank" href="/gongkaike/151201681/">
+					<div class="tag_gkk"></div>
+					<img class="lazy" width="195" height="130" data-original="http://f1.c.hjfile.cn/public/upload/201403/201403050547137835_m.jpg" src="img/course1.png" style="display: block;" />
+					</a>
+					<p>
+						<a class="course_title" title="看电影学英语 你真的会吗？" target="_blank" href="/gongkaike/151201681/">看电影学英语 你真的会吗？ </a>
+					</p>
+					<p>
+						<span class="gray">开课时间：</span>
+						4月14日 19:30
+					</p>
+					<p>
+						<span class="gray">预约人数：</span>
+						2129 人
+					</p>
+				</li>
+				<li>
+					<a class="por mb5" target="_blank" href="/gongkaike/151201681/">
+					<div class="tag_gkk"></div>
+					<img class="lazy" width="195" height="130" data-original="http://f1.c.hjfile.cn/public/upload/201403/201403050547137835_m.jpg" src="img/course1.png" style="display: block;" />
+					</a>
+					<p>
+						<a class="course_title" title="看电影学英语 你真的会吗？" target="_blank" href="/gongkaike/151201681/">看电影学英语 你真的会吗？ </a>
+					</p>
+					<p>
+						<span class="gray">开课时间：</span>
+						4月14日 19:30
+					</p>
+					<p>
+						<span class="gray">预约人数：</span>
+						2129 人
+					</p>
+				</li>
+				<li>
+					<a class="por mb5" target="_blank" href="/gongkaike/151201681/">
+					<div class="tag_gkk"></div>
+					<img class="lazy" width="195" height="130" data-original="http://f1.c.hjfile.cn/public/upload/201403/201403050547137835_m.jpg" src="img/course1.png" style="display: block;" />
+					</a>
+					<p>
+						<a class="course_title" title="看电影学英语 你真的会吗？" target="_blank" href="/gongkaike/151201681/">看电影学英语 你真的会吗？ </a>
+					</p>
+					<p>
+						<span class="gray">开课时间：</span>
+						4月14日 19:30
+					</p>
+					<p>
+						<span class="gray">预约人数：</span>
+						2129 人
+					</p>
+				</li>
+			</ul>
+		</div>
+	
+	 <div class="course_recommend panel "  style="margin-bottom:19px">
+			<div class="course_top">
+				<p class="panel_title">高中课程</p>
+				<div id="zs"></div>
+				<p id="zs2">为什么要成为会员 | 当月课程表</p>
+				
+			</div>
+			<ul>
+				<li>
+					<a class="por mb5" target="_blank" href="/gongkaike/151201681/">
+					<div class="tag_gkk"></div>
+					<img class="lazy" width="195" height="130" data-original="http://f1.c.hjfile.cn/public/upload/201403/201403050547137835_m.jpg" src="img/course1.png" style="display: block;" />
+					</a>
+					<p>
+						<a class="course_title" title="看电影学英语 你真的会吗？" target="_blank" href="/gongkaike/151201681/">看电影学英语 你真的会吗？ </a>
+					</p>
+					<p>
+						<span class="gray">开课时间：</span>
+						4月14日 19:30
+					</p>
+					<p>
+						<span class="gray">预约人数：</span>
+						2129 人
+					</p>
+				</li>
+				<li>
+					<a class="por mb5" target="_blank" href="/gongkaike/151201681/">
+					<div class="tag_gkk"></div>
+					<img class="lazy" width="195" height="130" data-original="http://f1.c.hjfile.cn/public/upload/201403/201403050547137835_m.jpg" src="img/course1.png" style="display: block;" />
+					</a>
+					<p>
+						<a class="course_title" title="看电影学英语 你真的会吗？" target="_blank" href="/gongkaike/151201681/">看电影学英语 你真的会吗？ </a>
+					</p>
+					<p>
+						<span class="gray">开课时间：</span>
+						4月14日 19:30
+					</p>
+					<p>
+						<span class="gray">预约人数：</span>
+						2129 人
+					</p>
+				</li>
+				<li>
+					<a class="por mb5" target="_blank" href="/gongkaike/151201681/">
+					<div class="tag_gkk"></div>
+					<img class="lazy" width="195" height="130" data-original="http://f1.c.hjfile.cn/public/upload/201403/201403050547137835_m.jpg" src="img/course1.png" style="display: block;" />
+					</a>
+					<p>
+						<a class="course_title" title="看电影学英语 你真的会吗？" target="_blank" href="/gongkaike/151201681/">看电影学英语 你真的会吗？ </a>
+					</p>
+					<p>
+						<span class="gray">开课时间：</span>
+						4月14日 19:30
+					</p>
+					<p>
+						<span class="gray">预约人数：</span>
+						2129 人
+					</p>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="course_recommend panel "  style="margin-bottom:19px">
+			<div class="course_top">
+				<p class="panel_title">高中课程</p>
+				<div id="zs"></div>
+				<p id="zs2">为什么要成为会员 | 当月课程表</p>
+				
+			</div>
+			<ul>
+				<li>
+					<a class="por mb5" target="_blank" href="/gongkaike/151201681/">
+					<div class="tag_gkk"></div>
+					<img class="lazy" width="195" height="130" data-original="http://f1.c.hjfile.cn/public/upload/201403/201403050547137835_m.jpg" src="img/course1.png" style="display: block;" />
+					</a>
+					<p>
+						<a class="course_title" title="看电影学英语 你真的会吗？" target="_blank" href="/gongkaike/151201681/">看电影学英语 你真的会吗？ </a>
+					</p>
+					<p>
+						<span class="gray">开课时间：</span>
+						4月14日 19:30
+					</p>
+					<p>
+						<span class="gray">预约人数：</span>
+						2129 人
+					</p>
+				</li>
+				<li>
+					<a class="por mb5" target="_blank" href="/gongkaike/151201681/">
+					<div class="tag_gkk"></div>
+					<img class="lazy" width="195" height="130" data-original="http://f1.c.hjfile.cn/public/upload/201403/201403050547137835_m.jpg" src="img/course1.png" style="display: block;" />
+					</a>
+					<p>
+						<a class="course_title" title="看电影学英语 你真的会吗？" target="_blank" href="/gongkaike/151201681/">看电影学英语 你真的会吗？ </a>
+					</p>
+					<p>
+						<span class="gray">开课时间：</span>
+						4月14日 19:30
+					</p>
+					<p>
+						<span class="gray">预约人数：</span>
+						2129 人
+					</p>
+				</li>
+				<li>
+					<a class="por mb5" target="_blank" href="/gongkaike/151201681/">
+					<div class="tag_gkk"></div>
+					<img class="lazy" width="195" height="130" data-original="http://f1.c.hjfile.cn/public/upload/201403/201403050547137835_m.jpg" src="img/course1.png" style="display: block;" />
+					</a>
+					<p>
+						<a class="course_title" title="看电影学英语 你真的会吗？" target="_blank" href="/gongkaike/151201681/">看电影学英语 你真的会吗？ </a>
+					</p>
+					<p>
+						<span class="gray">开课时间：</span>
+						4月14日 19:30
+					</p>
+					<p>
+						<span class="gray">预约人数：</span>
+						2129 人
+					</p>
+				</li>
+			</ul>
+		</div>
+	
+
+	
+	</div>
+		<div class="aside fr">
+		<!--right-->
+		
+			<!--<div class="cblock fr">
+				<div class="mb15 cf">
+					<a class="userhead fl" target="_blank">
+						<img width="82" height="82" alt="roei" src="http://i2.hjfile.cn/f96/38/24/25383824.jpg" /></a> 
+					<div class="myinfo_con fr">
+						<p>
+							<span class="big mb10 bold" style="white-space:pre">笑阳Sean</span>
+						</p>
+						<p>
+							<span class="big">欢迎来到CT课堂</span>
+						</p>
+					</div>
+				</div>
+				<div class="mytab cf pt10 mt10">
+					<ul class="mb10 cf">
+						<li> 
+						<a class="mytab_1" onclick="" href="/gongkaike/my/">我的课表</a>
+						</li>
+						<li>
+						<a class="mytab_3" href="/gongkaike/my/past/">课程回顾</a>
+						</li>
+						<li>
+						<a class="mytab_2" onclick="" target="_blank" href="http://bulo.hujiang.com/u/25383824">我的部落</a>
+						</li>
+						</ul>
+						<a class="dlcc" href="http://f1.ct.hjfile.cn/api/AutoUpdate/CTClient_Out/CCTalk4-2-9-48.exe">下载CCTalk</a>
+				</div>
+			</div> 
+			-->
+			<!--模块1-->
+			
+			<div id="gkkscroller" class="cblock fr">
+				<div class="side_title mb10">
+					<span class="fr">
+						<a id="btn_eventMenu_prev" href="###"></a>
+						<a id="btn_eventMenu_next" href="###"></a>
+					</span>
+					经典公开课订阅
+				</div>
+				<ul id="eventMenuScroller" style="width: 225px;">
+            
+					<li>
+						<a target="_blank" href="http://bulo.hujiang.com/app/menu/14667/">
+							<img height="110" width="220" src="/app/images/event_menu/14667.jpg" /></a>
+					</li>
+					
+					<li>
+						<a target="_blank" href="http://bulo.hujiang.com/app/menu/15024/">
+							<img height="110" width="220" src="/app/images/event_menu/15024.jpg" /></a>
+					</li>
+					
+					<li>
+						<a target="_blank" href="http://bulo.hujiang.com/app/menu/15200/">
+							<img height="110" width="220" src="/app/images/event_menu/15200.jpg" /></a>
+					</li>
+					
+					<li>
+						<a target="_blank" href="http://bulo.hujiang.com/app/menu/10358/">
+							<img height="110" width="220" src="/app/images/event_menu/10358.jpg" /></a>
+					</li>
+					
+					<li>
+						<a target="_blank" href="http://bulo.hujiang.com/app/menu/10605/">
+							<img height="110" width="220" src="/app/images/event_menu/10605.jpg" /></a>
+					</li>
+					
+					<li>
+						<a target="_blank" href="http://bulo.hujiang.com/app/menu/12048/">
+							<img height="110" width="220" src="/app/images/event_menu/12048.jpg" /></a>
+					</li>
+					
+					<li>
+						<a target="_blank" href="http://bulo.hujiang.com/app/menu/12050/">
+							<img height="110" width="220" src="/app/images/event_menu/12050.jpg" /></a>
+					</li>
+					
+					<li>
+						<a target="_blank" href="http://bulo.hujiang.com/app/menu/12075/">
+							<img height="110" width="220" src="/app/images/event_menu/12075.jpg" /></a>
+					</li>
+            </ul>
+			
+		</div>
+		
+			<div class="cblock fr"> 
+				<p class="side_title mb10">热门名师</p>
+				<div id="random_feed_pop_layer">
+					<span id="pop_layer_arrow" class="arrow03"></span>
+					<div class="mb5 mt5">
+						<div class="mb10">
+							<span class="fr">
+								<a id="pop_layer_btn_invite" class="" data-uid="0" href="http://bulo.hujiang.com/u/19125137" target="_blank" title="关注Ta">+ 关注</a>
+							</span>
+							<span id="pop_layer_user_name">exhijacky</span>
+						</div>
+					
+						<div class="pop_layer_declaration">
+						认证信息：
+							<span id="pop_layer_declaration_content">沪江网教书匠，主要方向：托福，雅思，SAT等</span>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				<ul class="random_feed_list cf">
+					<li>
+						<span class="random_feed_item">
+							<a class="fl" data-inviteed="0" data-declaration="笈川幸司，清华大学外教，日语教学专家" data-level2="1" data-level1="4" data-name="oikawasensei" data-uid="14537345" data-index="0" target="_blank" href="/gongkaike/t/14537345"><img alt="" src="img/ms1.jpg" /></a>					</span>
+					</li>
+					<li>
+						<span class="random_feed_item">
+							<a class="fl" data-inviteed="0" data-declaration="笈川幸司，清华大学外教，日语教学专家" data-level2="1" data-level1="4" data-name="oikawasensei" data-uid="14537345" data-index="1" target="_blank" href="/gongkaike/t/14537345"><img alt="" src="img/ms1.jpg" /></a>					</span>
+					</li>
+					<li>
+						<span class="random_feed_item">
+							<a class="fl" data-inviteed="0" data-declaration="笈川幸司，清华大学外教，日语教学专家" data-level2="1" data-level1="4" data-name="oikawasensei" data-uid="14537345" data-index="2" target="_blank" href="/gongkaike/t/14537345"><img alt="" src="img/ms1.jpg" /></a>					</span>
+					</li>
+					<li>
+						<span class="random_feed_item">
+							<a class="fl" data-inviteed="0" data-declaration="笈川幸司，清华大学外教，日语教学专家" data-level2="1" data-level1="4" data-name="oikawasensei" data-uid="14537345" data-index="3" target="_blank" href="/gongkaike/t/14537345"><img alt="" src="img/ms1.jpg" /></a>					</span>
+					</li>
+					<li>
+						<span class="random_feed_item">
+							<a class="fl" data-inviteed="0" data-declaration="笈川幸司，清华大学外教，日语教学专家" data-level2="1" data-level1="4" data-name="oikawasensei" data-uid="14537345" data-index="4" target="_blank" href="/gongkaike/t/14537345"><img alt="" src="img/ms1.jpg" /></a>					</span>
+					</li>
+					<li>
+						<span class="random_feed_item">
+							<a class="fl" data-inviteed="0" data-declaration="笈川幸司，清华大学外教，日语教学专家" data-level2="1" data-level1="4" data-name="oikawasensei" data-uid="14537345" data-index="5" target="_blank" href="/gongkaike/t/14537345"><img alt="" src="img/ms1.jpg" /></a>					</span>
+					</li>
+					<li>
+						<span class="random_feed_item">
+							<a class="fl" data-inviteed="0" data-declaration="笈川幸司，清华大学外教，日语教学专家" data-level2="1" data-level1="4" data-name="oikawasensei" data-uid="14537345" data-index="6" target="_blank" href="/gongkaike/t/14537345"><img alt="" src="img/ms1.jpg" /></a>					</span>
+					</li>	
+					<li>
+						<span class="random_feed_item">
+							<a class="fl" data-inviteed="0" data-declaration="笈川幸司，清华大学外教，日语教学专家" data-level2="1" data-level1="4" data-name="oikawasensei" data-uid="14537345" data-index="7" target="_blank" href="/gongkaike/t/14537345"><img alt="" src="img/ms1.jpg" /></a>					</span>
+					</li>	
+					<li>
+						<span class="random_feed_item">
+							<a class="fl" data-inviteed="0" data-declaration="笈川幸司，清华大学外教，日语教学专家" data-level2="1" data-level1="4" data-name="oikawasensei" data-uid="14537345" data-index="8" target="_blank" href="/gongkaike/t/14537345"><img alt="" src="img/ms1.jpg" /></a>					</span>
+					</li>	
+					<li>
+						<span class="random_feed_item">
+							<a class="fl" data-inviteed="0" data-declaration="笈川幸司，清华大学外教，日语教学专家" data-level2="1" data-level1="4" data-name="oikawasensei" data-uid="14537345" data-index="9" target="_blank" href="/gongkaike/t/14537345"><img alt="" src="img/ms1.jpg" /></a>					</span>
+					</li>	
+					<li>
+						<span class="random_feed_item">
+							<a class="fl" data-inviteed="0" data-declaration="笈川幸司，清华大学外教，日语教学专家" data-level2="1" data-level1="4" data-name="oikawasensei" data-uid="14537345" data-index="10" target="_blank" href="/gongkaike/t/14537345"><img alt="" src="img/ms1.jpg" /></a>					</span>
+					</li>	
+					<li>
+						<span class="random_feed_item">
+							<a class="fl" data-inviteed="0" data-declaration="笈川幸司，清华大学外教，日语教学专家" data-level2="1" data-level1="4" data-name="oikawasensei" data-uid="14537345" data-index="11" target="_blank" href="/gongkaike/t/14537345"><img alt="" src="img/ms1.jpg" /></a>					</span>
+					</li>	
+		 	</ul>
+		
+		
+		
+		
+			</div>
+			<!--模块2-->
+			<div class="cblock">
+				<div class="side_title mb10">如何成为会员</div>
+				<a class="btn_hy" title="如何成为会员" href="#" target="_blank"></a>
+			</div>
+		
+			<!--模块3-->
+			<div id="dzb" class="cblock mb20">
+				<div class="side_title mb10">公开课电子报订阅</div>
+				<a class="btn_dzb" title="邮箱订阅：CCTalk名师公开课周刊" target="_blank" href="http://app.hujiang.com/mail/sub/72/"></a>
+			</div>	
+			<!--模块4-->
+			<div class="cblock">
+				<div class="side_title mb10">申请开设公开课</div>
+				<a class="btn_gkkorder" href="/gongkaike/biz/">申请开设公开课»</a>
+			</div>
+			<!--模块5-->
+			<div class="cblock">
+				<div class="side_title mb10">意见反馈</div>
+				<a class="btn_yjfk" target="_blank" title="反馈意见" href="http://kefu.hujiang.com/feedback/"></a>
+			</div>
+			<!--模块6-->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	</div>
+</div>
+<script type="text/javascript">
+
+
+setTimeout(function(){$('#eventMenuScroller').boxSlider({
+		speed:1000,
+		autoScroll:true,
+		timeout:slideInterval,
+		prev:'#btn_eventMenu_next',
+		next:'#btn_eventMenu_prev',
+		pauseOnHover:true,
+		effect:'scrollHorz',
+		blindCount:15});},slideInterval/2)
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+.img-head {
+     width: 502px;
+     height: 15px;
+     padding: 9px 0;
+     border-left: 1px solid #ccc;
+     border-right: 1px solid #ccc;
+     background: url(../images/ks_cl.gif) -20px 0px repeat-x;
+     }
+.img-head span {
+         float: left;
+         color: #454545;
+         margin: 0 3px;
+         }
+.img-channel {
+     float: left;
+     font-size: 10px;
+     }
+.img-prev {
+    width: 21px;
+    height: 15px;
+    cursor: pointer;
+    background: url(../images/prev.gif) no-repeat;
+    }
+.img-next {
+    width: 21px;
+    height: 15px;
+    cursor: pointer;
+    background: url(../images/next.gif) no-repeat;
+}
+.img-content {
+    width: 243px;
+    height: 85px;
+    margin-top: 2px;
+    padding: 0 5px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ccc;
+    }
+.img-list {
+    width: 1992px;
+    overflow: hidden;
+    position: absolute;
+    }
+.img-focus {
+    float: left;
+    width: 84px;
+    }
+	
+.img-focus img {
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    float: left;
+    border: 1px solid #ccc;
+    }
+.txt-weight {
+    font-size: 12px;
+    font-weight: bold;
+    }
+</style>
+<script type="text/javascript" src="http://res.hjfile.cn/js/lib/jq/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+         var $imgList = $('.img-list'); 
+         var $imgfocus = $('.img-focus');
+        
+         var n = 1;
+         var focus_Width = $imgfocus.width();//分类长
+         //向前运动
+         $('.img-next').click(function(){
+             if (n == $imgfocus.length) 
+             {
+                 //在最后一个面板继续向前时，跳转至第一个面板
+                 $imgList.animate({left: '0px'}, 800); 
+                 n = 1;
+             }
+             else 
+             {
+                 $imgList.animate({
+                 left: '-=' + focus_Width}, 800);
+                 n++;
+              }
+           /*$page.eq(n - 1).addClass('txt-weight').siblings().removeClass('txt-weight');*/
+		   });
+                         //向后运动
+         
+   })
+</script>
+</head>
+
+<body>
+
+<div class="img-head">
+    <span class="img-prev">
+    &lt;&lt; 
+    </span>
+    <div class="img-channel">
+        <span>1 </span>
+        <span>2 </span>
+        <span>3 </span>
+       
+    </div>
+    <span class="img-next">&gt;&gt; </span>
+</div>
+<div class="img-content">
+  <div class="img-list" style="left:0px;">
+     <div class="img-focus">
+        <img src="http://image1.mop.com/images/project7/2009-06-25/12458919296351914.jpg" alt=""/>
+	 </div>
+	 <div class="img-focus">
+        <img src="http://image1.mop.com/images/project7/2009-06-25/12458919296351914.jpg" alt=""/>
+	 </div>
+	 <div class="img-focus">
+        <img src="http://image1.mop.com/images/project7/2009-06-25/12458919296351914.jpg" alt=""/>
+	 </div>
+	 <div class="img-focus">
+        <img src="http://image1.mop.com/images/project7/2009-06-25/12458919296351914.jpg" alt=""/>
+	 </div>
+	 <div class="img-focus">
+        <img src="http://image1.mop.com/images/project7/2009-06-25/12458919296351914.jpg" alt=""/>
+	 </div>
+    
+     
+</div>
+</div>
+</body>
+</html>

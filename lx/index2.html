@@ -1,0 +1,1139 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>IUNI U2手机_IUNI U2配置参数详细介绍>>IUNI手机官网</title>
+	<meta name="keywords" content="IUNI U2,IUNIU2配置参数">
+	<meta name="description" content="展现了IUNI U2手机“惊艳”的设计外观，详细的介绍了IUNI U2的配置参数信息，让您更好的了解IUNI U2。">
+	<link rel="stylesheet" type="text/css" href="http://static.iuniimg.com/css/version/2014/04/common.18134451.css"/>
+	<link rel="stylesheet" type="text/css" href="http://static.iuniimg.com/css/version/2014/04/iuni_1_U2.21114424.css"/>
+	<link rel="stylesheet" type="text/css" href="http://static.iuniimg.com/css/version/2014/03/parameter.18162626.css"/> 
+</head>
+
+<body class="navtop_phone">
+	<div class="hd_wrap" id="JheaderNav">
+		<script type="text/javascript" charset="utf-8">
+if("undefined"==typeof $)document.write("<script type=\"text\/javascript\" src=\"http:\/\/static.iuniimg.com\/js\/jquery-1.7.min.js\"><\/script>")
+</script>
+<script type="text/javascript" src="http://static.iuniimg.com/js/version/2014/03/iuni.common.app.17114713.js" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+if("undefined"==typeof $)document.write("<script type=\"text\/javascript\" src=\"http:\/\/static.iuniimg.com\/js\/jquery-1.7.min.js\"><\/script>")
+</script>
+<script type="text/javascript" src="http://static.iuniimg.com/js/version/2014/03/iuni.common.ui.17170831.js" charset="utf-8"></script>
+<div class="hd_bg">
+    <div class="w header cl cf" data-action="headerContainer">
+        <a href="http://www.iuni.com/index.shtml" class="z logo" title="IUNI" rtag="2.0002.0002"></a>
+        <ul data-action="links" class="nav cf navleft ui_abs" style=" left:270px;">
+            <li class="z navhome">
+                <a href="http://www.iuni.com/index.shtml" title="首页" rtag="2.0002.0001">首页</a>
+            </li>
+            <li class="z navphone">
+                <a href="http://www.iuni.com/special/2014/0418open/index.shtml" title="IUNI手机" rtag="2.0002.0003">手机</a>
+            </li>
+             <li class="z navparts">
+                <a href="http://www.iuni.com/goods/parts" title="IUNI配件" rtag="2.0002.0004">配件</a>
+            </li>
+            
+            <li class="z navtown">
+                <a href="http://town.iuni.com/" target="_blank" title="IUNI TOWN" rtag="2.0002.0011">IUNI TOWN</a>
+            </li>
+            <li class="z navtown">
+                <a href="http://www.iunios.com/" target="_blank" title="IUNI OS" rtag="2.0002.0013">IUNI OS</a>
+            </li>
+            <li class="z navservice">
+                <a href="http://www.iuni.com/service/" title="服务与支持" rtag="2.0002.0006">服务与支持</a>
+            </li> 
+            </ul> 
+            <ul class="nav f_r">     
+                    <li data-action="loginBtn" class="navlogin z" >
+                        <a rtag="2.0009.0002" data-action="login" href="javascript:void 0" title="登录">登录</a><em class="ui_cut_line1">|</em><a rtag="2.0009.0001" data-action="register" href="javascript:(function(){location.href='http://passport.iuni.com/register.shtml?reurl='+location.href.replace(/.*reurl=/,'')})()" title="注册">注册</a><em class="ui_cut_line2">|</em>
+                    </li>
+                    <li data-action="logoutBtnContainer" class="z exp_phk6 ui_hide navuserlist" id="navuserlist">
+                        <!--img class="ui_loading ui_hd_photo" data-action="head_photo" src="http://static.iuniimg.com/img/no_avatar_small.jpg" width="23" height="23" /-->
+                        <a href="http://passport.iuni.com/base_info_set.shtml" class="ui_nickname" data-action="userName" rtag="2.0002.0007"></a> <i class="trangleicon">&#8711;</i><em class="ui_cut_line2 y" style="*margin-top:-60px;">|</em>
+                        <div class="my_infod">                           
+                           <a href="http://passport.iuni.com/myorder.shtml">我的订单</a>
+                           <a href="http://passport.iuni.com/base_info_set.shtml">我的资料</a>
+                           <a data-action="logoutBtn" href="javascript: void 0" class="color_gray" title="退出">退出</a>
+                        </div>
+                    </li>
+                    <li class="z navmycart">
+                        <div class="navshopcar">
+                        <!--hover样式 sc_hover-->
+                            <span data-action="shop_car_box" class="shopcarbox">
+                                <span class="shopcarwrp" data-action="shop_car_wrap">
+                                <a data-action="shop_car_btn1" href="javascript:void 0" class="shop_car_link" rtag="2.0002.0008">购物车 </a> <em data-action="cart_num" class="cart_num"></em> <i class="trangleicon">&#8711;</i>
+                                    <b class="s_line"></b>
+                                   
+                                </span>
+                            </span>
+                                
+                         </div>    
+                    </li>
+            </ul>
+            
+            
+    </div>
+</div>
+<script id="tpl_shop_list" type="text/html">
+
+                    <div class="shopcarcont" data-action="shopcarlist_parent">
+                        <%
+
+                            if ( total_number === 0 ){
+                        %>
+                                <div class="shopcaremptybox" data-action="shopcarlist_empty">
+                                    <a href="#" class="shopcarempty">您的购物车是空的，去挑选喜欢的商品吧。</a>
+                                </div>
+                        <%
+                            }else{
+                        %>
+                                <ul class="shopcarlist" >
+
+                                <%
+                                    for ( var i in goods_list ){
+                                        var item = goods_list[ i ],
+                                            belong_list = item.belong_list || [];
+                                %>
+                                         <li>
+                                            <div class="shopcar_good">
+                                                <a href="javascript:void 0"><img class="shopcar_good_img shopcar_mid" src="<%=item.goods_img%>"></a>
+                                                <span class="shopcar_good_desc">
+                                                    <span><%=item.goods_name%></span>
+                                                    <span><%=item.goods_attr%></span>
+                                                </span>
+                                                <span class="shopcar_good_price">
+                                                    <span>￥</span>
+                                                    <span class="color_red"><%=item.goods_price%></span>
+                                                    <span>x</span>
+                                                    <span><%=item.goods_number%></span>
+                                                </span>
+                                            </div>
+                                            <%
+                                                for ( var j = 0, belong; belong = belong_list[ j++ ]; ){
+                                            %>
+                                                    <div class="shopcar_gift cf">
+                                                        <span class="color_red f_l shopcar_gift_title">【赠品】</span>
+                                                        <a href="javascript:void 0" class="f_l"><img class="shopcar_gift_img shopcar_mid" src="<%=belong.goods_img%>"></a>
+                                                        <div class="shopcar_gift_desc f_l">
+                                                            <p><%=belong.goods_name%></p>
+                                                            <p><%=belong.goods_attr%></p>
+                                                        </div>
+                                                        <div class="shopcar_gift_num f_r"><%=belong.goods_number%></div>
+                                                    </div>
+                                            <%
+                                                }
+                                            %>
+                                            
+                                        </li>
+                                <%
+                                    }
+                                %>
+
+                                </ul>
+                        
+                                <div class="shopcar_btn_box">
+                                    <div class="shopcar_btn_info">
+                                        共<span class="shopcar_btnnum"><%=total_number%></span>件商品，合计：￥<span class="color_red"><%=total_price%></span>
+                                    </div>
+                                    <div class="shopcar_btn_div">
+                                        <a data-action="shop_car_btn" class="shopcar_btn" href="javascript:void 0" rtag="2.0002.0009">去结算</a>
+                                    </div>
+                                </div>
+                        <%
+                            }
+                        %>
+                        
+                    </div>
+
+</script>
+<script>
+    $("#navuserlist").hover(
+ function () {
+    $(this).addClass("navuserlist_hover");
+  },
+  function () {
+    $(this).removeClass("navuserlist_hover");
+  }
+
+        )
+
+//         $(".navshopcar").hover(
+//  function () {
+//     $(".ui_cut_line2").addClass("color_w");
+//   },
+//   function () {
+//     $(".ui_cut_line2").removeClass("color_w");
+//   }
+
+// )
+
+
+// ui_cut_line2
+
+</script>
+<!-- E header -->
+<script type="text/javascript" charset="utf-8">
+if("undefined"==typeof $)document.write("<script type=\"text\/javascript\" src=\"http:\/\/static.iuniimg.com\/js\/jquery-1.7.min.js\"><\/script>")
+</script>
+<script type="text/javascript" src="http://static.iuniimg.com/js/version/2014/03/iuni.common.header.18112511.js" charset="utf-8"></script>
+
+	</div>
+	<div class="main" style="top:0;" id="Jmain" >
+		<div class="ui_rel s s1">
+			<div class="s1_nav">
+				<ul>
+					<li class="s1_nav_current"><a href="/special/2014/0109iuni/index.shtml" title="IUNI手机" id="Jiuni2">U2详情</a></li>
+					<li><a href="#" title="手机视频" rtag="2.0004.0005" id="Jfooter1_video">视频</a></li>
+					<li><a  href="#" title="手机图库" rtag="2.0004.0004" id="Jfooter1_imgs">图库</a></li>
+					<li><a title="详细参数"  href="#" rtag="2.0004.0003" id="Jfooter1_param">详细参数</a></li>
+					<li class="buylink buylink_false"><a href="javascript:void(0);" title="立即购买">立即购买</a></li>
+				</ul>
+			</div>
+		     <img class="s1_banner" src="http://static.iuniimg.com/img/iuni_1/S1_1a.jpg">
+		     <div class="s1_add">
+		     	<div class="s1_add_title"></div>
+		     	<p>32G ROM +3G &nbsp;RAM &nbsp; &nbsp; 4.7英寸<br>
+		     	WCDMA/GSM &nbsp;&nbsp;Micro SIM卡 &nbsp; 单卡双模</p>
+		     </div>
+		    <div class="s1_btn s1_btn_false" >
+			<a href="javascript:void(0);"  target="_self" class="btn_yy btn_yy_false" rtag="2.0004.0001">
+				<small>&yen;</small>1999<span>立即购买<i class="iconfont">&#59422;</i></span>
+			</a>
+			<a href="http://passport.iuni.com/myorder.shtml" class="s1_bookedlink" id="Jbalance200" >预定用户通道&gt;&gt;</a>
+			<!--<span class="s1_tips">对不起，今日库存已售完</span>-->
+		</div>
+			<span class="s1_next"></span>
+		</div>
+		<div class="ui_rel s s2">
+			<div class="ui_abs s2_1"></div>
+		</div>
+		<div class="ui_rel s s3">
+			<div class="ui_abs s3_1"></div>
+			<div class="ui_abs s3_2"></div>
+		</div>
+		<div class="ui_rel s s4">
+			<div class="ui_abs s4_1"></div>
+			<div class="ui_abs s4_2"></div>
+		</div>
+		<div class="ui_rel s s5">
+		    <div class="ui_abs s5_1"><a href="javascript:void(0)" class="video_1" id="videobtn1">工艺</a>
+			<a href="javascript:void(0)" class="video_2" id="videobtn2">设计</a></div>
+		</div>
+		<div class="ui_rel s as56">
+
+		</div>
+		<div class="ui_rel s s6">
+			<div class="ui_abs s6_1"></div>
+			<div class="ui_abs s6_2"></div>
+		</div>
+		<div class="ui_rel s as67">
+		
+		</div>
+		<div class="ui_rel s s7">
+			<div class="ui_abs s7_1"></div>
+			<div class="ui_abs s7_2"></div>
+		</div>
+		<div class="ui_rel s as78">
+		
+		</div>
+		<div class="ui_rel s s8">
+			<div class="ui_abs s8_1"></div>
+			<div class="ui_abs s8_2"></div>
+		</div>	
+
+			<div class="ui_rel s s14">
+		<div class="w_960">			
+			<ul  class="s14_imglists" id="s14ul" tag="0">
+				<li>
+					<img src="http://static.iuniimg.com/img/iuni_1/s14.jpg">
+				</li>
+				<li>
+					<img class="s14_img_1" src="http://static.iuniimg.com/img/iuni_1/s14_1.jpg?st=20140312" alt="">
+					<img src="http://static.iuniimg.com/img/iuni_1/s14_2.jpg?st=20140312" alt="">
+					<h3>弱光拍照对比</h3>
+
+				</li>
+				<li>
+					<img class="s14_img_1"  src="http://static.iuniimg.com/img/iuni_1/s14_3.jpg" alt="">
+					<img src="http://static.iuniimg.com/img/iuni_1/s14_4.jpg" alt="">
+					<h3>逆光拍照对比</h3>
+				</li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+		<div class="ui_rel s s10">
+			<div class="ui_abs s10_1">
+				<img class="s10_1_img" src="http://static.iuniimg.com/img/iuni_1/S10_b01.jpg" id="Js10img">
+			</div>
+			<div class="ui_abs s10_2">
+				<p>无需学习复杂的摄影和图像处理技术<br>
+IUNI从120万张照片中总结出令人点赞的完美法则<br>
+浓缩成12组实时滤镜<br>
+惊艳你的社交圈</p>
+			</div>
+			<div class="ui_abs s10_3" id="Js10tab">
+				<div class="s10_3_tabs" id="s10tab">
+					<span class="s10_3_tabs_onshow" tag10_action="option">前置</span><span tag10_action="option">后置</span>
+				</div>
+				<ul class="s10_3_cont s10_3_cont_front" sel10_action="con">
+					<li tag10_action="item" class="onshow" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b01.jpg">
+						<span class="s10_simg s10_simg1"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">正常</span>
+					</li>
+					<li tag10_action="item" class="s10_3_cont_center" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b02.jpg">
+						<span class="s10_simg s10_simg2"></span>
+						<span class="s10_mask s10_mask_onshow"></span>
+						<span class="s10_modle s10_modle_onshow">日系逆光</span>
+					</li>
+					<li tag10_action="item" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b03.jpg">
+						<span class="s10_simg s10_simg3"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">暖调LOMO</span>
+					</li>
+
+					<li tag10_action="item" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b10.jpg">
+						<span class="s10_simg s10_simg4"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">冷调LOMO</span>
+					</li>
+					<li tag10_action="item" class="s10_3_cont_center" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b08.jpg">
+						<span class="s10_simg s10_simg5"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">飞雪</span>
+					</li>
+					<li tag10_action="item" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b09.jpg">
+						<span class="s10_simg s10_simg6"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">粉红佳人</span>
+					</li>
+
+					<li tag10_action="item" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b12.jpg">
+						<span class="s10_simg s10_simg7"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">美容逆光</span>
+					</li>
+					<li tag10_action="item" class="s10_3_cont_center" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b11.jpg">
+						<span class="s10_simg s10_simg8"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">流年</span>
+					</li>
+					<li tag10_action="item" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b13.jpg">
+						<span class="s10_simg s10_simg9"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">玻璃反光</span>
+					</li>
+				</ul>
+
+				<ul class="s10_3_cont s10_3_cont_back display_none" sel10_action="con">
+						<li tag10_action="item" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b01.jpg">
+						<span class="s10_simg s10_simg1"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">正常</span>
+					</li>
+					<li tag10_action="item" class="s10_3_cont_center" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b02.jpg">
+						<span class="s10_simg s10_simg2"></span>
+						<span class="s10_mask s10_mask_onshow"></span>
+						<span class="s10_modle s10_modle_onshow">日系逆光</span>
+					</li>
+					<li tag10_action="item" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b03.jpg">
+						<span class="s10_simg s10_simg3"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">暖调LOMO</span>
+					</li>
+
+					<li tag10_action="item" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b10.jpg">
+						<span class="s10_simg s10_simg4"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">冷调LOMO</span>
+					</li>
+					<li tag10_action="item" class="s10_3_cont_center" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b08.jpg">
+						<span class="s10_simg s10_simg5"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">飞雪</span>
+					</li>
+					<li tag10_action="item"  bigImg="http://static.iuniimg.com/img/iuni_1/S10_b05.jpg">
+						<span class="s10_simg s10_simg10"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">反转片</span>
+					</li>
+					<li tag10_action="item" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b06.jpg">
+						<span class="s10_simg s10_simg11"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">秋之光晕</span>
+					</li>
+
+					<li tag10_action="item" class="s10_3_cont_center" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b07.jpg">
+						<span class="s10_simg s10_simg12"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">蜡笔</span>
+					</li>
+					
+					<li tag10_action="item" bigImg="http://static.iuniimg.com/img/iuni_1/S10_b04.jpg">
+						<span class="s10_simg s10_simg13"></span>
+						<span class="s10_mask"></span>
+						<span class="s10_modle">形状光效</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- <div class="ui_rel s s11"></div>
+	-->
+	<div class="ui_rel s s12">
+		<div class="ui_abs s12_1">
+			<span class="s12_1span">骁龙800处理器</span>
+			<span>3G RAM超大内存</span>
+			<span>极致系统</span>
+		</div>
+	</div>
+	<div class="ui_rel s s13" id="s13_bgs"><div class="ui_abs s13_1"></div>
+</div>
+
+
+	<div class="ui_rel s s15">
+		<p>优雅的设计风格、简洁的实用功能、悦动的交互体验、以及精良的服务传递。IUNI OS同时是国内第一个真正 “零预装”的系统，拒绝一切第三方强制预装，将应用选择权完全交还给用户，从而打造最纯净的“单屏ROM ”。IUNI OS聚焦于用户最常用的核心功能优化，并在内核性能、省电处理、高效运算方面下足功夫，简洁易 用的系统有着飞一般的轻快流畅。</p>
+		<a class="s15_link" href="http://www.iunios.com" target="_blank">IUNIOS官网<span class="s15_jg"></span></a>
+		<span class="s15_video1" id="Js14_video1"><em class="s15_video_span">iunios视频</em></span>
+		<!-- <span class="s15_video2" id="Js14_video2"></span> -->	
+	</div>
+
+	<div class="ui_rel s as156">
+		<div class="w_960">
+			<ul class="as156_lists">
+				<li class="as156_list_right">
+					<h3>具有浓厚设计内涵！</h3>
+					<p>IUNI U2是一款具有浓厚设计内涵的产品，外在精湛的工业设计，产品精良之余，配色很重要，金属机身喷漆绿色的IUNI U2绝对够漂亮，色值选的很棒。内在IUNI OS从精挑细选的壁纸到减法理念、图标配色以及交互动画，内外兼修的IUNI U2绝对是设计行业中值得称赞有个性的产品！
+</p>
+				<!-- 	<span class="as156_list_from">泡泡网</span>
+					<span class="as156_list_date">2014年3月24号</span> -->
+				</li>
+				<li>
+					<h3>瞬间被IUNI有品的外观和
+清新的IUNI OS所吸引!</h3>
+					<p>金属一体机身在美观和握持舒适度方面找到了很好的平衡点，硬件方面同样也是目前旗舰市场的顶配。内置的IUNI OS外观清新，其主张的“零预装”理念让手机从此远离自动扣费和隐私窃取。
+</p>
+				<!-- 	<span class="as156_list_from">手机中国</span>
+					<span class="as156_list_date">2014年3月24号</span> -->
+				</li>
+				<li class="as156_list_right">
+					<h3>幸福，有时候并不遥远
+</h3>
+					<p>在智能手机功能设计越来越繁杂的当下，专为有品青年打造的 IUNI U2 ，为我们带来「纯净」的美好体验。金属机身设计、旗舰级硬件配置、尖叫价格，当我感受了这一切时，只想说：“幸福，有时候并不遥远</p>
+					<!-- <span class="as156_list_from">数字尾巴</span>
+				    <span class="as156_list_date">2014年3月24号</span> -->
+				</li>
+				<li>
+					<h3>一款内外兼修的智能手机</h3>
+					<p>IUNI U2在外观上采用了铝合金一体化设计，极光绿的机身色彩彰显出一种超凡脱俗的科技范儿。此外，在系统上，通过对系统的“零预装”，打造出一个全新的、纯净的操作空间，还给消费者一片净土。</p>
+				<!-- 	<span class="as156_list_from">机锋网</span>
+					<span class="as156_list_date">2014年3月25号</span> -->
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="ui_rel s s16"></div>
+</div>
+<div class="s5_video ui_abs" id="s5_video" style="display:none;left:-100%; z-index:300;top:0;">
+		<div class="video_wrap ui_abs">
+			<div id="flash"></div>
+			<a class="close_video" href="javascript:void(0)" id="s5_video_close"></a>
+		</div>
+</div>
+<div class="ft_wrap" id="JfooterNav" style="display: none;">
+	<div class="bottom_panel">
+		<ul data-action="links" class="nav cf nav_bottom ui_rel ui_m">
+			<li class="z logo_bottom_wrap">
+				<a href="/index.shtml" title="首页" class="logo_bottom">LOGO</a>
+			</li>
+			 <li class="y">
+			<a href="javascript:void(0);" title="立即购买" class="btn_yybuy btn_yybuy_false">立即购买</a>
+		</li>
+		
+		<li class="y service_online ui_rel" id="Jfooter_service">
+		<div id="Jfooter_service2">	
+			<i class="service_icon_jg">|</i>					
+			<i class="service_icon"></i>
+			<a title="在线客服" href="javascript:void 0" >在线客服</a>
+		</div>
+			<div class="service_online_fd ui_abs ">
+				<div class="online_fd online_fd1" id="Jfooter_service_kefu"  rtag="2.0004.0006"><span class="online_fd_text" >在线客服</span><i class="online_fd_icon online_fd_icon1"></i></div>
+				<div class="online_fd online_fd2" tag="online_fd2" id="Jfooter_service_weixin"><span class="online_fd_text">微信客服</span><i class="online_fd_icon online_fd_icon2"></i>
+				<div class="online_fd2_weixin ui_abs">
+					<div class="online_fd2_weixin_icon ui_abs"></div>
+				</div>
+				</div>
+			</div>
+		</li>
+		<li class="y nav_broder">
+			<a title="详细参数"  href="#" rtag="2.0004.0003" id="Jfooter_param">详细参数</a>
+		</li>
+		<li class="y">
+			<a href="#" title="手机图库" rtag="2.0004.0004" id="Jfooter_imgs">图库</a>
+		</li>
+		<li class="y">
+			<a href="#" title="手机视频" rtag="2.0004.0005" id="Jfooter_video">视频</a>
+		</li>
+		<li class="y nav_ie6 nav_onthis">
+			<a href="/special/2014/0109iuni/index.shtml" title="IUNI手机">U2详情</a>
+		</li>
+	</ul>
+</div>
+</div>
+
+<div class="btn_sw" id="Joptions">
+<a href="#" title="" class="" tag_action="option">
+	<span class="anchor"></span>
+	<span class="txt">
+		<s class="loz lozs_left">◆</s>
+		首页
+	</span>
+</a>
+<a href="#" title="" class="cur" tag_action="option">
+	<span class="anchor"></span>
+	<span class="txt">
+		<s class="loz lozs_left">◆</s>
+		工艺
+	</span>
+</a>
+<a href="#" title="" class="" tag_action="option">
+	<span class="anchor"></span>
+	<span class="txt">
+		<s class="loz lozs_left">◆</s>
+		美屏
+	</span>
+</a>
+<a href="#" title="" class="" tag_action="option">
+	<span class="anchor"></span>
+	<span class="txt">
+		<s class="loz lozs_left">◆</s>
+		拍照
+	</span>
+</a>
+<a href="#" title="" class="" tag_action="option">
+	<span class="anchor"></span>
+	<span class="txt">
+		<s class="loz lozs_left">◆</s>
+		内核&amp;网络
+	</span>
+</a>
+<a href="#" title="" class="" tag_action="option">
+	<span class="anchor"></span>
+	<span class="txt">
+		<s class="loz lozs_left">◆</s>
+		操作系统OS
+	</span>
+</a>
+<a href="#" title="" class="" tag_action="option">
+	<span class="anchor"></span>
+	<span class="txt">
+		<s class="loz lozs_left">◆</s>
+		支持&amp;服务
+	</span>
+</a>
+</div>
+
+<!-- 下导航浮层 -->
+<!-- IUNI视频 -->
+
+<div class="floatting" style="top:1500px;display: none;" id="iuniVideo">
+<div class="video_area">
+	<div class="video_tab cf" id="video_sel">
+		<a href="#" class="z cur">
+			<span class="z">设计</span>
+			<i class="z video_icon1" ></i></a>
+		<a href="#" class="z">
+			<span class="z">工艺</span>
+			<i class="z video_icon2" ></i></a>
+	</div>
+	<div class="iuni_video" id="iuniVideo_flash">
+		
+	</div>
+</div>
+<a href="#" class="btn_closed">关闭</a>
+</div>
+<!-- IUNI图库 -->
+<div class="floatting" style="top:1500px;display: none;" id="iuniTuku">
+<div class="photo_tab_wrap ui_m">
+	<div class="photo_tab cf" id="iuniTuku_options">
+		<a href="#" class="cur">全部</a>
+		<a href="#">冰峰银</a>
+		<a href="#">熔岩灰</a>
+		<a href="#">极光绿</a>
+		<a href="#">实拍图</a>
+	</div>
+</div>
+<div class="photo_area">
+	<div id="iuniTuku_wrap" class="photo_area_wrap"></div>
+	<div class="btn_opp btn_1" id="iuniTuku_pre">
+		<a href="#" class="btn_p btn_link" title="上一张" ></a>
+	</div>
+	<div class="btn_opp btn_2" id="iuniTuku_next">
+		<a href="#" class="btn_n btn_link" title="下一张" ></a>
+	</div>
+</div>
+<div class="photo_num ui_tac">
+	<span id="iuniTukuNumCur">1</span>
+	/
+	<span id="iuniTukuNum">26</span>
+</div>
+<a href="#" class="btn_closed">关闭</a>
+</div>
+<!-- 详细参数 -->
+<div class="floatting floatting_cs" style="top:1500px;display: none;" id="detail">
+<div class="content_box radius_5 mart15 w_920">
+	<div class="showbox cf border_b">
+		<span class="name">
+			<i class="cs_icon cs_icon_color"></i>
+		颜色</span>
+		<span>
+			<img src="http://static.iuniimg.com/img/iuni_1/cs1.jpg?st20140319" alt="">
+			<p>冰峰银</p>
+		</span>
+		<span>
+			<img src="http://static.iuniimg.com/img/iuni_1/cs_2.jpg?st20140319" alt="">
+			<p>熔岩灰</p>
+		</span>
+		<span>
+			<img src="http://static.iuniimg.com/img/iuni_1/cs_3.jpg?st20140319" alt="">
+			<p>极光绿</p>
+		</span>
+	</div>
+	<div class="showbox cf pad_tb30 border_b">
+		<span class="name">
+        <i class="cs_icon cs_icon_base"></i>
+		基本参数</span>
+		<span class="lineh24 w_70">
+			尺寸
+			<br>
+			重量
+			<br><br>
+			CPU型号
+			<br>频率
+			<br>
+			GPU型号
+			<br>频率
+			</span>
+
+			<span class="lineh24">
+			136.9mmx65mmx10.2mm
+			<br>
+			145g
+			<br><br>
+			高通骁龙800
+			<br>2.2GHz  四核
+			<br>
+			Adreno 330
+			<br>450MHz 
+			</span>
+		<span>
+			<img src="http://static.iuniimg.com/img/iuni_1/cs_4.jpg?st20130313"></span>
+	</div>
+	<div class="showbox cf border_b">
+		<span class="name">
+        <i class="cs_icon cs_icon_photo"></i>
+		拍照</span>
+		<span class="lineh24 w_70">
+			后置摄像头<br>
+			光圈<br>
+			广角度<br>
+			闪光灯<br>
+            <br><br>
+			前置摄像头<br>
+			光圈<br>
+			广角
+			</span>
+		<span class="lineh24">
+		1600万像素AF自动对焦<br>
+		f/2.2<br>
+		28mm<br>
+		支持<br>
+        <br><br>
+		400万像素<br>
+		f/2.0<br>
+		28mm
+	</span>
+		<span class="tobottom">
+			<img src="http://static.iuniimg.com/img/phone.png"></span>
+	</div>
+	<div class="showbox cf border_b">
+		<span class="name">
+ <i class="cs_icon cs_icon_screen"></i>
+		显示屏</span>
+		<span class="lineh24 w_70">
+		 屏幕尺寸<br>
+	     屏幕材质<br>
+	     PPI<br>
+	    分辨率<br>
+	    屏幕特效	
+		</span>
+		<span class="lineh24">
+		 4.7英寸<br>
+        夏普  LTPS全视角屏<br>
+        469ppi<br>
+        1920x1080全高清<br>
+        双击唤醒	
+		</span>
+	</div>
+
+		<div class="showbox cf border_b">
+		<span class="name">
+ <i class="cs_icon cs_icon_web"></i>
+		网络</span>
+		<span class="lineh24 w_70">
+		  网络制式<br>
+          网络频率<br>
+          <br><br>
+          数据业务<br>
+          GPS<br>
+          蓝牙<br>
+          WIFI	
+		</span>
+		<span class="lineh24">
+		 支持WCDMA/GSM双模单卡（Micro SIM卡）<br>
+         3G：WCDMA 900/2100MHz<br>
+         2G：GSM 850/900/1800/1900MHz<br><br>
+        GPRS/EDGE/HSPA+<br>
+        支持<br>
+        蓝牙4.0<br>
+        802.11ac
+		</span>
+	</div>
+
+
+	<div class="showbox cf border_b">
+		<span class="name">电池</span>
+		<span class="lineh24 w_70">
+			容量
+			</span>
+		<span class="lineh24">
+			2200mAh 高密度聚合物锂电池</span>
+	</div>
+	<div class="showbox cf border_b">
+		<span class="name">
+ <i class="cs_icon  cs_icon_media"></i>
+		多媒体播放</span>
+		<span class="lineh24 w_70">
+		音乐播放<br>
+        视频播放<br>
+        图片播放
+        
+
+		</span>
+        <span class="lineh24">
+		支持mp3、wav、wma、ogg、ape、flac、aac等格式<br>
+        支持H.264/263,MPEG4,VP8，MVC格式<br>
+        支持JPEG、PNG、GIF、BMP等格式
+     
+
+		</span>
+	</div>
+	<div class="showbox cf border_b">
+		<span class="name">内存</span>
+		<span class="lineh24 w_70">
+	    <br>
+        </span>
+		<span class="lineh24">
+		 32GB ROM+3GB RAM<br>
+         16GB ROM+2GB RAM
+		</span>
+	</div>
+
+	<div class="showbox cf border_b">
+		<span class="name">摄像</span>
+		<span class="lineh24 w_70">
+			视频拍摄
+			</span>
+		<span class="lineh24">
+			1080p全高清 60帧/s摄录</span>
+	</div>
+
+
+	<div class="showbox cf border_b">
+		<span class="name">
+ <i class="cs_icon cs_icon_inductor"></i>
+		感应器</span>
+		<span class="lineh24 w_70">
+		重力感应<br>
+		距离感应<br>
+		电子罗盘<br>
+		气压计<br>
+		陀螺仪<br>
+		mic
+		</span>
+		<span class="lineh24">
+		支持<br>
+		支持<br>
+		支持<br>
+		支持<br>
+		支持<br>
+		3颗
+		</span>
+	</div>
+
+	<div class="showbox cf border_b">
+		<span class="name">
+ <i class="cs_icon cs_icon_port"></i>
+		接口</span>
+		<span class="lineh24 w_70">
+		耳机接口<br>
+		充电接口<br>
+		OTG功能
+		</span>
+		<span class="lineh24">
+		3.5mm耳机接口<br>
+		5pin micro USB<br>
+		支持
+
+		</span>
+	</div>
+
+	<div class="showbox cf ">
+		<span class="name">标准配件</span>
+		<span class="lineh24 w_70">
+		充电头<br>
+        数据线
+	    </span>
+		<span class="lineh24">
+		 1Ah充电头<br>
+         1.0m
+		</span>
+	</div>
+
+</div>
+<a href="#" class="btn_closed">关闭</a>
+</div>
+<script type="text/html" id="tpl_list">
+		<!--tuKuList/*图库列表*/	
+		
+			%><ul class="iuni_photo cf"><%
+			for(var i=0,len=blackList.length;i<len;i++){
+				var blist = blackList[i];
+				%> 
+					<li>
+						<img src="<%=blist.blackUrl%>" alt="<%=blist.blackTitle%>" height="100%"></li>								
+				<%				
+			}
+			for(var i=0,len=silverList.length;i<len;i++){
+				var slist = silverList[i];
+				%> 
+					<li>
+						<img src="<%=slist.silverUrl%>" alt="<%=slist.silverTitle%>" height="100%"></li>			
+				<%
+			}
+			for(var i=0,len=greenList.length;i<len;i++){
+				var glist = greenList[i];
+				%> 
+					<li>
+						<img src="<%=glist.greenUrl%>" alt="<%=glist.greenTitle%>" height="100%"></li>								
+				<%				
+			}	
+			for(var i=0,len=realList.length;i<len;i++){
+				var glist = realList[i];
+				%> 
+					<li>
+						<img src="<%=glist.realUrl%>" alt="<%=glist.realTitle%>" height="100%"></li>								
+				<%				
+			}			
+			%></ul><% 
+		<%if(silverList.length>0){
+			%><ul class="iuni_photo cf" tag="silver" style="display:none"><%
+			for(var i=0,len=silverList.length;i<len;i++){
+				var slist = silverList[i];
+				%> 
+					<li>
+						<img src="<%=slist.silverUrl%>" alt="<%=slist.silverTitle%>" height="100%"></li>			
+				<%
+			}
+			%></ul><%
+		}%>	
+			
+		<%if(blackList.length>0){
+			%><ul class="iuni_photo cf" tag="black" style="display:none"><%
+			for(var i=0,len=blackList.length;i<len;i++){
+				var blist = blackList[i];
+				%> 
+					<li>
+						<img src="<%=blist.blackUrl%>" alt="<%=blist.blackTitle%>" height="100%"></li>								
+				<%				
+			}
+			%></ul><% 
+		}%>  	
+				
+		<%if(greenList.length>0){
+			%><ul class="iuni_photo cf" tag="green" style="display:none"><%
+			for(var i=0,len=greenList.length;i<len;i++){
+				var glist = greenList[i];
+				%> 
+					<li>
+						<img src="<%=glist.greenUrl%>" alt="<%=glist.greenTitle%>" height="100%"></li>			
+				<%
+			}
+			%></ul><%
+		}%>  	
+		
+		<ul class="iuni_photo cf" tag="real" style="display:none">
+			<%if(realList.length>0){
+				for(var i=0,len=realList.length;i<len;i++){
+					var glist = realList[i];
+					%> 
+						<li>
+							<img src="<%=glist.realUrl%>" alt="<%=glist.realTitle%>" height="100%"></li>			
+					<%
+				}
+			 } %>
+			</ul>
+			tuKuList-->
+</script>
+<!--工艺-->
+<script type="text/html" id="tpl_video">
+   <embed src="http://player.video.qiyi.com/87a7cf85d909483a849dd2723050aa3e/0/97/marketing/20140319/56403e6600ffaaa0.swf-pid=13444-ptype=2-albumId=677176-tvId=828303" quality="high" width="960" height="470" align="middle" allowScriptAccess="always" allowFullscreen="true" type="application/x-shockwave-flash">
+   </embed>
+</script>
+<!--设计-->
+<script type="text/html" id="tpl_video2">
+   <embed src="http://player.video.qiyi.com/e4a2d1f21bdc4620b1bead6a05a4ba18/0/116/marketing/20140319/5a4599d17555912e.swf-pid=13444-ptype=2-albumId=677173-tvId=828308" quality="high" width="960" height="470" align="middle" allowScriptAccess="always" allowFullscreen="true" type="application/x-shockwave-flash">
+   </embed>
+</script>
+<!--os-->
+<script type="text/html" id="tpl_video3">
+   <embed src="http://player.video.qiyi.com/9e37e8ca95b846f58f8f6f9a8ba0acb5/0/166/marketing/20140319/879964c56cb4566e.swf-pid=13444-ptype=2-albumId=677175-tvId=828305" quality="high" width="960" height="470" align="middle" allowScriptAccess="always" allowFullscreen="true" type="application/x-shockwave-flash">
+   </embed>
+</script>
+<script type="text/javascript">
+<!--
+var winWidth = 0;
+var winHeight = 0;
+function findDimensions() // 函数：获取尺寸
+{
+// 获取窗口宽度
+if (window.innerWidth)
+winWidth = window.innerWidth;
+else if ((document.body) && (document.body.clientWidth))
+winWidth = document.body.clientWidth;
+// 获取窗口高度
+if (window.innerHeight)
+winHeight = window.innerHeight;
+else if ((document.body) && (document.body.clientHeight))
+winHeight = document.body.clientHeight;
+// 通过深入 Document 内部对 body 进行检测，获取窗口大小
+if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
+{
+winHeight = document.documentElement.clientHeight;
+winWidth = document.documentElement.clientWidth;
+}
+// 结果输出至两个文本框
+if(winHeight<700)
+$("#s13_bgs").addClass("s13_bg");
+else
+$("#s13_bgs").removeClass("s13_bg");
+}
+findDimensions();
+// 调用函数，获取数值
+window.onresize=findDimensions;
+
+//-->
+</script>
+
+<script type="text/javascript">
+var CMSIMAGES = [
+	
+	{
+		greenTitle : "正",
+		greenUrl : "http://res.iuniimg.com/iuni/201403/20_1395298092753.jpg"
+	},
+	
+	{
+		greenTitle : "背",
+		greenUrl : "http://res.iuniimg.com/iuni/201403/17_1395043236998.jpg"
+	},
+	
+	{
+		greenTitle : "斜侧",
+		greenUrl : "http://res.iuniimg.com/iuni/201403/17_1395043237162.jpg"
+	},
+	
+	{
+		greenTitle : "侧",
+		greenUrl : "http://res.iuniimg.com/iuni/201403/17_1395043241636.jpg"
+	},
+	
+	{
+		greenTitle : "躺",
+		greenUrl : "http://res.iuniimg.com/iuni/201403/20_1395298120078.jpg"
+	},
+	
+	{
+		greenTitle : "躺2",
+		greenUrl : "http://res.iuniimg.com/iuni/201403/17_1395043249276.jpg"
+	},
+	
+	{
+		greenTitle : "镜头",
+		greenUrl : "http://res.iuniimg.com/iuni/201403/17_1395043251227.jpg"
+	},
+	
+	
+	{
+		blackTitle : "all",
+		blackUrl : "http://res.iuniimg.com/iuni/201403/18_1395138720112.jpg"
+	},
+	
+	{
+		blackTitle : "all",
+		blackUrl : "http://res.iuniimg.com/iuni/201403/18_1395138723774.jpg"
+	},
+	
+	{
+		blackTitle : "all",
+		blackUrl : "http://res.iuniimg.com/iuni/201403/18_1395138731140.jpg"
+	},
+	
+	{
+		blackTitle : "炭黑",
+		blackUrl : "http://res.iuniimg.com/iuni/201403/20_1395298045859.jpg"
+	},
+	
+	{
+		blackTitle : "炭黑",
+		blackUrl : "http://res.iuniimg.com/iuni/201403/17_1395043319446.jpg"
+	},
+	
+	{
+		blackTitle : "炭黑",
+		blackUrl : "http://res.iuniimg.com/iuni/201403/17_1395043321374.jpg"
+	},
+	
+	{
+		blackTitle : "炭黑",
+		blackUrl : "http://res.iuniimg.com/iuni/201403/17_1395043322902.jpg"
+	},
+	
+	{
+		blackTitle : "炭黑",
+		blackUrl : "http://res.iuniimg.com/iuni/201403/20_1395298064262.jpg"
+	},
+	
+	{
+		blackTitle : "炭黑",
+		blackUrl : "http://res.iuniimg.com/iuni/201403/17_1395043326654.jpg"
+	},
+	
+	{
+		blackTitle : "炭黑",
+		blackUrl : "http://res.iuniimg.com/iuni/201403/17_1395043328343.jpg"
+	},
+	
+	
+	{
+		silverTitle : "钛银",
+		silverUrl : "http://res.iuniimg.com/iuni/201403/20_1395297917956.jpg"
+	},
+	
+	{
+		silverTitle : "钛银",
+		silverUrl : "http://res.iuniimg.com/iuni/201403/17_1395043361838.jpg"
+	},
+	
+	{
+		silverTitle : "钛银",
+		silverUrl : "http://res.iuniimg.com/iuni/201403/17_1395043363729.jpg"
+	},
+	
+	{
+		silverTitle : "钛银",
+		silverUrl : "http://res.iuniimg.com/iuni/201403/20_1395297943960.jpg"
+	},
+	
+	{
+		silverTitle : "钛银",
+		silverUrl : "http://res.iuniimg.com/iuni/201403/17_1395043368639.jpg"
+	},
+	
+	{
+		silverTitle : "钛银",
+		silverUrl : "http://res.iuniimg.com/iuni/201403/17_1395043369557.jpg"
+	},
+	
+	
+	{
+		realTitle : "白1",
+		realUrl : "http://res.iuniimg.com/iuni/201404/15_1397549268081.jpg"
+	},
+	
+	{
+		realTitle : "白2",
+		realUrl : "http://res.iuniimg.com/iuni/201404/15_1397549276918.jpg"
+	},
+	
+	{
+		realTitle : "白3",
+		realUrl : "http://res.iuniimg.com/iuni/201404/15_1397549283423.jpg"
+	},
+	
+	{
+		realTitle : "白4",
+		realUrl : "http://res.iuniimg.com/iuni/201404/15_1397549287206.jpg"
+	},
+	
+	{
+		realTitle : "黑1",
+		realUrl : "http://res.iuniimg.com/iuni/201404/15_1397549299473.jpg"
+	},
+	
+	{
+		realTitle : "黑2",
+		realUrl : "http://res.iuniimg.com/iuni/201404/15_1397549305122.jpg"
+	},
+	
+	{
+		realTitle : "黑3",
+		realUrl : "http://res.iuniimg.com/iuni/201404/15_1397549313547.jpg"
+	},
+	
+	{
+		realTitle : "黑4",
+		realUrl : "http://res.iuniimg.com/iuni/201404/15_1397549320334.jpg"
+	},
+	
+	{
+		realTitle : "绿1",
+		realUrl : "http://res.iuniimg.com/iuni/201404/15_1397549327978.jpg"
+	},
+	
+	{
+		realTitle : "绿2",
+		realUrl : "http://res.iuniimg.com/iuni/201404/15_1397549334752.jpg"
+	},
+	
+	{
+		realTitle : "绿3",
+		realUrl : "http://res.iuniimg.com/iuni/201404/15_1397549341829.jpg"
+	},
+	
+	{
+		realTitle : "绿4",
+		realUrl : "http://res.iuniimg.com/iuni/201404/15_1397549347826.jpg"
+	},
+	
+	{
+		realTitle : "绿5",
+		realUrl : "http://res.iuniimg.com/iuni/201404/15_1397549355269.jpg"
+	},
+	
+];
+</script>
+<script type="text/javascript" charset="utf-8">
+if("undefined"==typeof $)document.write("<script type=\"text\/javascript\" src=\"http:\/\/static.iuniimg.com\/js\/jquery-1.7.min.js\"><\/script>")
+</script>
+<script type="text/javascript" src="http://static.iuniimg.com/js/version/2014/04/iuni.special.t20140418open.17202352.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="http://static.iuniimg.com/js/version/2014/03/iuni.common.footer.11110412.js" charset="utf-8"></script>
+</body>
+</html>

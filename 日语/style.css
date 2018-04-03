@@ -1,0 +1,43 @@
+/* CSS Document */
+*{margin:0; padding:0}
+
+#main1{background-color:#ff5b67;  height:464px; }
+
+#main1_div { width:1000px; margin:0 auto; overflow:hidden}
+#main1 p {margin-left:41px;margin-top:47px;font:normal 16px/31px "Microsoft YaHei";color:#FFF}
+#money{font-size:32px}
+.underline{text-decoration:underline}
+.study_abroad{margin-top:8px}
+.study_abroad a{width:451px;height:267px;float:left;display:block}
+.study_abroad1{background:url(image/zt1.png) no-repeat;margin-left:45px}
+.study_abroad2{background:url(image/zt2.png) no-repeat;margin-left:10px}
+li{list-style-type:none}
+
+
+#main2{ height:835px;  background:#7cd6fc}
+
+#main2_show1 { width:1000px;margin:0 auto;padding-top:32px;overflow:hidden}
+#main2_title1 { background-image:url(image/mx1.png); width:140px; height:377px;float:left}
+#main2_content1{ width:860px; height:362px; background-color:#FFFFFF; margin-top:16px; float:left}
+#main2_content1 ul{ margin:17px 0 0 23px;width:810px;overflow:hidden}
+#main2_content1 ul li { float:left;border:1px solid #e1e1e1;margin:5px 0 0 5px;position:relative}
+#main2_content1 ul li p { position:absolute;bottom:0px;height:22px;background:#ff5b67; width:100%;font:normal 12px/22px "SimSun";color:#FFF;text-align:center;display:none}
+#main2_content1 ul a { display:block}
+
+#main2_show2 { width:1000px;margin:0 auto;padding-top:28px;overflow:hidden}
+#main2_title2 { background-image:url(image/mx2.png); width:140px; height:295px; float:left}
+#main2_content2{ width:860px; height:283px; margin-top:12px; float:left; background-color:#FFFFFF}
+#main2_content2 ul { margin:24px 0 0 23px;width:820px; overflow:hidden}
+#main2_content2 ul li { float:left; border:1px solid #e1e1e1; margin:5px 0 0 5px; position:relative}
+#main2_content2 ul li p { position:absolute; display:none; bottom:0px; height:22px; color:#FFFFFF; background-color:#ff5b67; width:100%; text-align:center; font:normal 12px/22px "SimSun"}
+#main2_content2 ul a {display:block}
+
+#main3{ width:1000px; height:489px; background-color:#FFFFFF; margin:0 auto}
+
+#main3_1 {width:1000px; height:117px; background-image:url(image/jc.png);}
+#main3_2 { background-image:url(image/t1.png);}
+#main3_3 { background-image:url(image/t2.png); margin-left:13px}
+#main3_4 { background-image:url(image/t3.png); margin-left:13px}
+.main_contain { width:324px; height:215px; float:left;}
+
+
